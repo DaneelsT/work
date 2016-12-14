@@ -1,0 +1,470 @@
+/**
+ * Main CSS file of the Work webclient.
+ * Initial use by the Intelligent Automation System webclient.
+ *
+ * @author      Joeri HERMANS
+ * @version     0.2
+ * @since       30 December, 2014
+ */
+
+/** BEGIN Main CSS. ***********************************************************/
+
+html, body {
+    background: url("../img/background.jpg") repeat;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', Sans-Serif;
+    font-size: 0.82em;
+    font-weight: 400 !important;
+    color: #323840;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #323840;
+    color: #FFFFFF;
+    border-top: 3px solid #848d9a;
+    padding: 20px;
+}
+
+.footer a {
+    color: #FFFFFF;
+}
+
+.block {
+    display: block;
+}
+
+a img {
+    border: 0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+a {
+    color: #3972ab;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+h2 {
+    font-weight: 400;
+    color: #848d9a;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dce0e5;
+}
+
+h3 {
+    font-weight: 400;
+    color: #848d9a;
+    font-size: 1.45em;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+.panelSeparatorTop {
+    margin-bottom: 15px !important;
+}
+
+.panelSeparatorBottom {
+    margin-top: 15px !important;
+}
+
+.buttonSpacingLeft {
+    margin-left: 10px !important;
+}
+
+.buttonSpacingRight {
+    margin-right: 10px !important;
+}
+
+.button {
+    border: 1px solid #345d8c;
+    display: inline-block;
+    background: #5385be;
+    color: white;
+    text-align: center;
+    outline: 0;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-size: 11px !important;
+    line-height: normal;
+    letter-spacing: normal;
+    white-space: pre;
+    vertical-align: middle;
+    text-decoration: none !important;
+}
+
+.button:hover {
+    background: #6b99cc !important;
+}
+
+.button:active {
+    background: #456f9e !important;
+}
+
+.buttonRed {
+    background-color: #bd6767 !important;
+    border: 1px solid #822f2f !important;
+}
+
+.buttonRed:hover {
+    background-color: #d89696 !important;
+}
+
+.buttonRed:active {
+    background-color: #af4848 !important;
+}
+
+.buttonGreen {
+    background-color: #68b84b !important;
+    border: 1px solid #335a26 !important;
+}
+
+.buttonGreen:hover {
+    background-color: #65c642 !important;
+}
+
+.buttonGreen:active {
+    background-color: #4d9532 !important;
+}
+
+.panel {
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    box-shadow: 0px 0px 8px 1px #ddd;
+    box-sizing: content-box;
+    margin: 0 auto;
+}
+
+    .panelContent {
+        padding: 15px 29px 15px;
+        box-sizing: content-box;
+    }
+
+.spacingRight {
+    margin-right: 25px !important;
+}
+
+.spacingLeft {
+    margin-left: 25px !important;
+}
+
+.spacingTop {
+    margin-top: 25px !important;
+}
+
+.spacingBottom {
+    margin-bottom: 25px !important;
+}
+
+.formContainerSeparator {
+    margin-top: 12px;
+}
+
+input[type="submit"].button {
+    font-size: 1.05em !important;
+}
+
+.formSeparator {
+    margin-bottom: 45px;
+}
+
+form {
+
+}
+
+    .stdLabelWidth {
+        width: 60px;
+        text-align: left;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 1.15em;
+        display: inline-block;
+        padding: 9px 8px 8px 0px;
+        margin-right: 10px;
+    }
+
+    input[type="text"], input[type="password"] {
+        border: 1px solid #D1D1D1;
+        outline: 0 !important;
+        border-radius: 4px;
+        padding: 8px 14px;
+        vertical-align: middle;
+        color: #323840;
+    }
+
+    input[type="radio"] {
+        margin: 0 12px 0 0;
+    }
+
+table {
+    color: #666;
+    background: #eaebec;
+    border-spacing: 0;
+    margin: 0;
+    border: #ccc 1px solid;
+}
+
+    tr {
+        text-align: left;
+        padding-left: 20px;
+        background: white;
+    }
+
+        th {
+            text-shadow: 1px 1px 0 white;
+            padding: 11px 25px 12px 25px;
+            border-top: 1px solid #fafafa;
+            border-bottom: 2px solid #848d9a;
+            background: #ededed;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        td {
+            text-align: left;
+            padding: 10px 10px 10px 20px;
+            border-left: 0;
+        }
+
+        table tr:nth-child(odd) td {
+            background: #efefef !important;
+        }
+
+        table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        table tr:hover td {
+            background: #f2f2f2 !important;
+        }
+
+textarea {
+    box-sizing: border-box;
+    margin: 5px 0 0;
+    padding: 8px 14px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 0 0 4px #ddd;
+    color: #323840;
+    font-family: Verdana, Arial, Sans-Serif;
+    font-size: 1.1em;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width500 {
+    width: 500px;
+}
+
+.textalignLeft {
+    text-align: left;
+}
+
+.textalignRight {
+    text-align: right;
+}
+
+p {
+    font-size: 1.15em;
+    line-height: 1.5;
+}
+
+/** END Main CSS. *************************************************************/
+
+/** BEGIN Header and navigation. **********************************************/
+
+.submenu-left {
+    left: 0;
+}
+
+.submenu-right {
+    right: 0;
+}
+
+header {
+    background: #323840;
+    padding: 0 50px;
+    border-bottom: 3px solid #848d9a;
+    margin-bottom: 20px;
+    height: 45px;
+}
+
+    #logo {
+        margin-top: 18px;
+        display: inline-block;
+        float: left;
+    }
+
+    h1 {
+        display: inline-block;
+        float: left;
+        font-size: 1em;
+        color: #a9b0ba;
+        margin: 18px 0 0;
+        font-weight: normal;
+    }
+
+    nav {
+        float: right;
+        position: relative;
+        height: 45px;
+    }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: right;
+        }
+
+            nav ul li {
+                padding: 0;
+                margin: 0;
+                display: inline-block;
+                position: relative;
+                letter-spacing: 1px;
+            }
+
+                nav ul li a {
+                    padding: 18px 10px 17px;
+                    display: inline-block;
+                    font-weight: bold;
+                    font-size: 1.05em;
+                    color: white;
+                    letter-spacing: 0px;
+                }
+
+                nav ul li a:hover {
+                    text-decoration: none !important;
+                }
+
+                nav ul li a:active {
+                    cursor: pointer;
+                }
+
+                #siteNavigation ul li a:hover {
+                    background: #848d9a;
+                }
+
+                #siteNavigation ul li a:active {
+                    background: #646e7c;
+                }
+
+                    #userMenu ul li a img {
+                        float: left;
+                        display: inline-block;
+                        margin-right: 12px;
+                        margin-top: 4px;
+                    }
+
+            #userMenu {
+                float: right;
+                margin-left: 25px;
+            }
+
+                #userMenu ul {
+                }
+
+                        .menuSeparator {
+                            color: white;
+                            padding: 10px;
+                        }
+
+                            .menuSeparator span {
+                                display: inline;
+                                margin-top: 8px;
+                            }
+
+                        .dropdownActive .dropdownRoot {
+                            height: 24px !important;
+                        }
+
+                        .dropdownActive a {
+                            border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+
+                        .dropdownActive .languageImage {
+                            background-color: #454c55 !important;
+                        }
+
+                        .dropdownActive ul {
+                            display: block;
+                        }
+
+                            .menuDropdown ul li {
+                                width: 100%;
+                                height: auto;
+                                display: inline-block;
+                            }
+
+                            .menuDropdown ul li a {
+                                cursor: pointer;
+                                border-radius: 0;
+                                margin: 0;
+                                padding: 10px 0 10px;
+                                width: 100%;
+                            }
+
+                                .menuDropdown ul li a img {
+                                    float: left;
+                                    margin-top: 3px;
+                                    margin-right: 20px;
+                                    margin-left: 8px;
+                                }
+
+                            .menuDropdown ul li a:hover {
+                                background: #565d66;
+                            }
+
+/** END Header and navigation. ************************************************/
+
+/** BEGIN Main content. *******************************************************/
+
+main {
+    padding: 20px;
+    box-sizing: content-box;
+    flex: 1;
+}
+
+/** END Main content. *********************************************************/
