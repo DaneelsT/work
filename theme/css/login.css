@@ -5,10 +5,6 @@
  * @author      Joeri HERMANS, Gaetan Dumortier
  * @since       30 December, 2014
  */
-body {
-    text-align: center;
-}
-
 #loginContainer {
 	position: absolute;
     text-align: left;
