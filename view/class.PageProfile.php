@@ -50,7 +50,7 @@ class PageProfile extends AbstractAuthorizedPage
                 FROM
                     users,
                     users_pay,
-                    user_languages
+                    users_language
                 WHERE users.id = :user_id AND users_pay.userid = :user_id";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':user_id', $id);
@@ -95,7 +95,7 @@ class PageProfile extends AbstractAuthorizedPage
 		// Update payment info and language if needed
 		$sql = "UPDATE
 		          users_pay,
-		          user_languages
+		          users_language
 				SET
 					hourly_pay = :hourly_pay,
 					sunday_fee = :sunday_fee,

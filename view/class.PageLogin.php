@@ -8,7 +8,7 @@ namespace Work\Page;
  * @author  Joeri Hermans
  * @since   14 February 2016
  */
- 
+
 use \Carbon\Application\Application;
 use \Carbon\Page\AbstractPage;
 use \Work\User\User;
@@ -18,49 +18,49 @@ use \PDO;
 
 class PageLogin extends AbstractPage
 {
-	
+
     const PATH = "/login$";
     const TITLE = "Log in";
-	
+
     /**
      * Additional views that need to be rendered with the login page.
      */
     private $mHeader;
     private $mFooter;
-	
+
 	private $mDbHandle;
-	
+
 	private $mUserId;
 	private $mUsername;
 	private $mHourlyPay;
 	private $mSundayFee;
     private $mLanguage;
-	
+
     private function initializeViewElements() {
         $this->mHeader = new ViewHeaderNoMenu(self::TITLE);
         $this->mFooter = new ViewFooter();
     }
-	
+
     private function initializeDatabaseConnection() {
     	$app = Application::getInstance();
         $app->connectToDatabase();
         $this->mDbHandle = $app->getDatabaseConnection();
     }
-	
+
     private function addScripts() {
         $this->mFooter->addScript("jquery.min.js");
     }
-	
+
 	private function addStyleSheets() {
 		$this->mHeader->addStyleSheet("login.css");
 	}
-	
+
     private function setUsername()
     {
         if( isset( $_POST['username']) )
             $this->mUsername = $_POST['username'];
     }
-	
+
 	private function userLogin() {
 		$application = Application::getInstance();
 		// Fetch the data
@@ -94,10 +94,10 @@ class PageLogin extends AbstractPage
 				$sql = "SELECT
 				            users_pay.hourly_pay,
 				            users_pay.sunday_fee,
-				            user_languages.lang
+				            users_language.lang
 			            FROM
 			                users_pay,
-			                user_languages
+			                users_language
 		                WHERE users_pay.userid = :userid";
 				$statement = $this->mDbHandle->prepare($sql);
 				$statement->bindParam(":userid", $this->mUserId);
@@ -140,17 +140,17 @@ class PageLogin extends AbstractPage
 		$statement->bindParam(":sunday_fee", $this->mSundayFee);
 		$statement->execute();
 	}
-    
+
     private function addUserLanguage() {
         $sql = "INSERT INTO
-                    user_languages (userid, lang)
+                    users_language (userid, lang)
                 VALUES (:userid, :lang)";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(":userid", $this->mUserId);
         $statement->bindParam(":lang", $this->mLanguage);
         $statement->execute();
     }
-	
+
 	private function updateUserPays() {
 		$sql = "UPDATE users_pay
 				SET hourly_pay = :hourly_pay, sunday_fee = :sunday_fee
@@ -161,9 +161,9 @@ class PageLogin extends AbstractPage
 		$statement->bindParam(":userid", $this->mUserId);
 		$statement->execute();
 	}
-    
+
     private function updateUserLanguage() {
-        $sql = "UPDATE user_languages
+        $sql = "UPDATE users_language
                     SET lang = :lang
                 WHERE userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
@@ -171,37 +171,37 @@ class PageLogin extends AbstractPage
         $statement->bindParam(":lang", $this->mLanguage);
         $statement->execute();
     }
-	
+
     public function __construct()
     {
     	$this->initializeDatabaseConnection();
-    	
+
     	// Check if a POST occured
     	if($this->loggingIn() && $this->userLogin())
 			redirectInternally("/");
-		
+
         $this->setTitle(static::TITLE);
         $this->initializeViewElements();
 		$this->addStyleSheets();
 		$this->addScripts();
-		
+
         $this->setUsername();
     }
-	
+
     public function loggingIn()
     {
         return ( isset($_POST['username']) && isset($_POST['password']) );
     }
-	
+
     public function getUsername() {
         return $this->mUsername;
     }
-	
+
     public function draw()
     {
         $this->mHeader->draw();
         include "theme/inc.login.php";
         $this->mFooter->draw();
     }
-	
+
 }

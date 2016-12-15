@@ -35,7 +35,7 @@ class PageApiUsers extends AbstractApiPage {
         $sql = "SELECT id, username, email, name, surname, gender, disabled, admin, lang
                 FROM
                     users,
-                    user_languages;";
+                    users_language;";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);

@@ -69,7 +69,7 @@ class PageUserEdit extends AbstractAuthorizedPage
                 FROM
                     users,
                     users_pay,
-                    user_languages
+                    users_language
                 WHERE users.id = :userid AND users_pay.userid = :userid";
         try{
             $statement = $this->mDbHandle->prepare($sql);
@@ -102,7 +102,7 @@ class PageUserEdit extends AbstractAuthorizedPage
         $sql = "UPDATE
                     users,
                     users_pay,
-                    user_languages
+                    users_language
                 SET
                     email = :email,
                     password = :password,

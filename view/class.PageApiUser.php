@@ -17,30 +17,30 @@ use \PDO;
 class PageApiUser extends AbstractApiPage {
 
     const PATH = "/api/user/[0-9]+$";
-    
+
     private $mUsers;
-    
+
     private $mId;
     private $mDbHandle;
-    
+
     private function initializeDatabaseConnection() {
         $app = Application::getInstance();
         $app->connectToDatabase();
         $this->mDbHandle = $app->getDatabaseConnection();
     }
-        
+
     private function returnUser() {
         $this->fetchUser();
         $data = $this->mUsers;
-        
+
         echo $this->encodeJSON($data, JSON_PRETTY_PRINT);
     }
-    
+
     private function fetchUser() {
         $sql = "SELECT *
                 FROM
                     users,
-                    user_languages
+                    users_language
                 WHERE id = :userid";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(":userid", $this->mId);
@@ -50,7 +50,7 @@ class PageApiUser extends AbstractApiPage {
             http_response_code(204);
             exit();
         }
-        
+
         foreach($users as $user) {
             $id = $user['id'];
             $username = $user['username'];
@@ -81,9 +81,9 @@ class PageApiUser extends AbstractApiPage {
     {
         parent::__construct();
         $this->initializeDatabaseConnection();
-        
+
         $this->mId = Application::getInstance()->getRouter()->getSegment(2);
-        
+
         $apikey = $this->getApiKey();
         if( !isset($apikey) || strlen($apikey) == 0 ) {
             http_response_code(500);
@@ -103,6 +103,6 @@ class PageApiUser extends AbstractApiPage {
                 break;
         }
     }
-    
+
 }
 ?>

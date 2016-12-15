@@ -162,7 +162,7 @@ class PageUserVerify extends AbstractPage {
     private function addLanguage() {
         $id = $this->fetchUserId();
         $sql = "INSERT INTO
-                    user_languages (userid, lang)
+                    users_language (userid, lang)
                 VALUES (:userid, :lang)";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(":userid", $id);
