@@ -13,7 +13,7 @@ use \Carbon\Application\Application;
 use \Work\Application\WorkApplication;
 use \Work\Page\AbstractAuthorizedPage;
 use \Work\UI\ViewHeader;
-use \Work\UI\ViewFooter;
+use \Work\UI\ViewFooterNoFooter;
 use \Work\User\User;
 use \PDO;
 
@@ -25,7 +25,7 @@ class PageProfile extends AbstractAuthorizedPage
 
     private $mHeader;
     private $mFooter;
-	
+
 	private $mDbHandle;
 
     private $mUser = null;
@@ -33,11 +33,11 @@ class PageProfile extends AbstractAuthorizedPage
     private $mInvalidInput = false;
 
     private function initializeViews()
-    {		
+    {
 		$this->mHeader = new ViewHeader(self::TITLE);
-		$this->mFooter = new ViewFooter();
+		$this->mFooter = new ViewFooterNoFooter();
     }
-	
+
     private function initializeDatabaseConnection() {
         $app = Application::getInstance();
         $app->connectToDatabase();
@@ -77,7 +77,7 @@ class PageProfile extends AbstractAuthorizedPage
     	$id = Application::getInstance()->getUser()->getId();
         $app = Application::getInstance();
         $user = $app->getUser();
-        
+
 		$sql = "UPDATE users
 				SET
 				    email = :email,
@@ -115,11 +115,11 @@ class PageProfile extends AbstractAuthorizedPage
 		$user->setHourlyPay($pay);
 		$user->setSundayFee($fee);
         $user->setLanguage($lang);
-		
+
         $this->fetchUser();
         $this->mUserUpdated = true;
     }
-    
+
     private function verifyInput() {
         $name = $_POST['user_name'];
         $surname = $_POST['user_surname'];
@@ -135,7 +135,7 @@ class PageProfile extends AbstractAuthorizedPage
         }else{
             $lang = Application::getInstance()->getConfiguration("default_lang");
         }
-        
+
         // Verify that all fields are entered
         if(strlen($name) == 0 || strlen($surname) == 0 || strlen($email) == 0 || strlen($pay) == 0 || strlen($fee) == 0 || !isset($lang)) {
             $this->mInvalidInput = true;
@@ -156,12 +156,12 @@ class PageProfile extends AbstractAuthorizedPage
     {
         return $this->mUser;
     }
-	
+
 	private function userUpdated()
     {
         return $this->mUserUpdated;
     }
-    
+
     private function invalidInput() {
         return $this->mInvalidInput;
     }
@@ -171,7 +171,7 @@ class PageProfile extends AbstractAuthorizedPage
         parent::__construct(parent::DEFAULT_LOGIN_DIR);
         $this->initializeViews();
 		$this->initializeDatabaseConnection();
-		
+
 		if(isset($_POST['edit_user'])) {
 			$this->verifyInput();
 		}else{
