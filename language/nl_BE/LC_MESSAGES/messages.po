@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2016-12-08 22:35+0100\n"
-"PO-Revision-Date: 2016-12-08 22:36+0100\n"
+"POT-Creation-Date: 2016-12-15 01:15+0100\n"
+"PO-Revision-Date: 2016-12-15 01:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -36,15 +36,15 @@ msgstr "Het e-mail adres dat je hebt ingevuld is niet geldig"
 msgid "Invite a user"
 msgstr "Gebruiker uitnodigen"
 
-#: inc.admin-invite.php:24 inc.admin-users.php:14 inc.profile.php:58
-#: inc.profile.php:107 inc.user-add.php:44 inc.user-edit.php:42
-#: inc.user-verify.php:64
+#: inc.admin-invite.php:24 inc.admin-users.php:14 inc.profile.php:67
+#: inc.profile.php:116 inc.user-add.php:44 inc.user-edit.php:42
+#: inc.user-verify.php:67
 msgid "E-mail"
 msgstr "E-mail"
 
 #: inc.admin-invite.php:28 inc.admin-shifts.php:14 inc.admin-users.php:15
-#: inc.profile.php:46 inc.profile.php:97 inc.user-add.php:34
-#: inc.user-edit.php:32 inc.user-verify.php:54
+#: inc.profile.php:55 inc.profile.php:106 inc.user-add.php:34
+#: inc.user-edit.php:32 inc.user-verify.php:57
 msgid "Name"
 msgstr "Naam"
 
@@ -165,8 +165,8 @@ msgid "Select a user to view shifts from"
 msgstr "Selecteer een gebruiker om shifts van te bekijken"
 
 #: inc.admin-shifts.php:15 inc.admin-users.php:16 inc.admin-users.php:17
-#: inc.profile.php:50 inc.profile.php:99 inc.user-add.php:36
-#: inc.user-edit.php:34 inc.user-verify.php:56
+#: inc.profile.php:59 inc.profile.php:108 inc.user-add.php:36
+#: inc.user-edit.php:34 inc.user-verify.php:59
 msgid "Surname"
 msgstr "Achternaam"
 
@@ -182,8 +182,8 @@ msgstr "Gebruikers Overzicht"
 msgid "Add a user"
 msgstr "Voeg gebruiker toe"
 
-#: inc.admin-users.php:13 inc.profile.php:54 inc.profile.php:103
-#: inc.user-add.php:40 inc.user-edit.php:38 inc.user-verify.php:60
+#: inc.admin-users.php:13 inc.profile.php:63 inc.profile.php:112
+#: inc.user-add.php:40 inc.user-edit.php:38 inc.user-verify.php:63
 msgid "Username"
 msgstr ""
 "Gebruikers\n"
@@ -240,19 +240,6 @@ msgstr "beheer"
 #: inc.header.php:28
 msgid "logout"
 msgstr "uitloggen"
-
-#: inc.login.php:6
-msgid "Username or e-mail"
-msgstr "Gebruikersnaam of e-mail"
-
-#: inc.login.php:9 inc.profile.php:132 inc.user-add.php:55 inc.user-edit.php:67
-#: inc.user-verify.php:92
-msgid "Password"
-msgstr "Wachtwoord"
-
-#: inc.login.php:11
-msgid "Sign In"
-msgstr "Inloggen"
 
 #: inc.month-close.php:14
 msgid "This month has been booked already"
@@ -351,64 +338,69 @@ msgstr "Sommige velden zijn leeggelaten of incorrect ingevuld"
 msgid "Go back and try again"
 msgstr "Ga terug en probeer opnieuw"
 
-#: inc.profile.php:62 inc.profile.php:111 inc.user-add.php:48
-#: inc.user-verify.php:68
+#: inc.profile.php:71 inc.profile.php:120 inc.user-add.php:48
+#: inc.user-verify.php:71
 msgid "Gender"
 msgstr "Geslacht"
 
-#: inc.profile.php:66 inc.profile.php:117 inc.user-edit.php:52
-#: inc.user-verify.php:75
+#: inc.profile.php:75 inc.profile.php:126 inc.user-edit.php:52
+#: inc.user-verify.php:78
 msgid "Hourly Pay"
 msgstr "Uurloon"
 
-#: inc.profile.php:70 inc.profile.php:119 inc.user-edit.php:54
-#: inc.user-verify.php:77
+#: inc.profile.php:79 inc.profile.php:128 inc.user-edit.php:54
+#: inc.user-verify.php:80
 msgid "Sunday Fee"
 msgstr "Zondag vergoeding"
 
-#: inc.profile.php:74 inc.profile.php:124 inc.user-edit.php:59
-#: inc.user-verify.php:83
+#: inc.profile.php:83 inc.profile.php:133 inc.user-edit.php:59
+#: inc.user-verify.php:86
 msgid "Language"
 msgstr "Taal"
 
-#: inc.profile.php:86
+#: inc.profile.php:95
 msgid "ADMINISTRATOR"
 msgstr "BEHEERDER"
 
-#: inc.profile.php:93
+#: inc.profile.php:102
 msgid "Edit my profile"
 msgstr "Mijn profiel aanpassen"
 
-#: inc.profile.php:95 inc.user-edit.php:30
+#: inc.profile.php:104 inc.user-edit.php:30
 msgid "General Settings"
 msgstr "Algemene Instellingen"
 
-#: inc.profile.php:115 inc.user-edit.php:50 inc.user-verify.php:73
+#: inc.profile.php:124 inc.user-edit.php:50 inc.user-verify.php:76
 msgid "Payment Settings"
 msgstr "Loon en vergoeding"
 
-#: inc.profile.php:122 inc.user-edit.php:57 inc.user-verify.php:81
+#: inc.profile.php:131 inc.user-edit.php:57 inc.user-verify.php:84
 msgid "Language Settings"
 msgstr "Taal Instellingen"
 
-#: inc.profile.php:130 inc.user-edit.php:65
+#: inc.profile.php:139 inc.user-edit.php:65
 msgid "Password Settings"
 msgstr "Wachtwoord Instellen"
 
-#: inc.profile.php:133 inc.user-edit.php:68
+#: inc.profile.php:141 inc.user-add.php:55 inc.user-edit.php:67
+#: inc.user-verify.php:95
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: inc.profile.php:142 inc.user-edit.php:68
 msgid "Enter new password"
 msgstr "Nieuw wachtwoord"
 
-#: inc.profile.php:136 inc.user-add.php:59 inc.user-edit.php:71
-#: inc.user-verify.php:96
+#: inc.profile.php:145 inc.user-add.php:59 inc.user-edit.php:71
+#: inc.user-verify.php:99
 msgid "Password (repeat)"
 msgstr "Wachtwoord (herhalen)"
 
-#: inc.profile.php:137 inc.user-edit.php:72
+#: inc.profile.php:146 inc.user-edit.php:72
 msgid "Repeat new password"
 msgstr "Herhaal nieuw wachtwoord"
 
-#: inc.profile.php:139 inc.shift-edit.php:34 inc.user-edit.php:74
+#: inc.profile.php:148 inc.shift-edit.php:34 inc.user-edit.php:74
 msgid "Save Changes"
 msgstr "Aanpassen"
 
@@ -456,27 +448,27 @@ msgstr "Een gebruiker met opgegeven gebruikersnaam/e-mail bestaat al"
 msgid "Add a new user"
 msgstr "Voeg nieuwe gebruiker toe"
 
-#: inc.user-add.php:29 inc.user-verify.php:49
+#: inc.user-add.php:29 inc.user-verify.php:52
 msgid "Basic information"
 msgstr "Algemene Informatie"
 
-#: inc.user-add.php:49 inc.user-verify.php:69
+#: inc.user-add.php:49 inc.user-verify.php:72
 msgid "Male"
 msgstr "Man"
 
-#: inc.user-add.php:50 inc.user-verify.php:70
+#: inc.user-add.php:50 inc.user-verify.php:73
 msgid "Female"
 msgstr "Vrouw"
 
-#: inc.user-add.php:53 inc.user-verify.php:90
+#: inc.user-add.php:53 inc.user-verify.php:93
 msgid "User password"
 msgstr "Wachtwoord"
 
-#: inc.user-add.php:56 inc.user-verify.php:93
+#: inc.user-add.php:56 inc.user-verify.php:96
 msgid "Enter a password"
 msgstr "Wachtwoord"
 
-#: inc.user-add.php:60 inc.user-verify.php:97
+#: inc.user-add.php:60 inc.user-verify.php:100
 msgid "Repeat password"
 msgstr "Herhaal Wachtwoord"
 
@@ -520,13 +512,27 @@ msgstr "Je account is succesvol aangemaakt"
 msgid "Proceed to the login page"
 msgstr "Doorgaan naar login pagina"
 
-#: inc.user-verify.php:48
+#: inc.user-verify.php:47
+msgid ""
+"Your password will be encrypted upon registration. Nobody will be able to "
+"view or decrypt your password"
+msgstr ""
+"Je wachtwoord wordt versleuteld na je registratie. Anderen zullen dit dus "
+"niet kunnen bekijken of ontcijferen"
+
+#: inc.user-verify.php:51
 msgid "Finish your registration"
 msgstr "Voltooi je registratie"
 
-#: inc.user-verify.php:100
+#: inc.user-verify.php:103
 msgid "Register"
 msgstr "Registreer"
+
+#~ msgid "Username or e-mail"
+#~ msgstr "Gebruikersnaam of e-mail"
+
+#~ msgid "Sign In"
+#~ msgstr "Inloggen"
 
 #~ msgid "Change Language"
 #~ msgstr "Wijzig Taal"

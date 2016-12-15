@@ -468,3 +468,19 @@ main {
 }
 
 /** END Main content. *********************************************************/
+
+/** BEGIN User Verification content. ******************************************/
+
+.info-important {
+    background-color: #C11119;
+    opacity: 0.6;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.info-important h4 {
+    font-weight: normal;
+}
+
+/** END User Verification content. ********************************************/
