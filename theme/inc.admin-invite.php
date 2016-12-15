@@ -28,7 +28,7 @@
                 <label class="stdLabelWidth spacingBottom"><?php echo translate("Name"); ?>: </label>
                 <input type="text" name="user_name" placeholder="John Doe">
             </div>
-            <input type="submit" class="button spacingTop" name="send_invite" value="<?php echo translate("Send Invite"); ?>">
+            <input type="submit" class="button" name="send_invite" value="<?php echo translate("Send Invite"); ?>">
             </form>
         </div>
     </div>
