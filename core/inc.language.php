@@ -16,14 +16,11 @@
 
     /**
      * Work out what language to display, based on the logged in user's language.
-     * If the user is currently verifying their account on the verification page, the language provided by the inviting admin will be applied.
      * If no user is logged in, we use the default language, defined in the main configuration of the application.
      */
     if($app->isLoggedIn()) {
         $user = $app->getUser();
         $lang = $user->getLanguage();
-    }elseif($app->isVerifying()) {
-        $lang = $app->getVerificationLanguage();
     }else{
         $lang = $app->getConfiguration("default_lang");
     }
