@@ -25,14 +25,15 @@ class PageUserVerify extends AbstractPage {
     private $mFooter;
 
     private $mDbHandle;
-    
+
     private $mToken;
-    
+
     private $mUsername;
+    private $mEmail;
+    private $mLanguage;
     private $mPay;
     private $mFee;
-    private $mLanguage;
-    
+
     private $mInvalidToken = false;
     private $mVerified = false;
     private $mUserAdded = false;
@@ -53,7 +54,7 @@ class PageUserVerify extends AbstractPage {
     private function addScripts() {
         $this->mFooter->addScript("jquery.min.js");
     }
-    
+
     private function verifyToken() {
         $sql = "SELECT token
                 FROM tokens
@@ -69,9 +70,9 @@ class PageUserVerify extends AbstractPage {
             return;
         }
     }
-    
-    private function fetchEmail($token) {
-        $sql = "SELECT email
+
+    private function fetchEmail() {
+        $sql = "SELECT email,
                 FROM tokens
                 WHERE token = :token";
         $statement = $this->mDbHandle->prepare($sql);
@@ -81,7 +82,19 @@ class PageUserVerify extends AbstractPage {
         if($result)
             return $result['email'];
     }
-    
+
+    private function fetchLanguage() {
+        $sql = "SELECT lang
+                FROM tokens
+                WHERE token = :token";
+        $statement = $this->mDbHandle->prepare($sql);
+        $statement->bindParam(":token", $this->mToken);
+        $statement->execute();
+        $result = $statement->fetch();
+        if($result)
+            return $result['lang'];
+    }
+
     private function deleteToken() {
         $sql = "DELETE FROM tokens
                 WHERE token = :token";
@@ -89,7 +102,7 @@ class PageUserVerify extends AbstractPage {
         $statement->bindParam(":token", $this->mToken);
         $statement->execute();
     }
-    
+
     private function checkData()
     {
         $sql = "SELECT id
@@ -109,8 +122,8 @@ class PageUserVerify extends AbstractPage {
             return;
         }
     }
-    
-    private function addUser($username, $password, $email, $name, $surname, $gender, $lastip) {        
+
+    private function addUser($username, $password, $email, $name, $surname, $gender, $lastip) {
         if(isset($_POST['hourly_pay'])) {
             $this->mPay = $_POST['hourly_pay'];
         }else{
@@ -121,10 +134,6 @@ class PageUserVerify extends AbstractPage {
         }else{
             $this->mFee = Application::getInstance()->getConfiguration("sunday_fee");
         }
-        if(isset($_POST['language'])) {
-        }else{
-            $this->mLanguage = Application::getInstance()->getConfiguration("default_lang");
-        }
         if($_POST['language'] == 'Nederlands') {
             $this->mLanguage = 'nl_BE';
         }elseif($_POST['language'] == 'English') {
@@ -132,7 +141,7 @@ class PageUserVerify extends AbstractPage {
         }else{
             $this->mLanguage = Application::getInstance()->getConfiguration("default_lang");
         }
-        
+
         $sql = "INSERT INTO
                 users (username, password, email, name, surname, gender, last_ip)
                 VALUES (:username, :password, :email, :name, :surname, :gender, :lastip)";
@@ -145,11 +154,13 @@ class PageUserVerify extends AbstractPage {
         $statement->bindParam(":gender", $gender);
         $statement->bindParam(":lastip", $lastip);
         $statement->execute();
-        
+
         $this->addPaymentInfo();
         $this->addLanguage();
         $this->deleteToken();
+
         $this->mUserAdded = true;
+        Application::getInstance()->setVerifying(false);
     }
 
     private function addPaymentInfo() {
@@ -163,7 +174,7 @@ class PageUserVerify extends AbstractPage {
         $statement->bindParam(":sundayfee", $this->mFee);
         $statement->execute();
     }
-    
+
     private function addLanguage() {
         $id = $this->fetchUserId();
         $sql = "INSERT INTO
@@ -173,6 +184,8 @@ class PageUserVerify extends AbstractPage {
         $statement->bindParam(":userid", $id);
         $statement->bindParam(":lang", $this->mLanguage);
         $statement->execute();
+
+        Application::getInstance()->setVerificationLanguage($this->mLanguage);
     }
 
     private function fetchUserId() {
@@ -186,7 +199,7 @@ class PageUserVerify extends AbstractPage {
         if($result)
             return $result['id'];
     }
-    
+
     private function verifyInput() {
         $this->mUsername = $_POST['user_username'];
         $password = hashString($_POST['user_password']);
@@ -196,11 +209,11 @@ class PageUserVerify extends AbstractPage {
         $surname = $_POST['user_surname'];
         $gender = $_POST['user_gender'];
         $lastip = $_POST['user_ip'];
-        
+
         // Make sure passwords match
         if($password != $passwordR)
             return;
-        
+
         // Make sure all fields are entered
         if(strlen($this->mUsername) == 0 || strlen($password) == 0 || strlen($passwordR) == 0 || strlen($email) == 0 || strlen($name) == 0 || strlen($surname) == 0 || !isset($_POST['language'])) {
             $this->mInvalidInput = true;
@@ -211,7 +224,7 @@ class PageUserVerify extends AbstractPage {
                 $this->addUser($this->mUsername, $password, $email, $name, $surname, $gender, $lastip);
             }else{
                 $this->mInvalidInput = true;
-                return;   
+                return;
             }
         }
     }
@@ -222,10 +235,12 @@ class PageUserVerify extends AbstractPage {
             $this->initializeViewElements();
             $this->initializeDatabaseConnection();
             $this->addScripts();
-            
+
             $this->mToken = Application::getInstance()->getRouter()->getSegment(2);
-            $this->mEmail = $this->fetchEmail($this->mToken);
-            
+            $this->mEmail = $this->fetchEmail();
+            $this->mLanguage = $this->fetchLanguage();
+            Application::getInstance()->setVerifying(true);
+
             if(isset($_POST['add_user'])) {
                 $this->verifyInput();
             }else{
@@ -235,27 +250,27 @@ class PageUserVerify extends AbstractPage {
             redirectInternally("/");
         }
     }
-    
+
     public function invalidToken() {
         return $this->mInvalidToken;
     }
-    
+
     public function invalidInput() {
         return $this->mInvalidInput;
     }
-    
+
     public function isVerified() {
         return $this->mVerified;
     }
-    
+
     public function getEmail() {
         return $this->mEmail;
     }
-    
+
     public function userAdded() {
         return $this->mUserAdded;
     }
-    
+
     public function userExists() {
         return $this->mExistingUser;
     }

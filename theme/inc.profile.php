@@ -2,7 +2,7 @@
     <?php
     use \Carbon\Application\Application;
     $user = $this->getUser();
-    	
+
     if( $this->userUpdated() ) { ?>
     <div class="panel panelSeparatorTop">
         <div class="panelContent">
@@ -21,7 +21,7 @@
     <div class="panel panelSeparatorTop">
         <div class="panelContent">
             <h2><?php echo translate("Invalid Input"); ?></h2>
-            
+
             <p>
                 <?php echo translate("Some fields were left empty or were not filled in correctly"); ?>
             </p>
@@ -38,7 +38,7 @@
         } elseif( $user->isFemale() ) {
             $femaleChecked = 'checked="checked"';
         }
-        
+
         // noob way of doing it, but it works, yay.
         $enSelected = "";
         $nlSelected = "";
@@ -55,7 +55,7 @@
                     <label class="stdLabelWidth"><?php echo translate("Name"); ?></label>
                     <?php echo $user->getName(); ?>
                     <label class="spacingRight"></label>
-                    
+
                     <label class="stdLabelWidth"><?php echo translate("Surname"); ?></label>
                     <?php echo $user->getSurName(); ?>
                 </div>

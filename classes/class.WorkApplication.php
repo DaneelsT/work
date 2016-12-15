@@ -20,24 +20,35 @@ class WorkApplication extends Application
 	 * Holds the database handle.
 	 */
     private $mDatabaseHandle = null;
-	
+
 	/**
      * Contains the logged-in user.
      */
     private $mUser = null;
-	
+
+	/**
+	 * Contains the state wheter the user is registering using the verification page or not.
+	 */
+	private $mUserVerifying = false;
+
+	/**
+	 * Contains the language of the user who is currently verifying his account
+	 * with the language provided by the admin who sent the invite.
+	 */
+	private $mVerificationLanguage = null;
+
     private function startSession()
     {
         session_start();
     }
-    
+
     private function destroySession()
     {
 		session_destroy();
 		unset($this->mUser);
 		$this->mUser = null;
     }
-    
+
     private function loadSessionData()
     {
 		if( isset($_SESSION['user']) )
@@ -48,7 +59,7 @@ class WorkApplication extends Application
         $this->startSession();
         $this->loadSessionData();
     }
-    
+
     public function __destruct()
     {
         $this->disconnectFromDatabase();
@@ -58,7 +69,7 @@ class WorkApplication extends Application
 			$_SESSION['user'] = serialize($this->mUser);
         }
     }
-	
+
     public function connectToDatabase() {
         // Check if a database connection is already available.
         if ($this->mDatabaseHandle == null) {
@@ -85,27 +96,43 @@ class WorkApplication extends Application
     public function isConnectedToDatabase() {
         return $this->mDatabaseHandle != null;
     }
-	
+
 	public function setUser($user)
     {
 		$this->mUser = $user;
 		if( $user == null )
 			$this->destroySession();
     }
-    
+
     public function logOut()
     {
         $this->destroySession();
     }
-    
+
     public function getUser()
     {
         return $this->mUser;
     }
-    
+
     public function isLoggedIn()
     {
         return ( $this->mUser != null );
     }
+
+	public function setVerifying($state) {
+		$this->mUserVerifying = $state;
+	}
+
+	public function isVerifying() {
+		return ( $this->mUserVerifying );
+	}
+
+	public function setVerificationLanguage($lang) {
+		$this->mVerificationLanguage = $lang;
+	}
+
+	public function getVerificationLanguage() {
+		return $this->mVerificationLanguage;
+	}
 
 }
