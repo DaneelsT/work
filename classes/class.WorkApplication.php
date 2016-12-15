@@ -26,17 +26,6 @@ class WorkApplication extends Application
      */
     private $mUser = null;
 
-	/**
-	 * Contains the state wheter the user is registering using the verification page or not.
-	 */
-	private $mUserVerifying = false;
-
-	/**
-	 * Contains the language of the user who is currently verifying his account
-	 * with the language provided by the admin who sent the invite.
-	 */
-	private $mVerificationLanguage = null;
-
     private function startSession()
     {
         session_start();
@@ -118,21 +107,5 @@ class WorkApplication extends Application
     {
         return ( $this->mUser != null );
     }
-
-	public function setVerifying($state) {
-		$this->mUserVerifying = $state;
-	}
-
-	public function isVerifying() {
-		return ( $this->mUserVerifying );
-	}
-
-	public function setVerificationLanguage($lang) {
-		$this->mVerificationLanguage = $lang;
-	}
-
-	public function getVerificationLanguage() {
-		return $this->mVerificationLanguage;
-	}
 
 }

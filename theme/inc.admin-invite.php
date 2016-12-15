@@ -25,15 +25,8 @@
                 <input type="text" name="user_email" placeholder="johndoe@mail.com">
             </div>
             <div>
-                <label class="stdLabelWidth"><?php echo translate("Name"); ?>: </label>
+                <label class="stdLabelWidth spacingBottom"><?php echo translate("Name"); ?>: </label>
                 <input type="text" name="user_name" placeholder="John Doe">
-            </div>
-            <div>
-                <label class="stdLabelWidth"><?php echo translate("Language"); ?></label>
-                <select name="language">
-                    <option name="nl_BE" value="nl_BE">Nederlands</option>
-                    <option name="en_US" value="en_US">English</option>
-                </select>
             </div>
             <input type="submit" class="button spacingTop" name="send_invite" value="<?php echo translate("Send Invite"); ?>">
             </form>

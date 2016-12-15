@@ -1,12 +1,12 @@
 /**
  *	The main script file responsible for handling script execution.
- * 
+ *
  * 	@author Gaetan Dumortier
  * 	@since 24 October 2016
  */
 
 /**
- *  Responsible for creating input masks for the start and end time fields. 
+ *  Responsible for creating input masks for the start and end time fields.
  */
 function createMasks() {
     $('#startTime').mask('00:00', {'translation': {0: {pattern: /[0-9*]/}}});
@@ -37,7 +37,7 @@ function validateTime(time) {
 }
 
 /**
- *  Responsible for displaying a confirmation box when the book month button has been clicked. 
+ *  Responsible for displaying a confirmation box when the book month button has been clicked.
  */
 function closeMonthConfirmation() {
     $("#closemonth").click(function() {
@@ -51,20 +51,20 @@ function closeMonthConfirmation() {
 $(document).ready(function() {
     // Create the input masks.
     createMasks();
-    
+
     // Called when the startTime fields changes.
     $("#startTime").change(function() {
         appendMinutes("start");
         validateTime("start");
     });
-    
+
     // Called when the endTime fields changes.
     $("#endTime").change(function() {
         appendMinutes("end");
         validateTime("end");
     });
-    
+
     // Called when the book month button has been clicked.
     closeMonthConfirmation();
-    
+
 });

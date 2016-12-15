@@ -30,9 +30,9 @@ class PageUserVerify extends AbstractPage {
 
     private $mUsername;
     private $mEmail;
-    private $mLanguage;
     private $mPay;
     private $mFee;
+    private $mLanguage;
 
     private $mInvalidToken = false;
     private $mVerified = false;
@@ -72,7 +72,7 @@ class PageUserVerify extends AbstractPage {
     }
 
     private function fetchEmail() {
-        $sql = "SELECT email,
+        $sql = "SELECT email
                 FROM tokens
                 WHERE token = :token";
         $statement = $this->mDbHandle->prepare($sql);
@@ -81,18 +81,6 @@ class PageUserVerify extends AbstractPage {
         $result = $statement->fetch();
         if($result)
             return $result['email'];
-    }
-
-    private function fetchLanguage() {
-        $sql = "SELECT lang
-                FROM tokens
-                WHERE token = :token";
-        $statement = $this->mDbHandle->prepare($sql);
-        $statement->bindParam(":token", $this->mToken);
-        $statement->execute();
-        $result = $statement->fetch();
-        if($result)
-            return $result['lang'];
     }
 
     private function deleteToken() {
@@ -134,10 +122,8 @@ class PageUserVerify extends AbstractPage {
         }else{
             $this->mFee = Application::getInstance()->getConfiguration("sunday_fee");
         }
-        if($_POST['language'] == 'Nederlands') {
-            $this->mLanguage = 'nl_BE';
-        }elseif($_POST['language'] == 'English') {
-            $this->mLanguage = 'en_EN';
+        if(isset($_POST['language'])) {
+            $this->mLanguage = $_POST['language'];
         }else{
             $this->mLanguage = Application::getInstance()->getConfiguration("default_lang");
         }
@@ -158,9 +144,7 @@ class PageUserVerify extends AbstractPage {
         $this->addPaymentInfo();
         $this->addLanguage();
         $this->deleteToken();
-
         $this->mUserAdded = true;
-        Application::getInstance()->setVerifying(false);
     }
 
     private function addPaymentInfo() {
@@ -184,8 +168,6 @@ class PageUserVerify extends AbstractPage {
         $statement->bindParam(":userid", $id);
         $statement->bindParam(":lang", $this->mLanguage);
         $statement->execute();
-
-        Application::getInstance()->setVerificationLanguage($this->mLanguage);
     }
 
     private function fetchUserId() {
@@ -238,8 +220,6 @@ class PageUserVerify extends AbstractPage {
 
             $this->mToken = Application::getInstance()->getRouter()->getSegment(2);
             $this->mEmail = $this->fetchEmail();
-            $this->mLanguage = $this->fetchLanguage();
-            Application::getInstance()->setVerifying(true);
 
             if(isset($_POST['add_user'])) {
                 $this->verifyInput();

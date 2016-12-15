@@ -47,16 +47,11 @@ class PageAdminInviteUser extends AbstractAuthorizedPage {
         $this->mFooter->addScript("jquery.min.js");
     }
 
-    private function verifyInput() {
+    private function verifyEmail() {
         if(strlen($_POST['user_name']) == 0 || strlen($_POST['user_email']) == 0)
             return;
 
         if(validEmail($_POST['user_email'])) {
-            if(isset($_POST['lang'])) {
-                $this->mLanguage = $_POST['lang'];
-            }else{
-                $this->mLanguage = Application::getInstance()->getConfiguration("default_lang");
-            }
             $this->inviteUser();
         }else{
             $this->mInvalidEmail = true;
@@ -76,8 +71,8 @@ class PageAdminInviteUser extends AbstractAuthorizedPage {
 
     private function addToken() {
         $sql = "INSERT INTO
-                tokens (token, email, lang)
-                VALUES (:token, :email, :lang)";
+                tokens (token, email)
+                VALUES (:token, :email)";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(":token", $this->mToken);
         $statement->bindParam(":email", $this->mEmail);
@@ -94,7 +89,7 @@ class PageAdminInviteUser extends AbstractAuthorizedPage {
             $this->addScripts();
 
             if(isset($_POST['send_invite']))
-                $this->verifyInput();
+                $this->verifyEmail();
         }else{
             redirectInternally("/");
         }
