@@ -14,7 +14,7 @@
                 <strong style="font-size: 15px;"><?php echo translate("Current earnings") . " (" . translate("without fees"); ?>):</strong> &euro; <?php echo $totalPay; ?><br />
                 <strong style="color:green;font-size:15px;"><?php echo translate("Current earnings") . " (" . translate("with fees"); ?>):</strong> &euro; <?php echo $totalPayWithFees; ?><br />
                 <strong><?php echo translate("Current month"); ?>:</strong> <?php echo $currentMonth; ?><br /><br />
-                
+
                 <strong><?php echo translate("Earnings per hour"); ?>:</strong> &euro; <?php echo $payPerHour; ?><br />
                 <strong><?php echo translate("Sunday fee"); ?>:</strong> &euro; <?php echo $sundayFee; ?><br />
                 <strong><?php echo translate("Hours worked"); ?>:</strong> <?php echo $hoursWorked; ?><br />
@@ -24,7 +24,7 @@
     <div class="panel panelSeparatorBottom" style="width:29%;float:left;">
         <div class="panelContent">
             <h2><?php echo translate("Add a new shift"); ?></h2>
-            
+
             <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
                 <div>
                     <label class="stdLabelWidth"><?php echo translate("Date"); ?></label>
@@ -51,7 +51,6 @@
             <h2><?php echo translate("Current Shifts"); ?> - <?php echo $currentMonth; ?> <a href="<?php echo placeHttpRoot(); ?>month/close" id="closemonth" class="button right"><?php echo translate("Close Month"); ?></a></h2>
             <table class="width50">
         		<tr>
-	            	<th>ID</th>
 	            	<th><?php echo translate("Date"); ?></th>
 	            	<th><?php echo translate("Start Time"); ?></th>
 	            	<th><?php echo translate("End Time"); ?></th>
@@ -74,9 +73,8 @@
 					$hoursWorked = (int)$timeDifference / 60 / 60;
 					$minutesWorked = (int)($timeDifference - ($hoursWorked * 60 * 60)) / 60;
 					$dayHours = ($hoursWorked + ($minutesWorked / 60));
-					
+
                 	$html .= '<tr>';
-                    $html .= '<td>' . $shift->getId() . '</td>';
                     $html .= '<td>' . $dateFormatted . '</td>';
                     $html .= '<td>' . $startTime . '</td>';
                     $html .= '<td>' . $endTime . '</td>';
