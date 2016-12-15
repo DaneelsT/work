@@ -39,14 +39,26 @@ function validateTime(time) {
 /**
  *  Responsible for displaying a confirmation box when the book month button has been clicked.
  */
-function closeMonthConfirmation() {
-    $("#closemonth").click(function() {
-        var confirmation = confirm("Are you sure you want to book and close this month?\nThere is no going back!");
-        if(confirmation == false) {
-            return false;
-        }
-    });
-}
+ function closeMonthConfirmation() {
+     var button = $("#closemonth");
+     var text;
+
+      // Work out which language we are using and set correct text for confirmation window
+     if(button.text().toLowerCase() == "close month") {
+         text = "Are you sure you want to book and close this month?\nThere is no going back!";
+     }else if(button.text().toLowerCase() == "sluit maand") {
+         text = "Ben je zeker dat je deze maand wilt boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
+     }else{
+         text = "Are you sure you want to book and close this month?\nThere is no going back!";
+     }
+
+     $(button).click(function() {
+         var confirmation = confirm(text);
+         if(confirmation == false) {
+             return false;
+         }
+     });
+ }
 
 $(document).ready(function() {
     // Create the input masks.
