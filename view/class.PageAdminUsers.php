@@ -13,7 +13,7 @@ use \Carbon\Application\Application;
 use \Work\Page\AbstractAuthorizedPage;
 use \Work\User\User;
 use \Work\UI\ViewHeader;
-use \Work\UI\ViewFooter;
+use \Work\UI\ViewFooterNoFooter;
 use \PDO;
 
 class PageAdminUsers extends AbstractAuthorizedPage {
@@ -23,14 +23,14 @@ class PageAdminUsers extends AbstractAuthorizedPage {
 
     private $mHeader;
     private $mFooter;
-	
+
 	private $mUsers = array();
 
     private $mDbHandle;
 
     private function initializeViewElements() {
         $this->mHeader = new ViewHeader(self::TITLE);
-        $this->mFooter = new ViewFooter();
+        $this->mFooter = new ViewFooterNoFooter();
     }
 
     private function initializeDatabaseConnection() {
@@ -42,7 +42,7 @@ class PageAdminUsers extends AbstractAuthorizedPage {
     private function addScripts() {
         $this->mFooter->addScript("jquery.min.js");
 	}
-	
+
 	private function fetchAllUsers() {
 		$sql = "SELECT *
 				FROM users";
@@ -71,13 +71,13 @@ class PageAdminUsers extends AbstractAuthorizedPage {
 	        $this->initializeViewElements();
 	        $this->initializeDatabaseConnection();
 	        $this->addScripts();
-			
+
 			$this->fetchAllUsers();
 		}else{
 			redirectInternally("/");
 		}
 	}
-	
+
 	public function getUsers() {
 		return $this->mUsers;
 	}

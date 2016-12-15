@@ -89,7 +89,7 @@ function getLastDayInMonth($inp) {
     return date("t", strtotime(date("d-$inp-y")));
 }
 
-function dayIsSunday($inp) {    
+function dayIsSunday($inp) {
     if(date("w", strtotime($inp)) == 0) {
         return true;
     }
@@ -156,7 +156,7 @@ function hashString($string) {
     $app = Application::getInstance();
     $presalt = $app->getConfiguration("sec_presalt");
     $postsalt = $app->getConfiguration("sec_postsalt");
-    
+
     return sha1($presalt . $string . $postsalt);
 }
 
