@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS `api_keys` (
   `id` int(11) NOT NULL,
   `apikey` varchar(50) NOT NULL,
   `userid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `months` (
   `id` int(11) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `months` (
   `earnings` decimal(10,2) NOT NULL,
   `sundaysWorked` int(11) NOT NULL,
   `userid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `shifts` (
   `id` int(11) NOT NULL,
@@ -21,13 +21,13 @@ CREATE TABLE IF NOT EXISTS `shifts` (
   `endTime` int(10) unsigned NOT NULL,
   `isSunday` tinyint(4) NOT NULL,
   `userid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `tokens` (
   `id` int(11) NOT NULL,
   `token` varchar(255) NOT NULL,
   `email` varchar(60) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `disabled` int(11) NOT NULL DEFAULT '0',
   `last_ip` varchar(45) NOT NULL,
   `admin` int(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `users_language` (
   `userid` int(11) NOT NULL,
@@ -63,7 +63,18 @@ ALTER TABLE `tokens`
     ADD PRIMARY KEY (`id`);
 ALTER TABLE `users`
     ADD PRIMARY KEY (`id`);
-ALTER TABLE `users_pay`
-    ADD PRIMARY KEY (`userid`);
 ALTER TABLE `users_language`
     ADD PRIMARY KEY (`userid`);
+ALTER TABLE `users_pay`
+    ADD PRIMARY KEY (`userid`);
+
+ALTER TABLE `api_keys`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `months`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `shifts`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tokens`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
