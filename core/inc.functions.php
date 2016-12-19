@@ -184,5 +184,4 @@ function registerPages($router) {
     $router->registerPage(\Work\Page\PageApiUsers::PATH, "Work\Page\PageApiUsers");
     $router->registerpage(\Work\Page\PageApiShift::PATH, "Work\Page\PageApiShift");
     $router->registerpage(\Work\Page\PageApiShifts::PATH, "Work\Page\PageApiShifts");
-    $router->registerPage(\Work\Page\PageApiTest::PATH, "Work\Page\PageApiTest");
 }
