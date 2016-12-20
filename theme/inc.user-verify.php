@@ -67,7 +67,7 @@
                     <label class="stdLabelWidth"><?php echo translate("E-mail"); ?></label>
                     <input type="text" name="user_email" value="<?php echo $this->getEmail(); ?>" disabled>
                 </div>
-                <div class="formContainerSeparator">
+                <div class="formContainerSeparator formSeparator">
                     <label class="stdLabelWidth"><?php echo translate("Gender"); ?></label>
                     <input type="radio" name="user_gender" value="1" checked><?php echo translate("Male"); ?>
                     <input type="radio" name="user_gender" class="spacingLeft" value="2"><?php echo translate("Female"); ?>
