@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
 "POT-Creation-Date: 2016-12-20 03:44+0100\n"
-"PO-Revision-Date: 2016-12-20 04:21+0100\n"
+"PO-Revision-Date: 2016-12-20 04:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -569,7 +569,7 @@ msgstr "Gevraagde gebruiker niet gevonden"
 
 #: view/class.PageUserEdit.php:46
 msgid "Edit this user"
-msgstr "Shift aanpassen"
+msgstr "Gebruiker aanpassen"
 
 #: view/class.PageUserVerify.php:22
 msgid "Verify Account"
