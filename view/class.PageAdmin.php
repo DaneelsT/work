@@ -20,7 +20,7 @@ use \PDO;
 class PageAdmin extends AbstractAuthorizedPage {
 
     const PATH = "/admin$";
-    private $mTitle = "Beheer";
+    private $mTitle = "Admin";
 
     private $mHeader;
     private $mFooter;
