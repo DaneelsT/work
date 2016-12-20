@@ -20,7 +20,7 @@ class PageMonth extends AbstractAuthorizedPage {
 
     const PATH = "/month$";
     // const TITLE = "Monthly Overview";
-    const title = translate("Monthly Overview");
+    const TITLE = translate("Monthly Overview");
 
     private $mHeader;
     private $mFooter;
