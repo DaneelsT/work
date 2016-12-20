@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
 "POT-Creation-Date: 2016-12-20 03:44+0100\n"
-"PO-Revision-Date: 2016-12-20 04:18+0100\n"
+"PO-Revision-Date: 2016-12-20 04:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -572,6 +572,14 @@ msgstr "Edit this user"
 #: view/class.PageUserVerify.php:22
 msgid "Verify Account"
 msgstr "Verify Account"
+
+#: view/class.PageShiftEdit.php:36
+msgid "Specified shift not found"
+msgstr "Specified shift not found"
+
+#: view/class.PageshiftEdit.php:38
+msgid "Edit this shift"
+msgstr "Edit this shift"
 
 #~ msgid "Username or e-mail"
 #~ msgstr "Username or e-mail"

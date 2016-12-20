@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
 "POT-Creation-Date: 2016-12-20 03:44+0100\n"
-"PO-Revision-Date: 2016-12-20 04:18+0100\n"
+"PO-Revision-Date: 2016-12-20 04:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -80,7 +80,7 @@ msgstr ""
 
 #: theme/inc.admin-shift.php:38 theme/inc.dashboard.php:12
 msgid "Current Earnings"
-msgstr "Momenteel verdiend"
+msgstr "Momenteel Verdiend"
 
 #: theme/inc.admin-shift.php:40 theme/inc.admin-shift.php:41
 #: theme/inc.dashboard.php:14 theme/inc.dashboard.php:15
@@ -574,6 +574,14 @@ msgstr "Shift aanpassen"
 #: view/class.PageUserVerify.php:22
 msgid "Verify Account"
 msgstr "Account verifiëren"
+
+#: view/class.PageShiftEdit.php:36
+msgid "Specified shift not found"
+msgstr "Gevraagde shift niet gevonden"
+
+#: view/class.PageshiftEdit.php:38
+msgid "Edit this shift"
+msgstr "Shift aanpassen"
 
 #~ msgid "Username or e-mail"
 #~ msgstr "Gebruikersnaam of e-mail"
