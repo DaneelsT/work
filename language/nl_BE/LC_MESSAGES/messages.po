@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
 "POT-Creation-Date: 2016-12-20 03:44+0100\n"
-"PO-Revision-Date: 2016-12-20 04:29+0100\n"
+"PO-Revision-Date: 2016-12-20 04:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -582,6 +582,10 @@ msgstr "Gevraagde shift niet gevonden"
 #: view/class.PageshiftEdit.php:38
 msgid "Edit this shift"
 msgstr "Shift aanpassen"
+
+#: view/class.PageAdmin.php:23
+msgid "Admin"
+msgstr "Beheer"
 
 #~ msgid "Username or e-mail"
 #~ msgstr "Gebruikersnaam of e-mail"
