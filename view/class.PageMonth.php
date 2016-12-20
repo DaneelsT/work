@@ -19,8 +19,7 @@ use \PDO;
 class PageMonth extends AbstractAuthorizedPage {
 
     const PATH = "/month$";
-    // const TITLE = "Monthly Overview";
-    private $mPageTitle = translate("Monthly Overview");
+    const TITLE = "Monthly Overview";
 
     private $mHeader;
     private $mFooter;
@@ -30,7 +29,7 @@ class PageMonth extends AbstractAuthorizedPage {
     private $mMonths = array();
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeader($this->mPageTitle);
+        $this->mHeader = new ViewHeader(self::TITLE);
         $this->mFooter = new ViewFooter();
     }
 
@@ -66,7 +65,7 @@ class PageMonth extends AbstractAuthorizedPage {
 
     public function __construct() {
     	parent::__construct(parent::DEFAULT_LOGIN_DIR);
-        $this->setTitle($this->mPageTitle);
+        $this->setTitle(self::TITLE);
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
 
