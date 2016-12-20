@@ -19,12 +19,11 @@ use \Work\UI\ViewFooter;
 class PageUserAdd extends AbstractAuthorizedPage
 {
     const PATH = "/user/add$";
-
-    const TITLE = "Add a user";
+    private $mTitle = "Add a user";
 
     private $mHeader;
     private $mFooter;
-	
+
 	private $mDbHandle;
 
     private $mUsername = "";
@@ -41,10 +40,10 @@ class PageUserAdd extends AbstractAuthorizedPage
     private $mExistingUser = false;
 
     private function initializeViews() {
-        $this->mHeader = new ViewHeader(self::TITLE);
+        $this->mHeader = new ViewHeader($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
-	
+
     private function initializeDatabaseConnection() {
         $app = Application::getInstance();
         $app->connectToDatabase();
@@ -85,7 +84,7 @@ class PageUserAdd extends AbstractAuthorizedPage
 		$statement->bindParam(":gender", $this->mGender);
 		$statement->bindParam(":lastip", $this->mIp);
         $statement->execute();
-        
+
         $this->mUserAdded = true;
         // TODO: add success message
     }
@@ -100,7 +99,7 @@ class PageUserAdd extends AbstractAuthorizedPage
         $this->mPassword = hashString($_POST['user_password']);
         $this->mRPassword = hashString($_POST['user_password_repeat']);
         $this->mIp = $_POST['user_ip'];
-        
+
         // Check if all fields have valid entries
         if( strlen($this->mUsername) == 0 || strlen($this->mName) == 0 || strlen($this->mSurname) == 0 || strlen($this->mEmail) == 0 || strlen($this->mPassword) == 0 )
             $this->mInvalidInput = true;
@@ -136,7 +135,7 @@ class PageUserAdd extends AbstractAuthorizedPage
     public function __construct()
     {
         parent::__construct(parent::DEFAULT_LOGIN_DIR);
-        $this->setTitle(static::TITLE);
+        $this->setTitle($this->mTitle);
         $this->initializeViews();
 		$this->initializeDatabaseConnection();
 

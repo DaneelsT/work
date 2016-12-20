@@ -20,7 +20,7 @@ use \PDO;
 class PageAdmin extends AbstractAuthorizedPage {
 
     const PATH = "/admin$";
-    const TITLE = "Admin";
+    private $mTitle = "Beheer";
 
     private $mHeader;
     private $mFooter;
@@ -28,7 +28,7 @@ class PageAdmin extends AbstractAuthorizedPage {
     private $mDbHandle;
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeader(self::TITLE);
+        $this->mHeader = new ViewHeader($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
 
@@ -45,7 +45,7 @@ class PageAdmin extends AbstractAuthorizedPage {
     public function __construct() {
     	if(Application::getInstance()->getUser()->isAdmin()) {
 	    	parent::__construct(parent::DEFAULT_LOGIN_DIR);
-	        $this->setTitle(self::TITLE);
+	        $this->setTitle($this->mTitle);
 	        $this->initializeViewElements();
 	        $this->initializeDatabaseConnection();
 	        $this->addScripts();

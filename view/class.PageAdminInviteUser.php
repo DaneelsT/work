@@ -19,7 +19,7 @@ use \PDO;
 class PageAdminInviteUser extends AbstractAuthorizedPage {
 
     const PATH = "/admin/invite$";
-    const TITLE = "Invite a user";
+    private $mTitle = "Invite a user";
 
     private $mHeader;
     private $mFooter;
@@ -33,7 +33,7 @@ class PageAdminInviteUser extends AbstractAuthorizedPage {
     private $mEmail;
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeader(self::TITLE);
+        $this->mHeader = new ViewHeader($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
 
@@ -83,7 +83,7 @@ class PageAdminInviteUser extends AbstractAuthorizedPage {
     public function __construct() {
         if(Application::getInstance()->getUser()->isAdmin()) {
             parent::__construct(parent::DEFAULT_LOGIN_DIR);
-            $this->setTitle(self::TITLE);
+            $this->setTitle($this->mTitle);
             $this->initializeViewElements();
             $this->initializeDatabaseConnection();
             $this->addScripts();

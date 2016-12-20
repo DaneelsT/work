@@ -21,15 +21,15 @@ use \PDO;
 class PageMonthClose extends AbstractAuthorizedPage {
 
     const PATH = "/month/close$";
-    const TITLE = "Close and book current month";
+    private $mTitle = "Close and book current month";
 
     private $mHeader;
     private $mFooter;
 
     private $mDbHandle;
-    
+
     private $mAlreadyBooked = false;
-    
+
     private $mShifts = array();
 
     private $mWorkedTime = array();
@@ -43,7 +43,7 @@ class PageMonthClose extends AbstractAuthorizedPage {
     private $mSundayExtra;
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeader(self::TITLE);
+        $this->mHeader = new ViewHeader($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
 
@@ -52,12 +52,12 @@ class PageMonthClose extends AbstractAuthorizedPage {
         $app->connectToDatabase();
         $this->mDbHandle = $app->getDatabaseConnection();
     }
-    
+
     // Fetch all the current worked shifts from the database, ordered DESC by date
     private function fetchAllShifts() {
     	$app = Application::getInstance();
 		$user = $app->getUser();
-		
+
         $sql = "SELECT *
                 FROM shifts
                 WHERE userid = :userid
@@ -87,7 +87,7 @@ class PageMonthClose extends AbstractAuthorizedPage {
     public function calculateEarnings() {
     	$app = Application::getInstance();
     	$user = $app->getUser();
-		
+
         $shifts = $this->getShifts();
         $payPerHour = $user->getHourlyPay();
         $i = 0;
@@ -132,12 +132,12 @@ class PageMonthClose extends AbstractAuthorizedPage {
             $this->bookMonth();
         }
     }
-    
+
     // Book the details of the current month and insert them into the database
     private function bookMonth() {
     	$app = Application::getInstance();
 		$user = $app->getUser();
-		
+
         $currentMonth = date("n");
         $sql = "INSERT INTO months (month, hoursWorked, daysWorked, earnings, sundaysWorked, userid)
                 VALUES(:month, :hoursworked, :daysworked, :earnings, :sundaysworked, :userid)";
@@ -149,32 +149,32 @@ class PageMonthClose extends AbstractAuthorizedPage {
         $statement->bindParam(':sundaysworked', $this->mSunday);
 		$statement->bindParam(':userid', $user->getId());
         $statement->execute();
-		
+
         $this->closeMonth();
     }
-    
+
     // Close the current month by emptying the shifts table
     private function closeMonth() {
     	$app = Application::getInstance();
 		$user = $app->getUser();
-		
+
     	$sql = "DELETE FROM shifts WHERE userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
 		$statement->bindParam(':userid', $user->getId());
         $statement->execute();
     }
-    
+
     public function __construct() {
     	parent::__construct(parent::DEFAULT_LOGIN_DIR);
-        $this->setTitle(self::TITLE);
+        $this->setTitle($this->mTitle);
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
-        
+
         $this->fetchAllShifts();
         $this->calculateEarnings();
         $this->checkMonth();
     }
-    
+
     public function alreadyBooked() {
         return $this->mAlreadyBooked;
     }
@@ -182,23 +182,23 @@ class PageMonthClose extends AbstractAuthorizedPage {
     public function getShifts() {
         return $this->mShifts;
     }
-    
+
     public function getTotalPay() {
         return $this->mTotalPay;
     }
-    
+
     public function getTotalPayWithFees() {
         return $this->mTotalPay + $this->mSundayExtra;
     }
-    
+
     public function getTotalHours() {
         return $this->mTotalHours;
     }
-	
+
 	public function getDaysWorked() {
 		return $this->mDaysWorked;
 	}
-    
+
     public function getSundaysWorked() {
         return $this->mSunday;
     }

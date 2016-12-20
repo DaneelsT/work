@@ -20,7 +20,7 @@ class PageLogin extends AbstractPage
 {
 
     const PATH = "/login$";
-    const TITLE = "Log in";
+    private $mTitle = "Log in";
 
     /**
      * Additional views that need to be rendered with the login page.
@@ -37,7 +37,7 @@ class PageLogin extends AbstractPage
     private $mLanguage;
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeaderNoMenu(self::TITLE);
+        $this->mHeader = new ViewHeaderNoMenu($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
 
@@ -180,7 +180,7 @@ class PageLogin extends AbstractPage
     	if($this->loggingIn() && $this->userLogin())
 			redirectInternally("/");
 
-        $this->setTitle(static::TITLE);
+        $this->setTitle($this->mTitle);
         $this->initializeViewElements();
 		$this->addStyleSheets();
 		$this->addScripts();

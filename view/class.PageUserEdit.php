@@ -19,7 +19,7 @@ use \PDOException;
 
 class PageUserEdit extends AbstractAuthorizedPage
 {
-    
+
     const PATH = "/user/edit/[0-9]+$";
 
     private $mHeader;
@@ -35,7 +35,7 @@ class PageUserEdit extends AbstractAuthorizedPage
     private $mPay;
     private $mFee;
     private $mLanguage;
-    
+
     private $mUserUpdated = false;
     private $mUserNotFound = false;
 
@@ -43,7 +43,7 @@ class PageUserEdit extends AbstractAuthorizedPage
         if($this->mUser == null)
             $title = "Specified user not found";
         else
-            $title = "Edit " . $this->mUser->getFullName();
+            $title = "Edit this user";
         $this->mHeader = new ViewHeader($title);
         $this->mFooter = new ViewFooter();
     }
@@ -53,14 +53,14 @@ class PageUserEdit extends AbstractAuthorizedPage
         $app->connectToDatabase();
         $this->mDbHandle = $app->getDatabaseConnection();
     }
-    
+
     /**
      * Set the routed id property to the requested user's id, using the application's router
     */
     private function setRoutedId() {
         $this->mRoutedId = (int) Application::getInstance()->getRouter()->getSegment(2);
     }
-    
+
     /**
      * Fetch the requested user's data from the database
     */
@@ -126,13 +126,13 @@ class PageUserEdit extends AbstractAuthorizedPage
             $statement->bindParam(":lang", $this->mLanguage);
             $statement->bindParam(":userid", $this->mRoutedId);
             $statement->execute();
-            
+
             $this->mUserUpdated = true;
         }catch(PDOException $e) {
             die("Error executing editUser: " . $e);
         }
     }
-    
+
     /**
      * Verify the retrieved input from the submitted form and make sure its valid
     */
@@ -143,16 +143,16 @@ class PageUserEdit extends AbstractAuthorizedPage
         }else{
             $gender = $_POST['gender'];
         }
-            
+
         // Make sure no fields are left empty
         if(strlen($_POST['email']) == 0 || strlen($_POST['name']) == 0 || strlen($_POST['surname']) == 0 || !User::isValidGender($gender)
             || strlen($_POST['hourly_pay']) == 0 || strlen($_POST['sunday_fee']) == 0 || !isset($_POST['lang']))
             return;
-        
+
         // Make sure the entered passwords match
         if(hashString($_POST['password'] != hashString($_POST['password_r'])))
             return;
-        
+
         // When no return has been thrown by now, set our properties and proceed with editUser
         $this->mEmail = $_POST['email'];
         $this->mPassword = hashString($_POST['password']);
@@ -162,7 +162,7 @@ class PageUserEdit extends AbstractAuthorizedPage
         $this->mPay = $_POST['hourly_pay'];
         $this->mFee = $_POST['sunday_fee'];
         $this->mLanguage = $_POST['language'];
-        
+
         $this->editUser();
     }
 
@@ -191,15 +191,15 @@ class PageUserEdit extends AbstractAuthorizedPage
         if(Application::getInstance()->getUser()->isAdmin()) {
             parent::__construct(parent::DEFAULT_LOGIN_DIR);
             $this->initializeDatabaseConnection();
-            
+
             $this->setRoutedId();
-    
+
             if( isset($_POST['edit_user'] ) ) {
                 $this->verifyInput();
             }else{
                 $this->fetchUser();
             }
-    
+
             $this->initializeViewElements();
         }else{
             redirectInternally("/profile");

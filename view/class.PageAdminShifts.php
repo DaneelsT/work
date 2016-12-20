@@ -19,7 +19,7 @@ use \PDO;
 class PageAdminShifts extends AbstractAuthorizedPage {
 
     const PATH = "/admin/shifts$";
-    const TITLE = "View Shifts";
+    private $mTitle = "View Shifts";
 
     private $mHeader;
     private $mFooter;
@@ -29,7 +29,7 @@ class PageAdminShifts extends AbstractAuthorizedPage {
     private $mDbHandle;
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeader(self::TITLE);
+        $this->mHeader = new ViewHeader($this->mTitle);
         $this->mFooter = new ViewFooterNoFooter();
     }
 
@@ -67,7 +67,7 @@ class PageAdminShifts extends AbstractAuthorizedPage {
     public function __construct() {
         if(Application::getInstance()->getUser()->isAdmin()) {
             parent::__construct(parent::DEFAULT_LOGIN_DIR);
-            $this->setTitle(self::TITLE);
+            $this->setTitle($this->mTitle);
             $this->initializeViewElements();
             $this->initializeDatabaseConnection();
             $this->addScripts();

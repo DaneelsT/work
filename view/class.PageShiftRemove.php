@@ -19,8 +19,8 @@ use \PDOException;
 
 class PageShiftRemove extends AbstractAuthorizedPage {
 
-    const TITLE = "Remove shift";
     const PATH = "/shift/remove/[0-9]+$";
+    private $mTitle = "Remove this shift";
 
     private $mHeader;
     private $mFooter;
@@ -28,7 +28,7 @@ class PageShiftRemove extends AbstractAuthorizedPage {
     private $mDbHandle;
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeader(self::TITLE);
+        $this->mHeader = new ViewHeader($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
 
@@ -58,12 +58,10 @@ class PageShiftRemove extends AbstractAuthorizedPage {
         $this->addScripts();
 
         $this->removeShift();
-        redirectInternally("/");
-        // redirect back to dashboard after deleting the shift
+        redirectInternally("/"); // redirect back to dashboard after deleting the shift
     }
 
     public function draw() {
-        // This page does not require any content to be drawn
     }
 
 }

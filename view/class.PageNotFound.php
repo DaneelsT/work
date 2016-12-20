@@ -17,8 +17,7 @@ use \Work\UI\ViewFooter;
 class PageNotFound extends AbstractPage {
 
     const PATH = "/404$";
-
-    const TITLE = "Page not found";
+    private $mTitle = "Page not found";
 
     private $mHeader;
 
@@ -30,7 +29,7 @@ class PageNotFound extends AbstractPage {
     }
 
     public function __construct() {
-        $this->setTitle(self::TITLE);
+        $this->setTitle($this->mTitle);
         $this->initializeViewElements();
         header('HTTP/1.0 404 Not Found');
     }

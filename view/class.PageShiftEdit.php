@@ -35,7 +35,7 @@ class PageShiftEdit extends AbstractAuthorizedPage {
         if ($this->mShift == null)
             $title = "Specified shift not found";
         else
-            $title = "Edit shift from " . $this->mShift->getDate();
+            $title = "Edit this shift";
         $this->mHeader = new ViewHeader($title);
         $this->mFooter = new ViewFooter();
     }
@@ -76,7 +76,7 @@ class PageShiftEdit extends AbstractAuthorizedPage {
         $date = $_POST['date'];
         $rawStartTime = explode(':', $_POST['startTime']);
         $rawEndTime = explode(':', $_POST['endTime']);
-				
+
         $startTimeHour = $rawStartTime[0] * 60 * 60;
         $startTimeMinute = $rawStartTime[1] * 60;
         $startTime = $startTimeHour + $startTimeMinute;
@@ -84,7 +84,7 @@ class PageShiftEdit extends AbstractAuthorizedPage {
         $endTimeHour = $rawEndTime[0] * 60 * 60;
         $endTimeMinute = $rawEndTime[1] * 60;
         $endTime = $endTimeHour + $endTimeMinute;
-		
+
 		if($_POST['holiday']) {
 			$isHoliday = true;
 		}else{
@@ -119,7 +119,7 @@ class PageShiftEdit extends AbstractAuthorizedPage {
     }
 
     public function __construct() {
-    	parent::__construct(parent::DEFAULT_LOGIN_DIR);    	
+    	parent::__construct(parent::DEFAULT_LOGIN_DIR);
         $this->initializeDatabaseConnection();
 
         if (isset($_POST['edit_shift'])) {

@@ -20,16 +20,16 @@ use \PDO;
 class PageAdminShift extends AbstractAuthorizedPage {
 
     const PATH = "/admin/shift/[0-9]+$";
-    const TITLE = "View Shifts";
+    private $mTitle = "View Shifts";
 
     private $mHeader;
     private $mFooter;
-    
+
     private $mDbHandle;
-    
+
     private $mUser = null;
     private $mShifts = array();
-    
+
     private $mWorkedTime = array();
     private $mCurrentEarnings;
     private $mHoursWorked;
@@ -37,12 +37,12 @@ class PageAdminShift extends AbstractAuthorizedPage {
     private $mTotalPay;
     private $mTotalHours;
     private $mSundayExtra;
-    
+
     private $mUserNotFound = false;
     private $mNoShifts = false;
-    
+
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeader(self::TITLE);
+        $this->mHeader = new ViewHeader($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
 
@@ -55,7 +55,7 @@ class PageAdminShift extends AbstractAuthorizedPage {
     private function addScripts() {
         $this->mFooter->addScript("jquery.min.js");
     }
-    
+
     private function fetchUser() {
         $app = Application::getInstance();
         $id = $app->getRouter()->getSegment(2);
@@ -115,12 +115,12 @@ class PageAdminShift extends AbstractAuthorizedPage {
             array_push($this->mShifts, new Shift($id, $date, $starttime, $endtime, $sunday));
         }
     }
-    
+
     // Add the extra payment per sunday to the mSundayExtra member to add to the total pay.
     private function addSunday() {
         $this->mSundayExtra += $this->mUser->getSundayFee();
     }
-    
+
     // Calculate the current earnings of the month, based on the hourly pay of the user and the amount of hours worked.
     public function calculateEarnings() {
         $shifts = $this->getShifts();
@@ -150,37 +150,37 @@ class PageAdminShift extends AbstractAuthorizedPage {
     public function __construct() {
         if(Application::getInstance()->getUser()->isAdmin()) {
             parent::__construct(parent::DEFAULT_LOGIN_DIR);
-            $this->setTitle(self::TITLE);
+            $this->setTitle($this->mTitle);
             $this->initializeViewElements();
             $this->initializeDatabaseConnection();
             $this->addScripts();
-            
+
             $this->fetchUser();
         }else{
             redirectInternally("/");
         }
     }
-    
+
     public function getUser() {
         return $this->mUser;
     }
-    
+
     public function getShifts() {
         return $this->mShifts;
     }
-    
+
     public function userNotFound() {
         return $this->mUserNotFound;
     }
-    
+
     public function noShifts() {
         return $this->mNoShifts;
     }
-    
+
     public function getTotalPay() {
         return $this->mTotalPay;
     }
-    
+
     public function getTotalPayWithFees() {
         return $this->mTotalPay + $this->mSundayExtra;
     }
@@ -192,7 +192,7 @@ class PageAdminShift extends AbstractAuthorizedPage {
     public function getTotalHours() {
         return $this->mTotalHours;
     }
-    
+
     public function getSundayFee() {
 		return $this->mUser->getSundayFee();
     }

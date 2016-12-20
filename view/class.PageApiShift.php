@@ -17,22 +17,22 @@ use \PDO;
 class PageApiShift extends AbstractApiPage {
 
     const PATH = "/api/shift/[0-9]+$";
-    
+
     private $mShift;
-    
+
     private $mShiftId;
     private $mDbHandle;
-    
+
     private function initializeDatabaseConnection() {
         $app = Application::getInstance();
         $app->connectToDatabase();
         $this->mDbHandle = $app->getDatabaseConnection();
     }
-        
+
     private function returnShift() {
         $this->fetchShift();
         $data = $this->mShift;
-        
+
         echo $this->encodeJSON($data, JSON_PRETTY_PRINT);
     }
 
@@ -49,7 +49,7 @@ class PageApiShift extends AbstractApiPage {
             http_response_code(404);
             exit();
         }
-        
+
         foreach($shifts as $shift) {
             $id = $shift['id'];
             $date = $shift['date'];
@@ -71,9 +71,9 @@ class PageApiShift extends AbstractApiPage {
     {
         parent::__construct();
         $this->initializeDatabaseConnection();
-        
+
         $this->mShiftId = Application::getInstance()->getRouter()->getSegment(2);
-        
+
         $apikey = $this->getApiKey();
         if( !isset($apikey) || strlen($apikey) == 0 ) {
             http_response_code(500);
@@ -93,6 +93,6 @@ class PageApiShift extends AbstractApiPage {
                 break;
         }
     }
-    
+
 }
 ?>

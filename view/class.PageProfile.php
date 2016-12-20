@@ -21,7 +21,7 @@ class PageProfile extends AbstractAuthorizedPage
 {
 
     const PATH = "/profile$";
-	const TITLE = "My Profile";
+    private $mTitle = "My Profile";
 
     private $mHeader;
     private $mFooter;
@@ -34,7 +34,7 @@ class PageProfile extends AbstractAuthorizedPage
 
     private function initializeViews()
     {
-		$this->mHeader = new ViewHeader(self::TITLE);
+		$this->mHeader = new ViewHeader($this->mTitle);
 		$this->mFooter = new ViewFooterNoFooter();
     }
 
@@ -170,6 +170,7 @@ class PageProfile extends AbstractAuthorizedPage
     {
         parent::__construct(parent::DEFAULT_LOGIN_DIR);
         $this->initializeViews();
+        $this->setTitle($this->mTitle);
 		$this->initializeDatabaseConnection();
 
 		if(isset($_POST['edit_user'])) {

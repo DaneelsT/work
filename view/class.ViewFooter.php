@@ -21,7 +21,6 @@ class ViewFooter extends AbstractUIelement {
     }
 
     private function addDefaultScripts() {
-        // $this -> addScript("jquery.min.js");
     }
 
     public function addScript($script) {

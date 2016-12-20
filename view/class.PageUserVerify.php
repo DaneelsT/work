@@ -19,7 +19,7 @@ use \PDO;
 class PageUserVerify extends AbstractPage {
 
     const PATH = "/user/verify/[0-z]+$";
-    const TITLE = "Verify Account";
+    private $mTitle = "Verify Account";
 
     private $mHeader;
     private $mFooter;
@@ -41,7 +41,7 @@ class PageUserVerify extends AbstractPage {
     private $mInvalidInput = false;
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeaderNoMenu(self::TITLE);
+        $this->mHeader = new ViewHeaderNoMenu($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
 
@@ -213,7 +213,7 @@ class PageUserVerify extends AbstractPage {
 
     public function __construct() {
         if(!Application::getInstance()->isLoggedIn()) {
-            $this->setTitle(self::TITLE);
+            $this->setTitle($this->mTitle);
             $this->initializeViewElements();
             $this->initializeDatabaseConnection();
             $this->addScripts();

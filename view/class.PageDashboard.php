@@ -20,8 +20,8 @@ use \PDO;
 class PageDashboard extends AbstractAuthorizedPage {
 
     const PATH = "/$";
-    const TITLE = "Dashboard";
-	
+    private $mTitle = "Dashboard";
+
     private $mHeader;
     private $mFooter;
 
@@ -38,7 +38,7 @@ class PageDashboard extends AbstractAuthorizedPage {
     private $mSundayExtra;
 
     private function initializeViewElements() {
-        $this->mHeader = new ViewHeader(self::TITLE);
+        $this->mHeader = new ViewHeader($this->mTitle);
         $this->mFooter = new ViewFooter();
     }
 
@@ -58,7 +58,7 @@ class PageDashboard extends AbstractAuthorizedPage {
     private function postShift() {
     	$app = Application::getInstance();
 		$user = $app->getUser();
-		
+
         $date = $_POST['date'];
         $rawStartTime = explode(':', $_POST['startTime']);
         $rawEndTime = explode(':', $_POST['endTime']);
@@ -75,13 +75,13 @@ class PageDashboard extends AbstractAuthorizedPage {
         $endTimeHour = $rawEndTime[0] * 60 * 60;
         $endTimeMinute = $rawEndTime[1] * 60;
         $endTime = $endTimeHour + $endTimeMinute;
-		
+
         if($isHoliday || dayIsSunday($date)) {
             $isSunday = true;
         }else{
             $isSunday = false;
         }
-		
+
         $sql = "INSERT INTO shifts (date, startTime, endTime, isSunday, userid)
                 VALUES (:date, :startTime, :endTime, :isSunday, :userid)";
         $statement = $this->mDbHandle->prepare($sql);
@@ -92,12 +92,12 @@ class PageDashboard extends AbstractAuthorizedPage {
 		$statement->bindParam(':userid', $user->getId());
         $statement->execute();
     }
-    
+
     // Fetch all the current worked shifts from the database, ordered DESC by date
     private function fetchAllShifts() {
     	$app = Application::getInstance();
 		$user = $app->getUser();
-		
+
         $sql = "SELECT id, date, startTime, endTime, isSunday
                 FROM shifts
                 WHERE userid = :userid
@@ -119,7 +119,7 @@ class PageDashboard extends AbstractAuthorizedPage {
             array_push($this->mShifts, new Shift($id, $date, $starttime, $endtime, $sunday));
         }
     }
-    
+
     // Add the extra payment per sunday to the mSundayExtra member to add to the total pay.
     private function addSunday() {
         $this->mSundayExtra += Application::getInstance()->getUser()->getSundayFee();
@@ -153,7 +153,7 @@ class PageDashboard extends AbstractAuthorizedPage {
 
     public function __construct() {
     	parent::__construct(parent::DEFAULT_LOGIN_DIR);
-        $this->setTitle(self::TITLE);
+        $this->setTitle($this->mTitle);
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
         $this->addScripts();
@@ -173,7 +173,7 @@ class PageDashboard extends AbstractAuthorizedPage {
     public function getTotalPay() {
         return $this->mTotalPay;
     }
-    
+
     public function getTotalPayWithFees() {
         return $this->mTotalPay + $this->mSundayExtra;
     }
@@ -185,7 +185,7 @@ class PageDashboard extends AbstractAuthorizedPage {
     public function getTotalHours() {
         return $this->mTotalHours;
     }
-    
+
     public function getSundayFee() {
 		return Application::getInstance()->getUser()->getSundayFee();
     }
