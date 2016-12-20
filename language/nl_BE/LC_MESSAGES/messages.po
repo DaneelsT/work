@@ -557,7 +557,7 @@ msgstr "Huidige maand boeken en sluiten"
 
 #: view/class.PageProfile.php:24
 msgid "My Profile"
-msgstr "Mijn Profile"
+msgstr "Mijn Profiel"
 
 #: view/class.PageShiftRemove.php:23
 msgid "Remove this shift"
