@@ -19,13 +19,14 @@ use \PDO;
 class PageMonth extends AbstractAuthorizedPage {
 
     const PATH = "/month$";
-    const TITLE = "Monthly Overview";
+    // const TITLE = "Monthly Overview";
+    const title = translate("Monthly Overview");
 
     private $mHeader;
     private $mFooter;
 
     private $mDbHandle;
-    
+
     private $mMonths = array();
 
     private function initializeViewElements() {
@@ -38,7 +39,7 @@ class PageMonth extends AbstractAuthorizedPage {
         $app->connectToDatabase();
         $this->mDbHandle = $app->getDatabaseConnection();
     }
-    
+
     // Fetch all months and the earnings of that month
     private function fetchMonths() {
     	$app = Application::getInstance();
@@ -62,13 +63,13 @@ class PageMonth extends AbstractAuthorizedPage {
             array_push($this->mMonths, new Month($monthId, $monthMonth, $monthHours, $daysWorked, $monthEarnings, $monthSundays));
         }
     }
-            
+
     public function __construct() {
     	parent::__construct(parent::DEFAULT_LOGIN_DIR);
         $this->setTitle(self::TITLE);
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
-        
+
         $this->fetchMonths();
     }
 

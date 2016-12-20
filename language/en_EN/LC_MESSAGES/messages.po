@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2016-12-20 03:39+0100\n"
-"PO-Revision-Date: 2016-12-20 03:39+0100\n"
+"POT-Creation-Date: 2016-12-20 03:44+0100\n"
+"PO-Revision-Date: 2016-12-20 03:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -10,66 +10,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: ../../../theme\n"
+"X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: translate;translatevar\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: .\n"
+"X-Poedit-SearchPath-0: theme\n"
+"X-Poedit-SearchPath-1: view\n"
 
-#: inc.admin-invite.php:5
+#: theme/inc.admin-invite.php:5
 msgid "Invite sent"
 msgstr "Invite sent"
 
-#: inc.admin-invite.php:7
+#: theme/inc.admin-invite.php:7
 msgid "An invite has been sent to this user"
 msgstr "An invite has been sent to this user"
 
-#: inc.admin-invite.php:13
+#: theme/inc.admin-invite.php:13
 msgid "Invalid email entered"
 msgstr "Invalid email entered"
 
-#: inc.admin-invite.php:15
+#: theme/inc.admin-invite.php:15
 msgid "The email you have entered is not valid"
 msgstr "The email you have entered is not valid"
 
-#: inc.admin-invite.php:21
+#: theme/inc.admin-invite.php:21
 msgid "Invite a user"
 msgstr "Invite a user"
 
-#: inc.admin-invite.php:24 inc.admin-users.php:14 inc.profile.php:67
-#: inc.profile.php:116 inc.user-add.php:44 inc.user-edit.php:42
-#: inc.user-verify.php:67
+#: theme/inc.admin-invite.php:24 theme/inc.admin-users.php:14
+#: theme/inc.profile.php:67 theme/inc.profile.php:116 theme/inc.user-add.php:44
+#: theme/inc.user-edit.php:42 theme/inc.user-verify.php:67
 msgid "E-mail"
 msgstr "E-mail"
 
-#: inc.admin-invite.php:28 inc.admin-shifts.php:14 inc.admin-users.php:15
-#: inc.profile.php:55 inc.profile.php:106 inc.user-add.php:34
-#: inc.user-edit.php:32 inc.user-verify.php:57
+#: theme/inc.admin-invite.php:28 theme/inc.admin-shifts.php:14
+#: theme/inc.admin-users.php:15 theme/inc.profile.php:55
+#: theme/inc.profile.php:106 theme/inc.user-add.php:34
+#: theme/inc.user-edit.php:32 theme/inc.user-verify.php:57
 msgid "Name"
 msgstr "Name"
 
-#: inc.admin-invite.php:31
+#: theme/inc.admin-invite.php:31
 msgid "Send Invite"
 msgstr "Send Invite"
 
-#: inc.admin-shift.php:9 inc.user-edit.php:7
+#: theme/inc.admin-shift.php:9 theme/inc.user-edit.php:7
 msgid "User not found"
 msgstr "User not found"
 
-#: inc.admin-shift.php:11
+#: theme/inc.admin-shift.php:11
 msgid "A user with that id could not be found"
 msgstr "A user with that id could not be found"
 
-#: inc.admin-shift.php:12 inc.admin-shift.php:24
+#: theme/inc.admin-shift.php:12 theme/inc.admin-shift.php:24
 msgid "Back to shifts page"
 msgstr "Back to shifts page"
 
-#: inc.admin-shift.php:18
+#: theme/inc.admin-shift.php:18
 msgid "No shifts found"
 msgstr "No shifts found"
 
-#: inc.admin-shift.php:21
+#: theme/inc.admin-shift.php:21
 msgid ""
 "No shifts for this user were found in the database!<br />\n"
 "                    Verify that this user has worked a shift before or "
@@ -78,365 +79,373 @@ msgstr ""
 "No shifts for this user were found in the database!\n"
 "Verify that this user has worked a shift before or shifts aren't booked."
 
-#: inc.admin-shift.php:38 inc.dashboard.php:12
+#: theme/inc.admin-shift.php:38 theme/inc.dashboard.php:12
 msgid "Current Earnings"
 msgstr "Current Earnings"
 
-#: inc.admin-shift.php:40 inc.admin-shift.php:41 inc.dashboard.php:14
-#: inc.dashboard.php:15
+#: theme/inc.admin-shift.php:40 theme/inc.admin-shift.php:41
+#: theme/inc.dashboard.php:14 theme/inc.dashboard.php:15
 msgid "Current earnings"
 msgstr "Current earnings"
 
-#: inc.admin-shift.php:40 inc.dashboard.php:14 inc.month-close.php:31
+#: theme/inc.admin-shift.php:40 theme/inc.dashboard.php:14
+#: theme/inc.month-close.php:31
 msgid "without fees"
 msgstr "without fees"
 
-#: inc.admin-shift.php:41 inc.dashboard.php:15 inc.month-close.php:32
+#: theme/inc.admin-shift.php:41 theme/inc.dashboard.php:15
+#: theme/inc.month-close.php:32
 msgid "with fees"
 msgstr "with fees"
 
-#: inc.admin-shift.php:42 inc.dashboard.php:16
+#: theme/inc.admin-shift.php:42 theme/inc.dashboard.php:16
 msgid "Current month"
 msgstr "Current month"
 
-#: inc.admin-shift.php:44 inc.dashboard.php:18
+#: theme/inc.admin-shift.php:44 theme/inc.dashboard.php:18
 msgid "Earnings per hour"
 msgstr "Earnings per hour"
 
-#: inc.admin-shift.php:45 inc.dashboard.php:19
+#: theme/inc.admin-shift.php:45 theme/inc.dashboard.php:19
 msgid "Sunday fee"
 msgstr "Sunday fee"
 
-#: inc.admin-shift.php:46 inc.dashboard.php:20 inc.month-close.php:34
+#: theme/inc.admin-shift.php:46 theme/inc.dashboard.php:20
+#: theme/inc.month-close.php:34
 msgid "Hours worked"
 msgstr "Hours worked"
 
-#: inc.admin-shift.php:52
+#: theme/inc.admin-shift.php:52
 msgid "View shifts from"
 msgstr "View shifts from"
 
-#: inc.admin-shift.php:56 inc.dashboard.php:30 inc.dashboard.php:54
-#: inc.shift-edit.php:12
+#: theme/inc.admin-shift.php:56 theme/inc.dashboard.php:30
+#: theme/inc.dashboard.php:54 theme/inc.shift-edit.php:12
 msgid "Date"
 msgstr "Date"
 
-#: inc.admin-shift.php:57 inc.dashboard.php:34 inc.dashboard.php:55
-#: inc.shift-edit.php:16
+#: theme/inc.admin-shift.php:57 theme/inc.dashboard.php:34
+#: theme/inc.dashboard.php:55 theme/inc.shift-edit.php:16
 msgid "Start Time"
 msgstr "Start Time"
 
-#: inc.admin-shift.php:58 inc.dashboard.php:38 inc.dashboard.php:56
-#: inc.shift-edit.php:20
+#: theme/inc.admin-shift.php:58 theme/inc.dashboard.php:38
+#: theme/inc.dashboard.php:56 theme/inc.shift-edit.php:20
 msgid "End Time"
 msgstr "End Time"
 
-#: inc.admin-shift.php:59 inc.dashboard.php:57
+#: theme/inc.admin-shift.php:59 theme/inc.dashboard.php:57
 msgid "Total Hours"
 msgstr "Total Hours"
 
-#: inc.admin-shift.php:61 inc.admin-shifts.php:16 inc.admin-users.php:18
-#: inc.dashboard.php:59
+#: theme/inc.admin-shift.php:61 theme/inc.admin-shifts.php:16
+#: theme/inc.admin-users.php:18 theme/inc.dashboard.php:59
 msgid "Actions"
 msgstr "Actions"
 
-#: inc.admin-shift.php:85 inc.dashboard.php:84
+#: theme/inc.admin-shift.php:85 theme/inc.dashboard.php:84
 msgid "SUNDAY"
 msgstr "SUNDAY"
 
-#: inc.admin-shift.php:87 inc.dashboard.php:86
+#: theme/inc.admin-shift.php:87 theme/inc.dashboard.php:86
 msgid "HOLIDAY"
 msgstr "HOLIDAY"
 
-#: inc.admin-shift.php:94 inc.dashboard.php:93
+#: theme/inc.admin-shift.php:94 theme/inc.dashboard.php:93
 msgid "Remove"
 msgstr "Remove"
 
-#: inc.admin-shift.php:95 inc.admin-users.php:29 inc.dashboard.php:94
-#: inc.user-edit.php:28
+#: theme/inc.admin-shift.php:95 theme/inc.admin-users.php:29
+#: theme/inc.dashboard.php:94 theme/inc.user-edit.php:28
 msgid "Edit"
 msgstr "Edit"
 
-#: inc.admin-shifts.php:4
+#: theme/inc.admin-shifts.php:4
 msgid "View shifts from a user"
 msgstr "View shifts from a user"
 
-#: inc.admin-shifts.php:6
+#: theme/inc.admin-shifts.php:6
 msgid "Select a user to view shifts from"
 msgstr "Select a user to view shifts from"
 
-#: inc.admin-shifts.php:15 inc.admin-users.php:16 inc.admin-users.php:17
-#: inc.profile.php:59 inc.profile.php:108 inc.user-add.php:36
-#: inc.user-edit.php:34 inc.user-verify.php:59
+#: theme/inc.admin-shifts.php:15 theme/inc.admin-users.php:16
+#: theme/inc.admin-users.php:17 theme/inc.profile.php:59
+#: theme/inc.profile.php:108 theme/inc.user-add.php:36
+#: theme/inc.user-edit.php:34 theme/inc.user-verify.php:59
 msgid "Surname"
 msgstr "Surname"
 
-#: inc.admin-shifts.php:23
+#: theme/inc.admin-shifts.php:23
 msgid "View Shifts"
 msgstr "View Shifts"
 
-#: inc.admin-users.php:4
+#: theme/inc.admin-users.php:4
 msgid "Users Overview"
 msgstr "Users Overview"
 
-#: inc.admin-users.php:4
+#: theme/inc.admin-users.php:4
 msgid "Add a user"
 msgstr "Add a user"
 
-#: inc.admin-users.php:13 inc.profile.php:63 inc.profile.php:112
-#: inc.user-add.php:40 inc.user-edit.php:38 inc.user-verify.php:63
+#: theme/inc.admin-users.php:13 theme/inc.profile.php:63
+#: theme/inc.profile.php:112 theme/inc.user-add.php:40
+#: theme/inc.user-edit.php:38 theme/inc.user-verify.php:63
 msgid "Username"
 msgstr "Username"
 
-#: inc.admin.php:4
+#: theme/inc.admin.php:4
 msgid "Administrator Panel"
 msgstr "Administrator Panel"
 
-#: inc.admin.php:6
+#: theme/inc.admin.php:6
 msgid "User Overview"
 msgstr "User Overview"
 
-#: inc.admin.php:7
+#: theme/inc.admin.php:7
 msgid "View Shifts From User"
 msgstr "View Shifts From User"
 
-#: inc.admin.php:8
+#: theme/inc.admin.php:8
 msgid "Invite A User"
 msgstr "Invite A User"
 
-#: inc.dashboard.php:26
+#: theme/inc.dashboard.php:26
 msgid "Add a new shift"
 msgstr "Add a new shift"
 
-#: inc.dashboard.php:42
+#: theme/inc.dashboard.php:42
 msgid "Is holiday"
 msgstr "Is holiday"
 
-#: inc.dashboard.php:43 inc.shift-edit.php:32
+#: theme/inc.dashboard.php:43 theme/inc.shift-edit.php:32
 msgid "This is a holiday"
 msgstr "This is a holiday"
 
-#: inc.dashboard.php:45
+#: theme/inc.dashboard.php:45
 msgid "Add Shift"
 msgstr "Add Shift"
 
-#: inc.dashboard.php:51
+#: theme/inc.dashboard.php:51
 msgid "Current Shifts"
 msgstr "Current Shifts"
 
-#: inc.dashboard.php:51
+#: theme/inc.dashboard.php:51
 msgid "Close Month"
 msgstr "Close Month"
 
-#: inc.header.php:22
+#: theme/inc.header.php:22
 msgid "monthly overview"
 msgstr "monthly overview"
 
-#: inc.header.php:26
+#: theme/inc.header.php:26
 msgid "admin"
 msgstr "admin"
 
-#: inc.header.php:28
+#: theme/inc.header.php:28
 msgid "logout"
 msgstr "logout"
 
-#: inc.month-close.php:14
+#: theme/inc.month-close.php:14
 msgid "This month has been booked already"
 msgstr "This month has been booked already"
 
-#: inc.month-close.php:15
+#: theme/inc.month-close.php:15
 #, php-format
 msgid "The current month (%s) has been booked and closed already"
 msgstr "The current month (%s) has been booked and closed already"
 
-#: inc.month-close.php:17
+#: theme/inc.month-close.php:17
 msgid "Check Monthly Overview"
 msgstr "Check Monthly Overview"
 
-#: inc.month-close.php:18 inc.month-close.php:39
+#: theme/inc.month-close.php:18 theme/inc.month-close.php:39
 msgid "Back to dashboard"
 msgstr "Back to dashboard"
 
-#: inc.month-close.php:25
+#: theme/inc.month-close.php:25
 msgid "Month closed and booked"
 msgstr "Month closed and booked"
 
-#: inc.month-close.php:27
+#: theme/inc.month-close.php:27
 #, php-format
 msgid "The month %s has been successfully closed and booked"
 msgstr "The month %s has been successfully closed and booked"
 
-#: inc.month-close.php:29
+#: theme/inc.month-close.php:29
 msgid "Details of this month"
 msgstr "Details of this month"
 
-#: inc.month-close.php:31 inc.month-close.php:32 inc.month-overview.php:10
-#: inc.month-overview.php:11
+#: theme/inc.month-close.php:31 theme/inc.month-close.php:32
+#: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
 msgid "Earnings"
 msgstr "Earnings"
 
-#: inc.month-close.php:33
+#: theme/inc.month-close.php:33
 msgid "Sundays worked"
 msgstr "Sundays worked"
 
-#: inc.month-close.php:35
+#: theme/inc.month-close.php:35
 msgid "Days worked"
 msgstr "Days worked"
 
-#: inc.month-overview.php:4
+#: theme/inc.month-overview.php:4 view/class.PageMonth.php:23
 msgid "Monthly Overview"
 msgstr "Monthly Overview"
 
-#: inc.month-overview.php:7
+#: theme/inc.month-overview.php:7
 msgid "Month"
 msgstr "Month"
 
-#: inc.month-overview.php:8
+#: theme/inc.month-overview.php:8
 msgid "Hours Worked"
 msgstr "Hours Worked"
 
-#: inc.month-overview.php:9
+#: theme/inc.month-overview.php:9
 msgid "Days Worked"
 msgstr "Days Worked"
 
-#: inc.month-overview.php:10
+#: theme/inc.month-overview.php:10
 msgid "without"
 msgstr "without"
 
-#: inc.month-overview.php:10 inc.month-overview.php:11
+#: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
 msgid "fees"
 msgstr "fees"
 
-#: inc.month-overview.php:11
+#: theme/inc.month-overview.php:11
 msgid "with"
 msgstr "with"
 
-#: inc.month-overview.php:12
+#: theme/inc.month-overview.php:12
 msgid "Sundays Worked"
 msgstr "Sundays Worked"
 
-#: inc.page-not-found.php:4
+#: theme/inc.page-not-found.php:4
 msgid "Page not found"
 msgstr "Page not found"
 
-#: inc.page-not-found.php:6
+#: theme/inc.page-not-found.php:6
 msgid "The page you are looking for could not be found"
 msgstr "The page you are looking for could not be found"
 
-#: inc.profile.php:9
+#: theme/inc.profile.php:9
 msgid "Account updated"
 msgstr "Account updated"
 
-#: inc.profile.php:12
+#: theme/inc.profile.php:12
 msgid "Your account has been updated successfully"
 msgstr "Account updated"
 
-#: inc.profile.php:16
+#: theme/inc.profile.php:16
 msgid "Go to dashboard"
 msgstr "Go to dashboard"
 
-#: inc.profile.php:23 inc.user-verify.php:35
+#: theme/inc.profile.php:23 theme/inc.user-verify.php:35
 msgid "Invalid Input"
 msgstr "Invalid Input"
 
-#: inc.profile.php:26 inc.user-verify.php:38
+#: theme/inc.profile.php:26 theme/inc.user-verify.php:38
 msgid "Some fields were left empty or were not filled in correctly"
 msgstr "Some fields were left empty or were not filled in correctly"
 
-#: inc.profile.php:29 inc.user-verify.php:41
+#: theme/inc.profile.php:29 theme/inc.user-verify.php:41
 msgid "Go back and try again"
 msgstr "Go back and try again"
 
-#: inc.profile.php:71 inc.profile.php:120 inc.user-add.php:48
-#: inc.user-verify.php:71
+#: theme/inc.profile.php:71 theme/inc.profile.php:120 theme/inc.user-add.php:48
+#: theme/inc.user-verify.php:71
 msgid "Gender"
 msgstr "Gender"
 
-#: inc.profile.php:75 inc.profile.php:126 inc.user-edit.php:52
-#: inc.user-verify.php:78
+#: theme/inc.profile.php:75 theme/inc.profile.php:126
+#: theme/inc.user-edit.php:52 theme/inc.user-verify.php:78
 msgid "Hourly Pay"
 msgstr "Hourly Pay"
 
-#: inc.profile.php:79 inc.profile.php:128 inc.user-edit.php:54
-#: inc.user-verify.php:80
+#: theme/inc.profile.php:79 theme/inc.profile.php:128
+#: theme/inc.user-edit.php:54 theme/inc.user-verify.php:80
 msgid "Sunday Fee"
 msgstr "Sunday Fee"
 
-#: inc.profile.php:83 inc.profile.php:133 inc.user-edit.php:59
-#: inc.user-verify.php:86
+#: theme/inc.profile.php:83 theme/inc.profile.php:133
+#: theme/inc.user-edit.php:59 theme/inc.user-verify.php:86
 msgid "Language"
 msgstr "Language"
 
-#: inc.profile.php:95
+#: theme/inc.profile.php:95
 msgid "ADMINISTRATOR"
 msgstr "ADMINISTRATOR"
 
-#: inc.profile.php:102
+#: theme/inc.profile.php:102
 msgid "Edit my profile"
 msgstr "Edit my profile"
 
-#: inc.profile.php:104 inc.user-edit.php:30
+#: theme/inc.profile.php:104 theme/inc.user-edit.php:30
 msgid "General Settings"
 msgstr "General Settings"
 
-#: inc.profile.php:124 inc.user-edit.php:50 inc.user-verify.php:76
+#: theme/inc.profile.php:124 theme/inc.user-edit.php:50
+#: theme/inc.user-verify.php:76
 msgid "Payment Settings"
 msgstr "Payment Settings"
 
-#: inc.profile.php:131 inc.user-edit.php:57 inc.user-verify.php:84
+#: theme/inc.profile.php:131 theme/inc.user-edit.php:57
+#: theme/inc.user-verify.php:84
 msgid "Language Settings"
 msgstr "Language Settings"
 
-#: inc.profile.php:139 inc.user-edit.php:65
+#: theme/inc.profile.php:139 theme/inc.user-edit.php:65
 msgid "Password Settings"
 msgstr "Password Settings"
 
-#: inc.profile.php:141 inc.user-add.php:55 inc.user-edit.php:67
-#: inc.user-verify.php:95
+#: theme/inc.profile.php:141 theme/inc.user-add.php:55
+#: theme/inc.user-edit.php:67 theme/inc.user-verify.php:95
 msgid "Password"
 msgstr "Password"
 
-#: inc.profile.php:142 inc.user-edit.php:68
+#: theme/inc.profile.php:142 theme/inc.user-edit.php:68
 msgid "Enter new password"
 msgstr "Enter new password"
 
-#: inc.profile.php:145 inc.user-add.php:59 inc.user-edit.php:71
-#: inc.user-verify.php:99
+#: theme/inc.profile.php:145 theme/inc.user-add.php:59
+#: theme/inc.user-edit.php:71 theme/inc.user-verify.php:99
 msgid "Password (repeat)"
 msgstr "Password (repeat)"
 
-#: inc.profile.php:146 inc.user-edit.php:72
+#: theme/inc.profile.php:146 theme/inc.user-edit.php:72
 msgid "Repeat new password"
 msgstr "Repeat new password"
 
-#: inc.profile.php:148 inc.shift-edit.php:34 inc.user-edit.php:74
+#: theme/inc.profile.php:148 theme/inc.shift-edit.php:34
+#: theme/inc.user-edit.php:74
 msgid "Save Changes"
 msgstr "Save Changes"
 
-#: inc.shift-edit.php:9
+#: theme/inc.shift-edit.php:9
 msgid "Edit shift from"
 msgstr "Edit shift from"
 
-#: inc.shift-edit.php:24
+#: theme/inc.shift-edit.php:24
 msgid "Is Holiday"
 msgstr "Is Holiday"
 
-#: inc.user-add.php:5
+#: theme/inc.user-add.php:5
 msgid "User added"
 msgstr "User added"
 
-#: inc.user-add.php:7
+#: theme/inc.user-add.php:7
 msgid "User successfully added to the Work Webinterface"
 msgstr "User successfully added to the Work Webinterface"
 
-#: inc.user-add.php:8
+#: theme/inc.user-add.php:8
 msgid "Return to user overview"
 msgstr "Return to user overview"
 
-#: inc.user-add.php:14
+#: theme/inc.user-add.php:14
 msgid "Invalid input"
 msgstr "Invalid input"
 
-#: inc.user-add.php:15
+#: theme/inc.user-add.php:15
 msgid ""
 "Some fields were not filled in (correctly). Fill in all fields correctly and "
 "try again"
@@ -444,90 +453,90 @@ msgstr ""
 "Some fields were not filled in (correctly). Fill in all fields correctly and "
 "try again"
 
-#: inc.user-add.php:21 inc.user-verify.php:18
+#: theme/inc.user-add.php:21 theme/inc.user-verify.php:18
 msgid "User already exists"
 msgstr "User already exists"
 
-#: inc.user-add.php:22
+#: theme/inc.user-add.php:22
 msgid "A user with this username and/or email already exists"
 msgstr "A user with this username and/or email already exists"
 
-#: inc.user-add.php:28
+#: theme/inc.user-add.php:28
 msgid "Add a new user"
 msgstr "Add a new user"
 
-#: inc.user-add.php:29 inc.user-verify.php:52
+#: theme/inc.user-add.php:29 theme/inc.user-verify.php:52
 msgid "Basic information"
 msgstr "Basic information"
 
-#: inc.user-add.php:49 inc.user-verify.php:72
+#: theme/inc.user-add.php:49 theme/inc.user-verify.php:72
 msgid "Male"
 msgstr "Male"
 
-#: inc.user-add.php:50 inc.user-verify.php:73
+#: theme/inc.user-add.php:50 theme/inc.user-verify.php:73
 msgid "Female"
 msgstr "Female"
 
-#: inc.user-add.php:53 inc.user-verify.php:93
+#: theme/inc.user-add.php:53 theme/inc.user-verify.php:93
 msgid "User password"
 msgstr "User password"
 
-#: inc.user-add.php:56 inc.user-verify.php:96
+#: theme/inc.user-add.php:56 theme/inc.user-verify.php:96
 msgid "Enter a password"
 msgstr "Enter a password"
 
-#: inc.user-add.php:60 inc.user-verify.php:100
+#: theme/inc.user-add.php:60 theme/inc.user-verify.php:100
 msgid "Repeat password"
 msgstr "Repeat password"
 
-#: inc.user-add.php:63
+#: theme/inc.user-add.php:63
 msgid "Add User"
 msgstr "Add User"
 
-#: inc.user-edit.php:9
+#: theme/inc.user-edit.php:9
 msgid "A user with that ID could not be found"
 msgstr "A user with that ID could not be found"
 
-#: inc.user-edit.php:10 inc.user-edit.php:19
+#: theme/inc.user-edit.php:10 theme/inc.user-edit.php:19
 msgid "Back to users overview"
 msgstr "Back to users overview"
 
-#: inc.user-edit.php:16
+#: theme/inc.user-edit.php:16
 msgid "User successfully updated"
 msgstr "User successfully updated"
 
-#: inc.user-edit.php:18
+#: theme/inc.user-edit.php:18
 msgid "This user's profile has been successfully updated"
 msgstr "This user's profile has been successfully updated"
 
-#: inc.user-verify.php:10
+#: theme/inc.user-verify.php:10
 msgid "Invalid token"
 msgstr "Invalid token"
 
-#: inc.user-verify.php:12
+#: theme/inc.user-verify.php:12
 #, php-format
 msgid "The token you have supplied (%s) does not appear to be valid"
 msgstr "The token you have supplied (%s) does not appear to be valid"
 
-#: inc.user-verify.php:20
+#: theme/inc.user-verify.php:20
 msgid "A user with the supplied username or email already exists in the system"
 msgstr ""
 "A user with the supplied username or email already exists in the system"
 
-#: inc.user-verify.php:26
+#: theme/inc.user-verify.php:26
 msgid "Account created"
 msgstr ""
 "A user with the supplied username or email already exists in the system"
 
-#: inc.user-verify.php:28
+#: theme/inc.user-verify.php:28
 msgid "Your account has been created successfully"
 msgstr "Your account has been created successfully"
 
-#: inc.user-verify.php:29
+#: theme/inc.user-verify.php:29
 msgid "Proceed to the login page"
 msgstr "Proceed to the login page"
 
-#: inc.user-verify.php:47
+#: theme/inc.user-verify.php:47
 msgid ""
 "Your password will be encrypted upon registration. Nobody will be able to "
 "view or decrypt your password"
@@ -535,11 +544,11 @@ msgstr ""
 "Your password will be encrypted upon registration. Nobody will be able to "
 "view or decrypt your password"
 
-#: inc.user-verify.php:51
+#: theme/inc.user-verify.php:51
 msgid "Finish your registration"
 msgstr "Finish your registration"
 
-#: inc.user-verify.php:103
+#: theme/inc.user-verify.php:103
 msgid "Register"
 msgstr "Register"
 
