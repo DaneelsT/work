@@ -6,7 +6,7 @@ namespace Carbon\Page;
  * A class which describes the abstract properties and actions of
  * a page.
  *
- * @author  Joeri Hermans
+ * @author  Joeri Hermans, Gaetan Dumortier
  * @since   17 February 2016
  */
 
@@ -18,7 +18,7 @@ abstract class AbstractPage {
     private $mTitle;
 
     public function setTitle($title) {
-        $this->mTitle = $title;
+        $this->mTitle = translate($title);
     }
 
     public function containsTitle() {

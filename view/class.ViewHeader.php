@@ -6,7 +6,7 @@ namespace Work\UI;
  * A class which describes the properties and actions of
  * the header.
  *
- * @author  Joeri Hermans
+ * @author  Joeri Hermans, Gaetan Dumortier
  * @since   21 June 2016
  */
 
@@ -23,7 +23,7 @@ class ViewHeader extends AbstractUIElement {
     }
 
     private function setTitle($title) {
-        $this->mTitle = $title;
+        $this->mTitle = translate($title);
     }
 
     private function placeStyleSheets() {
