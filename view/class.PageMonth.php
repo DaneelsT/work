@@ -21,7 +21,7 @@ class PageMonth extends AbstractAuthorizedPage {
     const PATH = "/month$";
     const TITLE = "Monthly Overview";
 
-    private $mPageTitle = translate("Test");
+    private $mPageTitle;
 
     private $mHeader;
     private $mFooter;
@@ -33,6 +33,14 @@ class PageMonth extends AbstractAuthorizedPage {
     private function initializeViewElements() {
         $this->mHeader = new ViewHeader(self::TITLE);
         $this->mFooter = new ViewFooter();
+    }
+
+    private function setTitle($title) {
+        $this->mPageTitle = $title;
+    }
+
+    private function getTitle() {
+        return $this->mPageTitle;
     }
 
     private function initializeDatabaseConnection() {
@@ -70,6 +78,8 @@ class PageMonth extends AbstractAuthorizedPage {
         $this->setTitle(self::TITLE);
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
+
+        $this->setTitle(translate("Monthly Overview")); // debugging
 
         $this->fetchMonths();
     }
