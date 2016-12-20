@@ -69,8 +69,14 @@
                 </div>
                 <div class="formContainerSeparator formSeparator">
                     <label class="stdLabelWidth"><?php echo translate("Gender"); ?></label>
-                    <input type="radio" name="user_gender" value="1" checked><?php echo translate("Male"); ?>
-                    <input type="radio" name="user_gender" class="spacingLeft" value="2"><?php echo translate("Female"); ?>
+                    <label for="male">
+                        <input type="radio" name="user_gender" value="1" checked />
+                        <?php echo translate("Male"); ?>
+                    </label>
+                    <label for="female">
+                        <input type="radio" name="user_gender" class="spacingLeft" value="2" />
+                        <?php echo translate("Female"); ?>
+                    </label>
                 </div>
 
                 <h4><?php echo translate("Payment Settings"); ?></h4>
