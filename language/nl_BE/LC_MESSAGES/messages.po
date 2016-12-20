@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
 "POT-Creation-Date: 2016-12-20 03:44+0100\n"
-"PO-Revision-Date: 2016-12-20 03:44+0100\n"
+"PO-Revision-Date: 2016-12-20 04:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -73,12 +73,10 @@ msgstr "Geen shifts gevonden"
 #: theme/inc.admin-shift.php:21
 msgid ""
 "No shifts for this user were found in the database!<br />\n"
-"                    Verify that this user has worked a shift before or "
-"shifts aren't booked."
+"                    Verify that this user has worked a shift before or shifts aren't booked."
 msgstr ""
 "Er konden geen shifts voor deze gebruiker worden gevonden.\n"
-"Ga na of deze gebruiker een shift heeft toegevoegd en/of de maand niet "
-"geboekt is."
+"Ga na of deze gebruiker een shift heeft toegevoegd en/of de maand niet geboekt is."
 
 #: theme/inc.admin-shift.php:38 theme/inc.dashboard.php:12
 msgid "Current Earnings"
@@ -449,12 +447,8 @@ msgid "Invalid input"
 msgstr "Ongeldige invoer"
 
 #: theme/inc.user-add.php:15
-msgid ""
-"Some fields were not filled in (correctly). Fill in all fields correctly and "
-"try again"
-msgstr ""
-"Sommige velden zijn niet (correct) ingevuld. Voer alle velden (correct) in "
-"en probeer opnieuw"
+msgid "Some fields were not filled in (correctly). Fill in all fields correctly and try again"
+msgstr "Sommige velden zijn niet (correct) ingevuld. Voer alle velden (correct) in en probeer opnieuw"
 
 #: theme/inc.user-add.php:21 theme/inc.user-verify.php:18
 msgid "User already exists"
@@ -538,12 +532,8 @@ msgid "Proceed to the login page"
 msgstr "Doorgaan naar login pagina"
 
 #: theme/inc.user-verify.php:47
-msgid ""
-"Your password will be encrypted upon registration. Nobody will be able to "
-"view or decrypt your password"
-msgstr ""
-"Je wachtwoord wordt versleuteld na je registratie. Anderen zullen dit dus "
-"niet kunnen bekijken of ontcijferen"
+msgid "Your password will be encrypted upon registration. Nobody will be able to view or decrypt your password"
+msgstr "Je wachtwoord wordt versleuteld na je registratie. Anderen zullen dit dus niet kunnen bekijken of ontcijferen"
 
 #: theme/inc.user-verify.php:51
 msgid "Finish your registration"
@@ -552,6 +542,38 @@ msgstr "Voltooi je registratie"
 #: theme/inc.user-verify.php:103
 msgid "Register"
 msgstr "Registreer"
+
+#: view/class.PageDashboard.php:23
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: view/class.PageLogin.php:23
+msgid "Log in"
+msgstr "Log in"
+
+#: view/class.PageMonthClose.php:24
+msgid "Close and book current month"
+msgstr "Huidige maand boeken en sluiten"
+
+#: view/class.PageProfile.php:24
+msgid "My Profile"
+msgstr "Mijn Profile"
+
+#: view/class.PageShiftRemove.php:23
+msgid "Remove this shift"
+msgstr "Verwijder deze shift"
+
+#: view/class.PageUserEdit.php:44
+msgid "Specified user not found"
+msgstr "Gevraagde gebruiker niet gevonden"
+
+#: view/class.PageUserEdit.php:46
+msgid "Edit this user"
+msgstr "Shift aanpassen"
+
+#: view/class.PageUserVerify.php:22
+msgid "Verify Account"
+msgstr "Account verifiëren"
 
 #~ msgid "Username or e-mail"
 #~ msgstr "Gebruikersnaam of e-mail"
@@ -562,12 +584,8 @@ msgstr "Registreer"
 #~ msgid "Change Language"
 #~ msgstr "Wijzig Taal"
 
-#~ msgid ""
-#~ "Some fields were left empty or were not filled in correctly. Go back and "
-#~ "try again"
-#~ msgstr ""
-#~ "Sommige velden zijn leeggelaten of niet correct ingevuld. Ga terug en "
-#~ "prober opnieuw"
+#~ msgid "Some fields were left empty or were not filled in correctly. Go back and try again"
+#~ msgstr "Sommige velden zijn leeggelaten of niet correct ingevuld. Ga terug en prober opnieuw"
 
 #~ msgid "excluded"
 #~ msgstr "niet inbegrepen"

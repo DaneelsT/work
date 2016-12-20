@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
 "POT-Creation-Date: 2016-12-20 03:44+0100\n"
-"PO-Revision-Date: 2016-12-20 03:44+0100\n"
+"PO-Revision-Date: 2016-12-20 04:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -73,8 +73,7 @@ msgstr "No shifts found"
 #: theme/inc.admin-shift.php:21
 msgid ""
 "No shifts for this user were found in the database!<br />\n"
-"                    Verify that this user has worked a shift before or "
-"shifts aren't booked."
+"                    Verify that this user has worked a shift before or shifts aren't booked."
 msgstr ""
 "No shifts for this user were found in the database!\n"
 "Verify that this user has worked a shift before or shifts aren't booked."
@@ -446,12 +445,8 @@ msgid "Invalid input"
 msgstr "Invalid input"
 
 #: theme/inc.user-add.php:15
-msgid ""
-"Some fields were not filled in (correctly). Fill in all fields correctly and "
-"try again"
-msgstr ""
-"Some fields were not filled in (correctly). Fill in all fields correctly and "
-"try again"
+msgid "Some fields were not filled in (correctly). Fill in all fields correctly and try again"
+msgstr "Some fields were not filled in (correctly). Fill in all fields correctly and try again"
 
 #: theme/inc.user-add.php:21 theme/inc.user-verify.php:18
 msgid "User already exists"
@@ -520,13 +515,11 @@ msgstr "The token you have supplied (%s) does not appear to be valid"
 
 #: theme/inc.user-verify.php:20
 msgid "A user with the supplied username or email already exists in the system"
-msgstr ""
-"A user with the supplied username or email already exists in the system"
+msgstr "A user with the supplied username or email already exists in the system"
 
 #: theme/inc.user-verify.php:26
 msgid "Account created"
-msgstr ""
-"A user with the supplied username or email already exists in the system"
+msgstr "A user with the supplied username or email already exists in the system"
 
 #: theme/inc.user-verify.php:28
 msgid "Your account has been created successfully"
@@ -537,12 +530,8 @@ msgid "Proceed to the login page"
 msgstr "Proceed to the login page"
 
 #: theme/inc.user-verify.php:47
-msgid ""
-"Your password will be encrypted upon registration. Nobody will be able to "
-"view or decrypt your password"
-msgstr ""
-"Your password will be encrypted upon registration. Nobody will be able to "
-"view or decrypt your password"
+msgid "Your password will be encrypted upon registration. Nobody will be able to view or decrypt your password"
+msgstr "Your password will be encrypted upon registration. Nobody will be able to view or decrypt your password"
 
 #: theme/inc.user-verify.php:51
 msgid "Finish your registration"
@@ -551,6 +540,38 @@ msgstr "Finish your registration"
 #: theme/inc.user-verify.php:103
 msgid "Register"
 msgstr "Register"
+
+#: view/class.PageDashboard.php:23
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: view/class.PageLogin.php:23
+msgid "Log in"
+msgstr "Log in"
+
+#: view/class.PageMonthClose.php:24
+msgid "Close and book current month"
+msgstr "Close and book current month"
+
+#: view/class.PageProfile.php:24
+msgid "My Profile"
+msgstr "My Profile"
+
+#: view/class.PageShiftRemove.php:23
+msgid "Remove this shift"
+msgstr "Remove this shift"
+
+#: view/class.PageUserEdit.php:44
+msgid "Specified user not found"
+msgstr "Specified user not found"
+
+#: view/class.PageUserEdit.php:46
+msgid "Edit this user"
+msgstr "Edit this user"
+
+#: view/class.PageUserVerify.php:22
+msgid "Verify Account"
+msgstr "Verify Account"
 
 #~ msgid "Username or e-mail"
 #~ msgstr "Username or e-mail"
@@ -561,12 +582,8 @@ msgstr "Register"
 #~ msgid "Change Language"
 #~ msgstr "Change Language"
 
-#~ msgid ""
-#~ "Some fields were left empty or were not filled in correctly. Go back and "
-#~ "try again"
-#~ msgstr ""
-#~ "Some fields were left empty or were not filled in correctly. Go back and "
-#~ "try again"
+#~ msgid "Some fields were left empty or were not filled in correctly. Go back and try again"
+#~ msgstr "Some fields were left empty or were not filled in correctly. Go back and try again"
 
 #~ msgid "excluded"
 #~ msgstr "excluded"
