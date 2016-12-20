@@ -4,7 +4,7 @@
             <h2><?php echo translate("Monthly Overview"); ?></h2>
             <table class="width50" style="font-size: 13px;">
                 <tr>
-                    <th><?php echo $this->getTitle(); // debugging purpose ?></th>
+                    <th><?php echo $this->getPageTitle(); // debugging purpose ?></th>
 
                     <th><?php echo translate("Month"); ?></th>
                     <th><?php echo translate("Hours Worked"); ?></th>
