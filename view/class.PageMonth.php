@@ -21,6 +21,8 @@ class PageMonth extends AbstractAuthorizedPage {
     const PATH = "/month$";
     const TITLE = "Monthly Overview";
 
+    private $mPageTitle = translate("Test");
+
     private $mHeader;
     private $mFooter;
 
@@ -74,6 +76,10 @@ class PageMonth extends AbstractAuthorizedPage {
 
     public function getMonths() {
         return $this->mMonths;
+    }
+
+    public function getTitle() {
+        return $this->mPageTitle;
     }
 
     public function draw() {
