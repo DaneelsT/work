@@ -88,10 +88,6 @@ class PageMonth extends AbstractAuthorizedPage {
         return $this->mMonths;
     }
 
-    public function getTitle() {
-        return $this->mPageTitle;
-    }
-
     public function draw() {
         $this->mHeader->draw();
         include "theme/inc.month-overview.php";
