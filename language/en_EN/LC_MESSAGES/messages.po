@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2016-12-15 01:14+0100\n"
-"PO-Revision-Date: 2016-12-15 01:15+0100\n"
+"POT-Creation-Date: 2016-12-20 03:39+0100\n"
+"PO-Revision-Date: 2016-12-20 03:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -115,43 +115,43 @@ msgstr "Hours worked"
 msgid "View shifts from"
 msgstr "View shifts from"
 
-#: inc.admin-shift.php:56 inc.dashboard.php:30 inc.dashboard.php:55
+#: inc.admin-shift.php:56 inc.dashboard.php:30 inc.dashboard.php:54
 #: inc.shift-edit.php:12
 msgid "Date"
 msgstr "Date"
 
-#: inc.admin-shift.php:57 inc.dashboard.php:34 inc.dashboard.php:56
+#: inc.admin-shift.php:57 inc.dashboard.php:34 inc.dashboard.php:55
 #: inc.shift-edit.php:16
 msgid "Start Time"
 msgstr "Start Time"
 
-#: inc.admin-shift.php:58 inc.dashboard.php:38 inc.dashboard.php:57
+#: inc.admin-shift.php:58 inc.dashboard.php:38 inc.dashboard.php:56
 #: inc.shift-edit.php:20
 msgid "End Time"
 msgstr "End Time"
 
-#: inc.admin-shift.php:59 inc.dashboard.php:58
+#: inc.admin-shift.php:59 inc.dashboard.php:57
 msgid "Total Hours"
 msgstr "Total Hours"
 
 #: inc.admin-shift.php:61 inc.admin-shifts.php:16 inc.admin-users.php:18
-#: inc.dashboard.php:60
+#: inc.dashboard.php:59
 msgid "Actions"
 msgstr "Actions"
 
-#: inc.admin-shift.php:85 inc.dashboard.php:86
+#: inc.admin-shift.php:85 inc.dashboard.php:84
 msgid "SUNDAY"
 msgstr "SUNDAY"
 
-#: inc.admin-shift.php:87 inc.dashboard.php:88
+#: inc.admin-shift.php:87 inc.dashboard.php:86
 msgid "HOLIDAY"
 msgstr "HOLIDAY"
 
-#: inc.admin-shift.php:94 inc.dashboard.php:95
+#: inc.admin-shift.php:94 inc.dashboard.php:93
 msgid "Remove"
 msgstr "Remove"
 
-#: inc.admin-shift.php:95 inc.admin-users.php:29 inc.dashboard.php:96
+#: inc.admin-shift.php:95 inc.admin-users.php:29 inc.dashboard.php:94
 #: inc.user-edit.php:28
 msgid "Edit"
 msgstr "Edit"

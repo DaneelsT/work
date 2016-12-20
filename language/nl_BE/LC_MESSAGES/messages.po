@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2016-12-15 01:15+0100\n"
-"PO-Revision-Date: 2016-12-15 01:15+0100\n"
+"POT-Creation-Date: 2016-12-20 03:38+0100\n"
+"PO-Revision-Date: 2016-12-20 03:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-Basepath: X:/github/work/theme\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;translate\n"
+"X-Poedit-KeywordsList: __;translate;translatevar\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: inc.admin-invite.php:5
@@ -115,43 +115,43 @@ msgstr "Gewerkte uren"
 msgid "View shifts from"
 msgstr "Bekijk shifts van"
 
-#: inc.admin-shift.php:56 inc.dashboard.php:30 inc.dashboard.php:55
+#: inc.admin-shift.php:56 inc.dashboard.php:30 inc.dashboard.php:54
 #: inc.shift-edit.php:12
 msgid "Date"
 msgstr "Datum"
 
-#: inc.admin-shift.php:57 inc.dashboard.php:34 inc.dashboard.php:56
+#: inc.admin-shift.php:57 inc.dashboard.php:34 inc.dashboard.php:55
 #: inc.shift-edit.php:16
 msgid "Start Time"
 msgstr "Start Tijd"
 
-#: inc.admin-shift.php:58 inc.dashboard.php:38 inc.dashboard.php:57
+#: inc.admin-shift.php:58 inc.dashboard.php:38 inc.dashboard.php:56
 #: inc.shift-edit.php:20
 msgid "End Time"
 msgstr "Eind Tijd"
 
-#: inc.admin-shift.php:59 inc.dashboard.php:58
+#: inc.admin-shift.php:59 inc.dashboard.php:57
 msgid "Total Hours"
 msgstr "Totaal uren"
 
 #: inc.admin-shift.php:61 inc.admin-shifts.php:16 inc.admin-users.php:18
-#: inc.dashboard.php:60
+#: inc.dashboard.php:59
 msgid "Actions"
 msgstr "Acties"
 
-#: inc.admin-shift.php:85 inc.dashboard.php:86
+#: inc.admin-shift.php:85 inc.dashboard.php:84
 msgid "SUNDAY"
 msgstr "ZONDAG"
 
-#: inc.admin-shift.php:87 inc.dashboard.php:88
+#: inc.admin-shift.php:87 inc.dashboard.php:86
 msgid "HOLIDAY"
 msgstr "FEESTDAG"
 
-#: inc.admin-shift.php:94 inc.dashboard.php:95
+#: inc.admin-shift.php:94 inc.dashboard.php:93
 msgid "Remove"
 msgstr "Verwijder"
 
-#: inc.admin-shift.php:95 inc.admin-users.php:29 inc.dashboard.php:96
+#: inc.admin-shift.php:95 inc.admin-users.php:29 inc.dashboard.php:94
 #: inc.user-edit.php:28
 msgid "Edit"
 msgstr "Aanpassen"
@@ -245,6 +245,11 @@ msgstr "uitloggen"
 msgid "This month has been booked already"
 msgstr "Deze maand is al geboekt"
 
+#: inc.month-close.php:15
+#, php-format
+msgid "The current month (%s) has been booked and closed already"
+msgstr "De huidige maand (%s) is al geboekt en afgesloten"
+
 #: inc.month-close.php:17
 msgid "Check Monthly Overview"
 msgstr "Bekijk Maandelijks Overzicht"
@@ -256,6 +261,11 @@ msgstr "Terug naar dashboard"
 #: inc.month-close.php:25
 msgid "Month closed and booked"
 msgstr "Maand gesloten en geboekt"
+
+#: inc.month-close.php:27
+#, php-format
+msgid "The month %s has been successfully closed and booked"
+msgstr "De maand %s is successvol gesloten en geboekt"
 
 #: inc.month-close.php:29
 msgid "Details of this month"
@@ -496,6 +506,11 @@ msgstr "Deze gebruiker zijn/haar profiel is succesvol aangepast"
 msgid "Invalid token"
 msgstr "Ongeldige token"
 
+#: inc.user-verify.php:12
+#, php-format
+msgid "The token you have supplied (%s) does not appear to be valid"
+msgstr "De token die je hebt ingevoerd (%s) lijkt niet geldig te zijn"
+
 #: inc.user-verify.php:20
 msgid "A user with the supplied username or email already exists in the system"
 msgstr "Een gebruiker met opgegeven gebruikersnaam/e-mail bestaat al"
@@ -543,15 +558,6 @@ msgstr "Registreer"
 #~ msgstr ""
 #~ "Sommige velden zijn leeggelaten of niet correct ingevuld. Ga terug en "
 #~ "prober opnieuw"
-
-#~ msgid "The current month (%s) has been booked and closed already"
-#~ msgstr "De huidige maand (%s) is al geboekt en afgesloten"
-
-#~ msgid "The month %s has been successfully closed and booked"
-#~ msgstr "De maand %s is successvol gesloten en geboekt"
-
-#~ msgid "The token you have supplied (%s) does not appear to be valid"
-#~ msgstr "De token die je hebt ingevoerd (%s) lijkt niet geldig te zijn"
 
 #~ msgid "excluded"
 #~ msgstr "niet inbegrepen"
