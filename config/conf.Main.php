@@ -18,8 +18,8 @@ $conf['host']   = "example.com";
 $conf['base']   = "/base-directory";
 
 // Security configuration.
-$conf['sec_presalt']        = "fKd4pT";
-$conf['sec_postsalt']       = "LAv83K";
+$conf['sec_presalt']        = "lAg6qR";
+$conf['sec_postsalt']       = "Krp54B";
 
 // Users payment configuration.
 $conf['hourly_pay']			= 10.25;
