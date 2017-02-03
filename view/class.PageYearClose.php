@@ -161,7 +161,7 @@ class PageYearClose extends AbstractAuthorizedPage {
 	}
 
     public function getSundaysWorked() {
-        return $this->mSundaysWorked
+        return $this->mSundaysWorked;
     }
 
     public function draw() {
