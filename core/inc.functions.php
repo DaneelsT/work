@@ -171,6 +171,8 @@ function registerPages($router) {
     $router->registerPage(\Work\Page\PageMonthClose::PATH, "\Work\Page\PageMonthClose");
 	$router->registerPage(\Work\Page\PageProfile::PATH, "\Work\Page\PageProfile");
     $router->registerPage(\Work\Page\PageUserVerify::PATH, "\Work\Page\PageUserVerify");
+    $router->registerPage(\Work\Page\PageYear::PATH, "\Work\Page\PageYear");
+    $router->registerPage(\Work\Page\PageYearClose::PATH, "\Work\Page\PageYearClose");
 	// Register admin pages
 	$router->registerPage(\Work\Page\PageAdmin::PATH, "\Work\Page\PageAdmin");
 	$router->registerPage(\Work\Page\PageAdminUsers::PATH, "\Work\Page\PageAdminUsers");
