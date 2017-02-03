@@ -13,7 +13,7 @@
                 </tr>
                 <?php
                 // Fetch the months
-                $months = $this->getYears();
+                $years = $this->getYears();
                 // Initialize the HTML string
                 $html = "";
                 // Iterate through all years and display them
