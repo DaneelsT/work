@@ -12,7 +12,7 @@
                     <th><?php echo translate("Sundays Worked"); ?></th>
                 </tr>
                 <?php
-                // Fetch the months
+                // Fetch the years
                 $years = $this->getYears();
                 // Initialize the HTML string
                 $html = "";

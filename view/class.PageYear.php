@@ -73,7 +73,7 @@ class PageYear extends AbstractAuthorizedPage {
     }
 
     public function getYears() {
-        return $this->mYears;
+        return $this->mYears
     }
 
     public function draw() {
