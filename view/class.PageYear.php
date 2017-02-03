@@ -16,7 +16,7 @@ use \Work\UI\ViewHeader;
 use \Work\UI\ViewFooter;
 use \PDO;
 
-class PageMonth extends AbstractAuthorizedPage {
+class PageYear extends AbstractAuthorizedPage {
 
     const PATH = "/year$";
     private $mTitle = "Yearly Overview";

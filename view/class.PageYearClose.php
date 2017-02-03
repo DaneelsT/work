@@ -18,7 +18,7 @@ use \Work\UI\ViewHeader;
 use \Work\UI\ViewFooter;
 use \PDO;
 
-class PageMonthClose extends AbstractAuthorizedPage {
+class PageYearClose extends AbstractAuthorizedPage {
 
     const PATH = "/year/close$";
     private $mTitle = "Close and book current year";
