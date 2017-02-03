@@ -17,7 +17,7 @@
                 // Initialize the HTML string
                 $html = "";
                 // Iterate through all years and display them
-                foreach$years as $year) {
+                foreach ($years as $year) {
                     $html .= '<tr>';
                     $html .= '<td>' . $year->getYear() . '</td>';
                     $html .= '<td>' . $year->getHoursWorked() . '</td>';
