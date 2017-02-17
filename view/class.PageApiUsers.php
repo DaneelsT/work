@@ -32,10 +32,19 @@ class PageApiUsers extends AbstractApiPage {
     }
 
     private function fetchAllUsers() {
-        $sql = "SELECT DISTINCT id, username, email, name, surname, gender, disabled, admin, lang
-                FROM
-                    users,
-                    users_language;";
+        $sql = "SELECT
+                    users.id,
+                    users.username,
+                    users.email,
+                    users.name,
+                    users.surname,
+                    users.gender,
+                    users.disabled,
+                    users.admin,
+                    users.last_ip,
+                    users_language.lang
+                FROM users
+                INNER JOIN users_language ON users.id = users_language.userid;";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
