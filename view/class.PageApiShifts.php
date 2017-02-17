@@ -19,7 +19,6 @@ class PageApiShifts extends AbstractApiPage {
     const PATH = "/api/shifts/[0-9]+$";
 
     private $mShifts;
-
     private $mId;
     private $mDbHandle;
 
@@ -54,7 +53,7 @@ class PageApiShifts extends AbstractApiPage {
 
         $apikey = $this->getApiKey();
         if( !isset($apikey) || strlen($apikey) == 0 ) {
-            http_response_code(500);
+            $this->generateError(500);
             exit;
         }
     }
@@ -67,7 +66,7 @@ class PageApiShifts extends AbstractApiPage {
                 $this->returnData();
                 break;
             default:
-                http_response_code(400);
+                $this->generateError(400);
                 break;
         }
     }

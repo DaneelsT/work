@@ -19,7 +19,6 @@ class PageApiShift extends AbstractApiPage {
     const PATH = "/api/shift/[0-9]+$";
 
     private $mShift;
-
     private $mShiftId;
     private $mDbHandle;
 
@@ -46,7 +45,7 @@ class PageApiShift extends AbstractApiPage {
         $shifts = $statement->fetchAll(PDO::FETCH_ASSOC);
         // Return 404 (not found) when no shifts for this user were found
         if(count($shifts) == 0) {
-            http_response_code(404);
+            $this->generateError(404);
             exit();
         }
 
@@ -76,7 +75,7 @@ class PageApiShift extends AbstractApiPage {
 
         $apikey = $this->getApiKey();
         if( !isset($apikey) || strlen($apikey) == 0 ) {
-            http_response_code(500);
+            $this->generateError(500);
             exit;
         }
     }
@@ -89,7 +88,7 @@ class PageApiShift extends AbstractApiPage {
                 $this->returnShift();
                 break;
             default:
-                http_response_code(400);
+                $this->generateError(400);
                 break;
         }
     }

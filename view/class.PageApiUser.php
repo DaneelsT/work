@@ -19,7 +19,6 @@ class PageApiUser extends AbstractApiPage {
     const PATH = "/api/user/[0-9]+$";
 
     private $mUsers;
-
     private $mId;
     private $mDbHandle;
 
@@ -46,7 +45,7 @@ class PageApiUser extends AbstractApiPage {
         $statement->execute();
         $users = $statement->fetchAll(PDO::FETCH_ASSOC);
         if(count($users) == 0) {
-            http_response_code(204);
+            $this->generateError(204);
             exit();
         }
 
@@ -74,11 +73,7 @@ class PageApiUser extends AbstractApiPage {
 
         $this->mId = Application::getInstance()->getRouter()->getSegment(2);
 
-        $apikey = $this->getApiKey();
-        if( !isset($apikey) || strlen($apikey) == 0 ) {
-            http_response_code(500);
-            exit;
-        }
+        $this->validApiKey();
     }
 
     public function draw()
@@ -89,7 +84,7 @@ class PageApiUser extends AbstractApiPage {
                 $this->returnUser();
                 break;
             default:
-                http_response_code(400);
+                $this->generateError(400);
                 break;
         }
     }
