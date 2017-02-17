@@ -51,27 +51,18 @@ class PageApiUser extends AbstractApiPage {
         }
 
         foreach($users as $user) {
-            $id = $user['id'];
-            $username = $user['username'];
-            $email = $user['email'];
-            $name = $user['name'];
-            $surname = $user['surname'];
-            $gender = (bool) $user['gender'];
-            $disabled = (bool) $user['disabled'];
-            $last_ip = $user['last_ip'];
-            $admin = $user['admin'];
-            $lang = $user['lang'];
             // Push user details to array
             $this->mUsers = array(
-                "id" => $id,
-                "username" => $username,
-                "email" => $email,
-                "name" => $name,
-                "surname" => $surname,
-                "gender" => $gender,
-                "disabled" => $disabled,
-                "admin" => $admin,
-                "lang" => $lang
+                "id" => $user['id'],
+                "username" => $user["username"],
+                "email" => $user["email"],
+                "name" => $user["name"],
+                "surname" => $user["surname"],
+                "gender" => $user["gender"],
+                "disabled" => $user["disabled"],
+                "admin" => $user["admin"],
+                "last_ip" => $user["last_ip"],
+                "lang" => $user["lang"]
             );
         }
     }
