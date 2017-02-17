@@ -38,10 +38,9 @@ class PageApiUser extends AbstractApiPage {
 
     private function fetchUser() {
         $sql = "SELECT *
-                FROM
-                    users,
-                    users_language
-                WHERE id = :userid";
+                FROM users
+                INNER JOIN users_language ON users.id = users_language.userid
+                WHERE id = :userid;";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(":userid", $this->mId);
         $statement->execute();
