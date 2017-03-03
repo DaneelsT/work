@@ -37,28 +37,47 @@ function validateTime(time) {
 }
 
 /**
- *  Responsible for displaying a confirmation box when the book month button has been clicked.
+ * Responsible for displaying a confirmationbox when the book month or book year button has been clicked.
+ * Not the best looking code I ever written but ok.
  */
- function closeMonthConfirmation() {
-     var button = $("#closemonth");
-     var text;
+function closeConfirmationBox() {
+    var button = $("#closebutton");
+    var buttonText = button.text();
+    var option;
+    var text = "Are you sure you want to book and close this month?\nThere is no going back!"; // default text
 
-      // Work out which language we are using and set correct text for confirmation window
-     if(button.text().toLowerCase() == "close month") {
-         text = "Are you sure you want to book and close this month?\nThere is no going back!";
-     }else if(button.text().toLowerCase() == "sluit maand") {
-         text = "Ben je zeker dat je deze maand wilt boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
-     }else{
-         text = "Are you sure you want to book and close this month?\nThere is no going back!";
-     }
+    // Work out if the button is for month or year
+    if(buttonText.indexOf("month") >= 0) {
+        option = "year";
+    }else{
+        option = "month";
+    }
 
-     $(button).click(function() {
-         var confirmation = confirm(text);
-         if(confirmation == false) {
-             return false;
-         }
-     });
- }
+    // Switch between month and year text
+    switch(option) {
+        case "month":
+            if(button.text().toLowerCase() == "close month") {
+                text = "Are you sure you want to book and close this month?\nThere is no going back!";
+            }else if(button.text().toLowerCase() == "sluit maand") {
+                text = "Ben je zeker dat je deze maand wilt boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
+            }
+            break;
+        case "year":
+            if(buttonText.toLowerCase() == "close year") {
+                text = "Are you sure you want to book and close this year?\nThere is no going back!";
+            }else if(buttonText.toLowerCase() == "sluit jaar") {
+                text = "Ben je zeker dat je dit jaar wilt boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
+            }
+            break;
+    }
+
+    $(button).click(function() {
+        var confirmation = confirm(text);
+        if(confirmation == false) {
+            return false;
+        }
+    });
+}
 
 $(document).ready(function() {
     // Create the input masks.
