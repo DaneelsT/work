@@ -1,72 +1,72 @@
 <?php
 
-namespace Work\Month;
+namespace Work\Year;
 
 /**
- * A class describing the actions and properties of the month class.
+ * A class describing the actions and properties of a year.
  *
  * @author Gaetan Dumortier
- * @since 24 October 2016
+ * @since 3 March 2017
 */
 
 use \Carbon\Application\Application;
 
-class Month {
+class Year {
 
     /**
-     * Contains the unique identifier of the month
-     */
+     * Contains the unique identifier of the year
+    */
     private $mId;
 
     /**
-     * Contains the numeric representation of the month
-     */
-    private $mMonth;
+     * Contains the numeric representation of the year
+    */
+    private $mYear;
 
     /**
-     * Contains the total of worked hours of the month
-     */
+     * Contains the total of worked hours of the year
+    */
     private $mHoursWorked;
 
-	/**
-	 * Contains the total days worked in the month
-	 */
-	private $mDaysWorked;
+    /**
+     * Contains the total days worked in the year
+    */
+    private $mDaysWorked;
 
     /**
-     * Contains the earnings of the month
-     */
+     * Contains the earnings of the year
+    */
     private $mEarnings;
 
     /**
-     * Contains the total sundays worked in the month
-     */
+     * Contains the total sundays worked in the year
+    */
     private $mSundays;
 
-    public function __construct($id, $month, $hours, $days, $earnings, $sunday) {
+    public function __construct($id, $year, $hours, $days, $earnings, $sundays) {
         $this->setId($id);
-        $this->setMonth($month);
+        $this->setYear($year);
         $this->setHoursWorked($hours);
         $this->setDaysWorked($days);
         $this->setEarnings($earnings);
-        $this->setSundays($sunday);
+        $this->setSundays($sundays);
     }
 
     private function setId($id) {
         $this->mId = $id;
     }
 
-    private function setMonth($month) {
-        $this->mMonth = $month;
+    private function setYear($year) {
+        $this->mYear = $year;
     }
 
     private function setHoursWorked($hours) {
         $this->mHoursWorked = $hours;
     }
 
-	private function setDaysWorked($days) {
-		$this->mDaysWorked = $days;
-	}
+    private function setDaysWorked($days) {
+        $this->mDaysWorked = $days;
+    }
 
     private function setEarnings($earnings) {
         $this->mEarnings = $earnings;
@@ -80,8 +80,8 @@ class Month {
         return $this->mId;
     }
 
-    public function getMonth() {
-        return $this->mMonth;
+    public function getYear() {
+        return $this->mYear;
     }
 
     public function getHoursWorked() {
