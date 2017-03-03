@@ -66,10 +66,10 @@ class PageYearClose extends AbstractAuthorizedPage {
         foreach ($months as $month) {
             $id = $month['id'];
             $this->mMonth = $month['month'];
-            $this->mHoursWorked = $month['hoursWorked'];
-            $this->mDaysWorked = $month['daysWorked'];
-            $this->mEarnings = $month['earnings'];
-            $this->mSundaysWorked = $month['sundaysWorked'];
+            $this->mHoursWorked += $month['hoursWorked'];
+            $this->mDaysWorked += $month['daysWorked'];
+            $this->mEarnings += $month['earnings'];
+            $this->mSundaysWorked += $month['sundaysWorked'];
             // Allocate a new month instance
             array_push($this->mMonths, new Month($id, $this->mMonth, $this->mHoursWorked, $this->mDaysWorked, $this->mEarnings, $this->mSundaysWorked));
         }

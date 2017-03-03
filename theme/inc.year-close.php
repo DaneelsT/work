@@ -24,7 +24,7 @@ $currentYear = date("Y");
         <div class="panelContent">
             <h2><?php echo translate("Year closed and booked"); ?></h2>
 
-            <p><?php echo translatevar("The year %s has been successfully closed and booked", $currentMonth); ?>.</p>
+            <p><?php echo translatevar("The year %s has been successfully closed and booked", $currentYear); ?>.</p>
 
             <h3><?php echo translate("Details of this year"); ?></h3>
             <p>
