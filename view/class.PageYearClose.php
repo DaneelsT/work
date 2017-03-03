@@ -111,6 +111,7 @@ class PageYearClose extends AbstractAuthorizedPage {
         $statement->bindParam(':earnings', $this->mEarnings);
         $statement->bindParam(':sundaysworked', $this->mSundaysWorked);
 		$statement->bindParam(':userid', $user->getId());
+        $statement->execute();
 
         $this->closeYear();
     }
