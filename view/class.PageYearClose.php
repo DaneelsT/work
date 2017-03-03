@@ -79,6 +79,7 @@ class PageYearClose extends AbstractAuthorizedPage {
     private function checkYear() {
     	$app = Application::getInstance();
 		$user = $app->getUser();
+
         $sql = "SELECT year
                 FROM years
                 WHERE year = :year AND userid = :userid";
