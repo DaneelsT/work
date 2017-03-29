@@ -10,6 +10,17 @@
 use \Carbon\Application\Application;
 use \Work\Shift\Shift;
 
+function getTheme($page) {
+    $path = null;
+    if(Application::getInstance()->isMobile()) {
+        $path = "./theme/mobile/". $page;
+    }else{
+        $path = "./theme/". $page;
+    }
+
+    return $path;
+}
+
 function loadClass($className) {
     $clearedFromNamespace = strrchr($className, '\\');
     if ($clearedFromNamespace != null)
