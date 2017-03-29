@@ -107,17 +107,26 @@ function dayIsSunday($inp) {
 }
 
 function placeStyleSheet($stylesheet) {
-    $source = getHttpRoot() . "theme/css/" . $stylesheet;
+    if(Application::getInstance()->isMobile()) {
+        $source = getHttpRoot() . "theme/mobile/css/" . $stylesheet;
+    }else{
+        $source = getHttpRoot() . "theme/css/" . $stylesheet;
+    }
 
     echo '<link rel="stylesheet" media="screen" href="' . $source . '">';
 }
 
 function placeScript($script) {
     // Check if the specified script is an absolute script.
-    if (substr($script, 0, 4) === "http")
+    if (substr($script, 0, 4) === "http") {
         $source = $script;
-    else
-        $source = getHttpRoot() . "theme/js/" . $script;
+    }else{
+        if(Application::getInstance()->isMobile()) {
+            $source = getHttpRoot() . "theme/mobile/js/" . $script;
+        }else{
+            $source = getHttpRoot() . "theme/js/" . $script;
+        }
+    }
 
     echo '<script type="text/javascript" src="' . $source . '"></script>';
 }
@@ -140,7 +149,7 @@ function placeHttpRoot() {
 }
 
 function placeMenuItem($url, $str, $style = "", $class = "") {
-	echo '<li><a href=' . getHttpRoot() . $url . ' style=' . $style . ' class=' . $class . '>' . strtoupper($str) . '</a></li>';
+	echo '<li><a href=' . getHttpRoot() . $url . ' style=' . $style . ' class=' . $class . '>' . $str . '</a></li>';
 }
 
 function validEmail( $email ) {
