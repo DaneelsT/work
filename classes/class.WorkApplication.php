@@ -26,6 +26,11 @@ class WorkApplication extends Application
      */
     private $mUser = null;
 
+	/**
+	 * Contains a boolean whether the site is being viewed on a mobile device or not
+	*/
+	private $mIsMobile = null;
+
     private function startSession()
     {
         session_start();
@@ -107,5 +112,13 @@ class WorkApplication extends Application
     {
         return ( $this->mUser != null );
     }
+
+	public function setMobile($state) {
+		$this->mIsMobile = $state;
+	}
+
+	public function isMobile() {
+		return ( $this->mIsMobile );
+	}
 
 }

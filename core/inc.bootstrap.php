@@ -22,6 +22,9 @@ Application::setInstance($app);
 parseConfiguration("Database");
 parseConfiguration("Main");
 
+// Load required device check file
+require_once "core/inc.device.php";
+
 // Load required language file
 require_once "core/inc.language.php";
 
