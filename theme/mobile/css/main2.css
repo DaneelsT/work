@@ -1,0 +1,61 @@
+html, body {
+    background: url("../img/background.jpg") repeat;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+}
+
+.navbar .container {
+    width: auto;
+}
+
+.buttonSpacingRight {
+    margin-right: 10px;
+}
+
+.spacingBottom {
+    margin-bottom: 10px;
+}
+
+/**
+*********************************
+    BEGIN footer
+*********************************
+**/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-left: 20px;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #222222;
+}
+
+.text {
+    color: #979797;
+    margin-top: 15px;
+}
+
+.footer a:hover,
+.footer a:visited,
+.footer a:active {
+    color: #979797;
+}
+
+.footer a:hover {
+    color: #FFFFFF;
+}
+/**
+*********************************
+    END footer
+*********************************
+**/

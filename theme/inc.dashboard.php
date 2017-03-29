@@ -2,12 +2,12 @@
     <div class="panel panelSeperatorBottom">
         <div class="panelContent">
         	<?php
-        	$totalPay = round($this->getTotalPay(), 2);
-            $totalPayWithFees = round($this->getTotalPayWithFees(), 2);
-			$payPerHour = $this->getPayPerHour();
-			$sundayFee = $this->getSundayFee();
-			$hoursWorked = round($this->getTotalHours(), 1);
-            $currentMonth = date("F");
+            	$totalPay = round($this->getTotalPay(), 2);
+                $totalPayWithFees = round($this->getTotalPayWithFees(), 2);
+    			$payPerHour = $this->getPayPerHour();
+    			$sundayFee = $this->getSundayFee();
+    			$hoursWorked = round($this->getTotalHours(), 1);
+                $currentMonth = date("F");
 			?>
             <h2><?php echo translate("Current Earnings"); ?> - <?php echo $currentMonth; ?> (&euro; <?php echo $totalPayWithFees; ?>)</h2>
             <p style="font-size:15px;">
