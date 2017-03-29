@@ -149,7 +149,7 @@ function placeHttpRoot() {
 }
 
 function placeMenuItem($url, $str, $style = "", $class = "") {
-	echo '<li><a href=' . getHttpRoot() . $url . ' style=' . $style . ' class=' . $class . '>' . $str . '</a></li>';
+	echo '<li><a href=' . getHttpRoot() . $url . ' style=' . $style . ' class=' . $class . '>' . strtoupper($str) . '</a></li>';
 }
 
 function validEmail( $email ) {
