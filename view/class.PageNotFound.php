@@ -36,7 +36,7 @@ class PageNotFound extends AbstractPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.page-not-found.php";
+        include getTheme("inc.page-not-found.php");
         $this->mFooter->draw();
     }
 

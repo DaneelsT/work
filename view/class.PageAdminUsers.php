@@ -84,7 +84,7 @@ class PageAdminUsers extends AbstractAuthorizedPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.admin-users.php";
+        include getTheme("inc.admin-users.php");
         $this->mFooter->draw();
     }
 

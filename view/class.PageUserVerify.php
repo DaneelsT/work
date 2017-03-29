@@ -257,7 +257,7 @@ class PageUserVerify extends AbstractPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.user-verify.php";
+        include getTheme("inc.user-verify.php");
         $this->mFooter->draw();
     }
 

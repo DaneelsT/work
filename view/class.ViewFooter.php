@@ -21,6 +21,9 @@ class ViewFooter extends AbstractUIelement {
     }
 
     private function addDefaultScripts() {
+        $this->addScript("jquery.min.js");
+        $this->addScript("bootstrap.min.js");
+        $this->addScript("jquery.mask.min.js");
     }
 
     public function addScript($script) {
@@ -29,7 +32,7 @@ class ViewFooter extends AbstractUIelement {
 
     public function draw() {
         $this->addDefaultScripts();
-        include "theme/inc.footer.php";
+        include getTheme("inc.footer.php");
     }
 
 }

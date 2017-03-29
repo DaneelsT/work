@@ -39,10 +39,6 @@ class PageMonth extends AbstractAuthorizedPage {
         $this->mDbHandle = $app->getDatabaseConnection();
     }
 
-    private function addScripts() {
-        $this->mFooter->addScript("main.js");
-    }
-
     // Fetch all months and the earnings of that month
     private function fetchMonths() {
     	$app = Application::getInstance();
@@ -82,7 +78,7 @@ class PageMonth extends AbstractAuthorizedPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.month-overview.php";
+        include getTheme("inc.month-overview.php");
         $this->mFooter->draw();
     }
 

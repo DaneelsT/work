@@ -11,6 +11,7 @@ namespace Work\UI;
  */
 
 use \Carbon\UI\AbstractUIElement;
+use \Carbon\Application\Application;
 
 class ViewHeaderNoMenu extends AbstractUIElement {
 
@@ -19,7 +20,12 @@ class ViewHeaderNoMenu extends AbstractUIElement {
     private $mStyleSheets = array();
 
     private function addDefaultStyleSheets() {
-        $this->addStyleSheet("main.css");
+        if(Application::getInstance()->isMobile()) {
+            $this->addStyleSheet("bootstrap.min.css");
+            $this->addStyleSheet("main2.css");
+        }else{
+            $this->addStyleSheet("main.css");
+        }
     }
 
     private function setTitle($title) {
@@ -45,7 +51,7 @@ class ViewHeaderNoMenu extends AbstractUIElement {
     }
 
     public function draw() {
-        include "theme/inc.header-no-menu.php";
+        include getTheme("inc.header-no-menu.php");
     }
 
 }

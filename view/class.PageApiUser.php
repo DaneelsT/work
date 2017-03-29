@@ -19,6 +19,7 @@ class PageApiUser extends AbstractApiPage {
     const PATH = "/api/user/[0-9]+$";
 
     private $mUsers;
+
     private $mId;
     private $mDbHandle;
 
@@ -37,31 +38,41 @@ class PageApiUser extends AbstractApiPage {
 
     private function fetchUser() {
         $sql = "SELECT *
-                FROM users
-                INNER JOIN users_language ON users.id = users_language.userid
-                WHERE id = :userid;";
+                FROM
+                    users,
+                    users_language
+                WHERE id = :userid";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(":userid", $this->mId);
         $statement->execute();
         $users = $statement->fetchAll(PDO::FETCH_ASSOC);
         if(count($users) == 0) {
-            $this->generateError(204);
+            http_response_code(204);
             exit();
         }
 
         foreach($users as $user) {
+            $id = $user['id'];
+            $username = $user['username'];
+            $email = $user['email'];
+            $name = $user['name'];
+            $surname = $user['surname'];
+            $gender = (bool) $user['gender'];
+            $disabled = (bool) $user['disabled'];
+            $last_ip = $user['last_ip'];
+            $admin = $user['admin'];
+            $lang = $user['lang'];
             // Push user details to array
             $this->mUsers = array(
-                "id" => $user['id'],
-                "username" => $user["username"],
-                "email" => $user["email"],
-                "name" => $user["name"],
-                "surname" => $user["surname"],
-                "gender" => $user["gender"],
-                "disabled" => $user["disabled"],
-                "admin" => $user["admin"],
-                "last_ip" => $user["last_ip"],
-                "lang" => $user["lang"]
+                "id" => $id,
+                "username" => $username,
+                "email" => $email,
+                "name" => $name,
+                "surname" => $surname,
+                "gender" => $gender,
+                "disabled" => $disabled,
+                "admin" => $admin,
+                "lang" => $lang
             );
         }
     }
@@ -73,7 +84,11 @@ class PageApiUser extends AbstractApiPage {
 
         $this->mId = Application::getInstance()->getRouter()->getSegment(2);
 
-        $this->validApiKey();
+        $apikey = $this->getApiKey();
+        if( !isset($apikey) || strlen($apikey) == 0 ) {
+            http_response_code(500);
+            exit;
+        }
     }
 
     public function draw()
@@ -84,7 +99,7 @@ class PageApiUser extends AbstractApiPage {
                 $this->returnUser();
                 break;
             default:
-                $this->generateError(400);
+                http_response_code(400);
                 break;
         }
     }

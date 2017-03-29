@@ -199,7 +199,7 @@ class PageAdminShift extends AbstractAuthorizedPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.admin-shift.php";
+        include getTheme("inc.admin-shift.php");
         $this->mFooter->draw();
     }
 

@@ -192,7 +192,7 @@ class PageDashboard extends AbstractAuthorizedPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.dashboard.php";
+        include getTheme("inc.dashboard.php");
         $this->mFooter->draw();
     }
 

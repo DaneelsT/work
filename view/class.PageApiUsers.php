@@ -17,9 +17,9 @@ use \PDO;
 class PageApiUsers extends AbstractApiPage {
 
     const PATH = "/api/users$";
-
+    
     private $mDbHandle;
-
+    
     private function initializeDatabaseConnection() {
         $app = Application::getInstance();
         $app->connectToDatabase();
@@ -30,25 +30,16 @@ class PageApiUsers extends AbstractApiPage {
     {
         $this->fetchAllUsers();
     }
-
+    
     private function fetchAllUsers() {
-        $sql = "SELECT
-                    users.id,
-                    users.username,
-                    users.email,
-                    users.name,
-                    users.surname,
-                    users.gender,
-                    users.disabled,
-                    users.admin,
-                    users.last_ip,
-                    users_language.lang
-                FROM users
-                INNER JOIN users_language ON users.id = users_language.userid;";
+        $sql = "SELECT id, username, email, name, surname, gender, disabled, admin, lang
+                FROM
+                    users,
+                    users_language;";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+        
         echo $this->encodeJSON($result, JSON_PRETTY_PRINT);
     }
 
@@ -56,7 +47,7 @@ class PageApiUsers extends AbstractApiPage {
     {
         parent::__construct();
         $this->initializeDatabaseConnection();
-
+        
         $apikey = $this->getApiKey();
         if( !isset($apikey) || strlen($apikey) == 0 ) {
             http_response_code(500);
@@ -76,6 +67,6 @@ class PageApiUsers extends AbstractApiPage {
                 break;
         }
     }
-
+    
 }
 ?>

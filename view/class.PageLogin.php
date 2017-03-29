@@ -52,6 +52,7 @@ class PageLogin extends AbstractPage
     }
 
 	private function addStyleSheets() {
+        $this->mHeader->addStyleSheet("bootstrap.min.css");
 		$this->mHeader->addStyleSheet("login.css");
 	}
 
@@ -200,7 +201,7 @@ class PageLogin extends AbstractPage
     public function draw()
     {
         $this->mHeader->draw();
-        include "theme/inc.login.php";
+        include getTheme("inc.login.php");
         $this->mFooter->draw();
     }
 

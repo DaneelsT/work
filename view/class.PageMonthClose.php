@@ -205,7 +205,7 @@ class PageMonthClose extends AbstractAuthorizedPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.month-close.php";
+        include getTheme("inc.month-close.php");
         $this->mFooter->draw();
     }
 

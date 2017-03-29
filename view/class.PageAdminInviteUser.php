@@ -109,7 +109,7 @@ class PageAdminInviteUser extends AbstractAuthorizedPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.admin-invite.php";
+        include getTheme("inc.admin-invite.php");
         $this->mFooter->draw();
     }
 

@@ -134,7 +134,7 @@ class PageShiftEdit extends AbstractAuthorizedPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include "theme/inc.shift-edit.php";
+        include getTheme("inc.shift-edit.php");
         $this->mFooter->draw();
     }
 

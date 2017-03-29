@@ -147,7 +147,7 @@ class PageUserAdd extends AbstractAuthorizedPage
     public function draw()
     {
         $this->mHeader->draw();
-        include "theme/inc.user-add.php";
+        include getTheme("inc.user-add.php");
         $this->mFooter->draw();
     }
 }

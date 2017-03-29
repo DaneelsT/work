@@ -209,7 +209,7 @@ class PageUserEdit extends AbstractAuthorizedPage
     public function draw()
     {
         $this->mHeader->draw();
-        include "theme/inc.user-edit.php";
+        include getTheme("inc.user-edit.php");
         $this->mFooter->draw();
     }
 

@@ -183,7 +183,7 @@ class PageProfile extends AbstractAuthorizedPage
     public function draw()
     {
         $this->mHeader->draw();
-        include "theme/inc.profile.php";
+        include getTheme("inc.profile.php");
         $this->mFooter->draw();
     }
 
