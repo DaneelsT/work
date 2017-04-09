@@ -24,6 +24,11 @@ class Year {
     private $mYear;
 
     /**
+     * Contains the total of worked months of the year
+    */
+    private $mMonthsWorked;
+
+    /**
      * Contains the total of worked hours of the year
     */
     private $mHoursWorked;
@@ -43,9 +48,10 @@ class Year {
     */
     private $mSundays;
 
-    public function __construct($id, $year, $hours, $days, $earnings, $sundays) {
+    public function __construct($id, $year, $months, $hours, $days, $earnings, $sundays) {
         $this->setId($id);
         $this->setYear($year);
+        $this->setMonthsWorked($months);
         $this->setHoursWorked($hours);
         $this->setDaysWorked($days);
         $this->setEarnings($earnings);
@@ -58,6 +64,10 @@ class Year {
 
     private function setYear($year) {
         $this->mYear = $year;
+    }
+
+    private function setMonthsWorked($months) {
+        $this->mMonthsWorked = $months;
     }
 
     private function setHoursWorked($hours) {
@@ -82,6 +92,10 @@ class Year {
 
     public function getYear() {
         return $this->mYear;
+    }
+
+    public function getMonthsWorked() {
+        return $this->mMonthsWorked;
     }
 
     public function getHoursWorked() {
