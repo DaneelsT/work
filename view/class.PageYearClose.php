@@ -165,10 +165,6 @@ class PageYearClose extends AbstractAuthorizedPage {
         return $this->mSundaysWorked;
     }
 
-    public function getMonths() {
-        return $this->mMonths;
-    }
-
     public function draw() {
         $this->mHeader->draw();
         include getTheme("inc.year-close.php");
