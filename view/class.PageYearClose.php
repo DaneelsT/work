@@ -46,33 +46,33 @@ class PageYearClose extends AbstractAuthorizedPage {
         $this->mDbHandle = $app->getDatabaseConnection();
     }
 
-    // Fetch all current months from the database
+    // Fetch all the months from the database
     private function fetchAllMonths() {
-        $app = Application::getInstance();
+        $app = Appliation::getInstance();
         $user = $app->getUser();
 
-        $sql = "SELECT *
+        $sql = "SELECT
+                    COUNT(months.month) AS totalmonths,
+                    SUM(months.hoursWorked) AS hoursworked,
+                    SUM(months.daysWorked) AS daysworked,
+                    SUM(months.earnings) AS earnings,
+                    SUM(months.sundaysWorked) AS sundaysworked
                 FROM months
-                WHERE userid = :userid
-                ORDER BY month DESC";
+                WHERE userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
-        $statement->bindParam(":userid", $user->getId());
+        $statement->bindParam(':userid', $user->getId());
         $statement->execute();
-        $months = $statement->fetchAll(PDO::FETCH_ASSOC);
-        $this->mMonthsWorked = count($months);
-        // Loop through all fetched months
-        foreach($months as $m) {
-            $id = $m['id'];
-            $month = $m['month'];
-            $this->hoursWorked += $m['hoursWorked'];
-            $this->mDaysWorked += $m['daysWorked'];
-            $this->mEarnings += $m['earnings'];
-            $this->mSundaysWorked += $m['sundaysWorked'];
-            // Allocate a new Month instance
-            array_push($this->mMonths, new Month($id, $month, $this->mHoursWorked, $this->mDaysWorked, $this->mEarnings, $this->mSundaysWorked));
+        $months = $statement->fetchAll(PDO::FETCH_ASS0C);
+        foreach($result as $month) {
+            $this->mMonthsWorked = $month['totalmonths'];
+            $this->mHoursWorked = $month['hoursworked'];
+            $this->mDaysWorked = $month['daysworked'];
+            $this->mEarnings = $month['earnings'];
+            $this->mSundaysWorked = $month['sundaysworked'];
         }
     }
 
+    // Check if the current year hasnt been booked yet
     private function checkYear() {
         $app = Application::getInstance();
         $user = $app->getUser();
@@ -91,6 +91,30 @@ class PageYearClose extends AbstractAuthorizedPage {
         }
     }
 
+    // Insert the fetched data
+    private function bookYear() {
+        $app = Application::getInstance();
+        $user = $app->getUser();
+
+        try{
+            $sql = "INSERT INTO
+                        years(year, hoursWorked, daysWorked, earnings, sundaysWorked, userid),
+                        VALUES(:year, :hoursworked, :daysworked, :earnings, :sundaysworked, :userid)";
+            $statement = $this->mDbHandle->prepare($sql);
+            $statement->bindParam(':year', date('Y'));
+            $statement->bindParam(':hoursworked', $this->mHoursWorked);
+            $statement->bindParam(':daysworked', $this->mDaysWorked);
+            $statement->bindParam(':earnings', $this->mEarnings);
+            $statement->bindParam(':sundaysworked', $this->mSundaysWorked);
+            $statement->bindParam(':userid', $user->getId());
+            $statement->execute();
+        }catch(Exception $e) {
+            die("Error executing bookYear()");
+        }finally{
+            $this->closeYear();
+        }
+    }
+
     // Close the current year by emptying the months table
     private function closeYear() {
     	$app = Application::getInstance();
@@ -99,7 +123,7 @@ class PageYearClose extends AbstractAuthorizedPage {
     	$sql = "DELETE FROM months WHERE userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
 		$statement->bindParam(':userid', $user->getId());
-        $statement->execute();
+        // $statement->execute();
     }
 
     public function __construct() {
