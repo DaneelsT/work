@@ -51,24 +51,30 @@ class PageYearClose extends AbstractAuthorizedPage {
         $app = Appliation::getInstance();
         $user = $app->getUser();
 
-        $sql = "SELECT
-                    COUNT(months.month) AS totalmonths,
-                    SUM(months.hoursWorked) AS hoursworked,
-                    SUM(months.daysWorked) AS daysworked,
-                    SUM(months.earnings) AS earnings,
-                    SUM(months.sundaysWorked) AS sundaysworked
-                FROM months
-                WHERE userid = :userid";
-        $statement = $this->mDbHandle->prepare($sql);
-        $statement->bindParam(':userid', $user->getId());
-        $statement->execute();
-        $months = $statement->fetchAll(PDO::FETCH_ASS0C);
-        foreach($result as $month) {
-            $this->mMonthsWorked = $month['totalmonths'];
-            $this->mHoursWorked = $month['hoursworked'];
-            $this->mDaysWorked = $month['daysworked'];
-            $this->mEarnings = $month['earnings'];
-            $this->mSundaysWorked = $month['sundaysworked'];
+        try {
+            $sql = "SELECT
+                        COUNT(months.month) AS totalmonths,
+                        SUM(months.hoursWorked) AS hoursworked,
+                        SUM(months.daysWorked) AS daysworked,
+                        SUM(months.earnings) AS earnings,
+                        SUM(months.sundaysWorked) AS sundaysworked
+                    FROM months
+                    WHERE userid = :userid";
+            $statement = $this->mDbHandle->prepare($sql);
+            $statement->bindParam(':userid', $user->getId());
+            $statement->execute();
+            $months = $statement->fetchAll(PDO::FETCH_ASS0C);
+            foreach($result as $month) {
+                $this->mMonthsWorked = $month['totalmonths'];
+                $this->mHoursWorked = $month['hoursworked'];
+                $this->mDaysWorked = $month['daysworked'];
+                $this->mEarnings = $month['earnings'];
+                $this->mSundaysWorked = $month['sundaysworked'];
+            }
+        }catch(Exception $e) {
+            die("Error executing fetchAllMonths()");
+        }finally{
+            $this->bookYear();
         }
     }
 
@@ -87,7 +93,7 @@ class PageYearClose extends AbstractAuthorizedPage {
             $this->mAlreadyBooked = true;
             return;
         }else{
-            $this->bookYear();
+            $this->fetchAllMonths();
         }
     }
 
@@ -132,7 +138,6 @@ class PageYearClose extends AbstractAuthorizedPage {
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
 
-        $this->fetchAllMonths();
         $this->checkYear();
     }
 
