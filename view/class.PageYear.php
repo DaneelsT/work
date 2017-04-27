@@ -61,7 +61,7 @@ class PageYear extends AbstractAuthorizedPage {
             $earnings = $y['earnings'];
             $sundays = $y['sundaysWorked'];
             // Allocate a new year instance
-            array_push($this->mYears, new Year($id, $year, $month, $hours, $days, $earnings, $sundays));
+            array_push($this->mYears, new Year($id, $year, $months, $hours, $days, $earnings, $sundays));
         }
     }
 
