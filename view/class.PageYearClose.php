@@ -71,10 +71,10 @@ class PageYearClose extends AbstractAuthorizedPage {
                 $this->mEarnings = $month['earnings'];
                 $this->mSundaysWorked = $month['sundaysworked'];
             }
+
+            $this->bookYear();
         }catch(Exception $e) {
             die("Error executing fetchAllMonths()");
-        }finally{
-            $this->bookYear();
         }
     }
 
