@@ -51,31 +51,27 @@ class PageYearClose extends AbstractAuthorizedPage {
         $app = Application::getInstance();
         $user = $app->getUser();
 
-        try {
-            $sql = "SELECT
-                        COUNT(months.month) AS totalmonths,
-                        SUM(months.hoursWorked) AS hoursworked,
-                        SUM(months.daysWorked) AS daysworked,
-                        SUM(months.earnings) AS earnings,
-                        SUM(months.sundaysWorked) AS sundaysworked
-                    FROM months
-                    WHERE userid = :userid";
-            $statement = $this->mDbHandle->prepare($sql);
-            $statement->bindParam(':userid', $user->getId());
-            $statement->execute();
-            $months = $statement->fetchAll(PDO::FETCH_ASSOC);
-            foreach($months as $month) {
-                $this->mMonthsWorked = $month['totalmonths'];
-                $this->mHoursWorked = $month['hoursworked'];
-                $this->mDaysWorked = $month['daysworked'];
-                $this->mEarnings = $month['earnings'];
-                $this->mSundaysWorked = $month['sundaysworked'];
-            }
-
-            $this->bookYear();
-        }catch(Exception $e) {
-            die("Error executing fetchAllMonths()");
+        $sql = "SELECT
+                    COUNT(months.month) AS totalmonths,
+                    SUM(months.hoursWorked) AS hoursworked,
+                    SUM(months.daysWorked) AS daysworked,
+                    SUM(months.earnings) AS earnings,
+                    SUM(months.sundaysWorked) AS sundaysworked
+                FROM months
+                WHERE userid = :userid";
+        $statement = $this->mDbHandle->prepare($sql);
+        $statement->bindParam(':userid', $user->getId());
+        $statement->execute();
+        $months = $statement->fetchAll(PDO::FETCH_ASSOC);
+        foreach($months as $month) {
+            $this->mMonthsWorked = $month['totalmonths'];
+            $this->mHoursWorked = $month['hoursworked'];
+            $this->mDaysWorked = $month['daysworked'];
+            $this->mEarnings = $month['earnings'];
+            $this->mSundaysWorked = $month['sundaysworked'];
         }
+
+        $this->bookYear();
     }
 
     // Check if the current year hasnt been booked yet
@@ -102,23 +98,19 @@ class PageYearClose extends AbstractAuthorizedPage {
         $app = Application::getInstance();
         $user = $app->getUser();
 
-        try{
-            $sql = "INSERT INTO
-                        years(year, hoursWorked, daysWorked, earnings, sundaysWorked, userid),
-                        VALUES(:year, :hoursworked, :daysworked, :earnings, :sundaysworked, :userid)";
-            $statement = $this->mDbHandle->prepare($sql);
-            $statement->bindParam(':year', date('Y'));
-            $statement->bindParam(':hoursworked', $this->mHoursWorked);
-            $statement->bindParam(':daysworked', $this->mDaysWorked);
-            $statement->bindParam(':earnings', $this->mEarnings);
-            $statement->bindParam(':sundaysworked', $this->mSundaysWorked);
-            $statement->bindParam(':userid', $user->getId());
-            $statement->execute();
-        }catch(Exception $e) {
-            die("Error executing bookYear()");
-        }finally{
-            $this->closeYear();
-        }
+        $sql = "INSERT INTO
+                    years(year, hoursWorked, daysWorked, earnings, sundaysWorked, userid),
+                    VALUES(:year, :hoursworked, :daysworked, :earnings, :sundaysworked, :userid)";
+        $statement = $this->mDbHandle->prepare($sql);
+        $statement->bindParam(':year', date('Y'));
+        $statement->bindParam(':hoursworked', $this->mHoursWorked);
+        $statement->bindParam(':daysworked', $this->mDaysWorked);
+        $statement->bindParam(':earnings', $this->mEarnings);
+        $statement->bindParam(':sundaysworked', $this->mSundaysWorked);
+        $statement->bindParam(':userid', $user->getId());
+        $statement->execute();
+
+        $this->closeYear();
     }
 
     // Close the current year by emptying the months table
