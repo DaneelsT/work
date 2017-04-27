@@ -55,7 +55,7 @@ class PageYear extends AbstractAuthorizedPage {
         foreach($years as $y) {
             $id = $y['id'];
             $year = $y['year'];
-            $months = $y['mMonthsWorked'];
+            $months = $y['monthsWorked'];
             $hours = $y['hoursWorked'];
             $days = $y['daysWorked'];
             $earnings = $y['earnings'];
