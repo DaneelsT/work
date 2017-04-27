@@ -24,7 +24,7 @@ class PageYearClose extends AbstractAuthorizedPage {
 
     private $mHeader;
     private $mFooter;
-
+    
     private $mDbHandle;
 
     private $mAlreadyBooked = false;
@@ -158,6 +158,11 @@ class PageYearClose extends AbstractAuthorizedPage {
     }
 
     public function getEarnings() {
+        return $this->mEarnings;
+    }
+
+    // TODO: implement.
+    public function getEarningsWithFees() {
         return $this->mEarnings;
     }
 

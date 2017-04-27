@@ -20,6 +20,7 @@
 
         	placeMenuItem("", "dashboard");
 			placeMenuItem("month", translate("monthly overview"));
+            placeMenuItem("year", translate("yearly overview"));
 			placeMenuItem("profile", $app->getUser()->getFullName());
 
 			if($app->getUser()->isAdmin())
