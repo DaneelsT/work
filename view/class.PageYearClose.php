@@ -63,7 +63,7 @@ class PageYearClose extends AbstractAuthorizedPage {
             $statement = $this->mDbHandle->prepare($sql);
             $statement->bindParam(':userid', $user->getId());
             $statement->execute();
-            $months = $statement->fetchAll(PDO::FETCH_ASS0C);
+            $months = $statement->fetchAll(PDO::FETCH_ASSOC);
             foreach($result as $month) {
                 $this->mMonthsWorked = $month['totalmonths'];
                 $this->mHoursWorked = $month['hoursworked'];
