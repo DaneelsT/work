@@ -2,6 +2,7 @@
     $earnings = round($this->getEarnings(), 2);
     $earningsWithFees = round($this->getEarningsWithFees(), 2);
     $sundays = $this->getSundaysWorked();
+    $monthsWorked = $this->getMonthsWorked();
     $hoursWorked = round($this->getHoursWorked(), 2);
     $daysWorked = $this->getDaysWorked();
     $currentYear = date("Y");
@@ -30,7 +31,8 @@
             <p>
                 <strong><?php echo translate("Earnings") . " (" . translate("without fees"); ?>):</strong> &euro; <?php echo $earnings; ?><br />
                 <strong><?php echo translate("Earnings") . " (" . translate("with fees"); ?>):</strong> &euro; <?php echo $earningsWithFees; ?><br />
-                <strong><?php echo translate("Sundays worked"); ?>:</strong> <?php $sundays; ?><br />
+                <strong><?php echo translate("Sundays worked"); ?>:</strong> <?php echo $sundays; ?><br />
+                <strong><?php echo translate("Months worked"); ?>:</strong> <?php echo $monthsWorked; ?><br />
                 <strong><?php echo translate("Hours worked"); ?>:</strong> <?php echo $hoursWorked; ?><br />
                 <strong><?php echo translate("Days worked"); ?>:</strong> <?php echo $daysWorked; ?><br />
             </p>
