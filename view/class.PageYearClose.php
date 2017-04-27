@@ -48,7 +48,7 @@ class PageYearClose extends AbstractAuthorizedPage {
 
     // Fetch all the months from the database
     private function fetchAllMonths() {
-        $app = Appliation::getInstance();
+        $app = Application::getInstance();
         $user = $app->getUser();
 
         try {
