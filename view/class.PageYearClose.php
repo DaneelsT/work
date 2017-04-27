@@ -153,9 +153,8 @@ class PageYearClose extends AbstractAuthorizedPage {
         return $this->mEarnings;
     }
 
-    // TODO: implement.
     public function getEarningsWithFees() {
-        return $this->mEarnings;
+        return $this->mEarnings + ($this->mSundaysWorked * Application::getInstance()->getConfiguration("sunday_fee"));
     }
 
     public function getSundaysWorked() {
