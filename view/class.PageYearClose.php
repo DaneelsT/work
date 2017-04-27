@@ -101,7 +101,7 @@ class PageYearClose extends AbstractAuthorizedPage {
                 VALUES(:year, :monthsWorked, :hoursWorked, :daysWorked, :earnings, :sundaysWorked, :userid)";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':year', date('Y'));
-        $statement->bindParam('monthsWorked':, $this->mMonthsWorked);
+        $statement->bindParam('monthsWorked', $this->mMonthsWorked);
         $statement->bindParam(':hoursWorked', $this->mHoursWorked);
         $statement->bindParam(':daysWorked', $this->mDaysWorked);
         $statement->bindParam(':earnings', $this->mEarnings);
