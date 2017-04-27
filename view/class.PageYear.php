@@ -70,7 +70,7 @@ class PageYear extends AbstractAuthorizedPage {
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
 
-        $this->fetchMonths();
+        $this->fetchAllYears();
     }
 
     public function getYears() {
