@@ -3,7 +3,7 @@
     $earningsWithFees = round($this->getEarningsWithFees(), 2);
     $sundays = $this->getSundaysWorked();
     $hoursWorked = round($this->getHoursWorked(), 2);
-    $daysworked = $this->getDaysWorked();
+    $daysWorked = $this->getDaysWorked();
     $currentYear = date("Y");
 ?>
 <main>
