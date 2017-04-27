@@ -1,7 +1,7 @@
 <main>
     <div class="panel panelSeperatorBottom">
         <div class="panelContent">
-            <h2><?php echo translate("Monthly Overview"); ?> - <a href="<?php echo placeHttpRoot(); ?>year/close" id="closebutton" class="button right"><?php echo translate("Close Year"); ?></a></h2>
+            <h2><?php echo translate("Monthly Overview"); ?> <a href="<?php echo placeHttpRoot(); ?>year/close" id="closebutton" class="button right"><?php echo translate("Close Year"); ?></a></h2>
             <table class="width50" style="font-size: 13px;">
                 <tr>
                     <th><?php echo translate("Month"); ?></th>
