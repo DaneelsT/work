@@ -191,6 +191,7 @@ function registerPages($router) {
     $router->registerPage(\Work\Page\PageMonthClose::PATH, "\Work\Page\PageMonthClose");
 	$router->registerPage(\Work\Page\PageProfile::PATH, "\Work\Page\PageProfile");
     $router->registerPage(\Work\Page\PageUserVerify::PATH, "\Work\Page\PageUserVerify");
+    $router->registerPages(\Work\Page\PageYearClose::PATH, "Work\Page\PageYearClose");
 	// Register admin pages
 	$router->registerPage(\Work\Page\PageAdmin::PATH, "\Work\Page\PageAdmin");
 	$router->registerPage(\Work\Page\PageAdminUsers::PATH, "\Work\Page\PageAdminUsers");
@@ -204,5 +205,4 @@ function registerPages($router) {
     $router->registerPage(\Work\Page\PageApiUsers::PATH, "Work\Page\PageApiUsers");
     $router->registerpage(\Work\Page\PageApiShift::PATH, "Work\Page\PageApiShift");
     $router->registerpage(\Work\Page\PageApiShifts::PATH, "Work\Page\PageApiShifts");
-    $router->registerPages(\Work\Page\PageYearClose::PATH, "Work\Page\PageYearClose");
 }
