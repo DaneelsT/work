@@ -99,14 +99,14 @@ class PageYearClose extends AbstractAuthorizedPage {
         $user = $app->getUser();
 
         $sql = "INSERT INTO
-                    years(year, hoursWorked, daysWorked, earnings, sundaysWorked, userid),
-                    VALUES(:year, :hoursworked, :daysworked, :earnings, :sundaysworked, :userid)";
+                years(year, hoursWorked, daysWorked, earnings, sundaysWorked, userid)
+                VALUES(:year, :hoursWorked, :daysWorked, :earnings, :sundaysWorked, :userid)";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':year', date('Y'));
-        $statement->bindParam(':hoursworked', $this->mHoursWorked);
-        $statement->bindParam(':daysworked', $this->mDaysWorked);
+        $statement->bindParam(':hoursWorked', $this->mHoursWorked);
+        $statement->bindParam(':daysWorked', $this->mDaysWorked);
         $statement->bindParam(':earnings', $this->mEarnings);
-        $statement->bindParam(':sundaysworked', $this->mSundaysWorked);
+        $statement->bindParam(':sundaysWorked', $this->mSundaysWorked);
         $statement->bindParam(':userid', $user->getId());
         $statement->execute();
 
