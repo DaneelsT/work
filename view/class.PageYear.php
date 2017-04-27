@@ -55,12 +55,13 @@ class PageYear extends AbstractAuthorizedPage {
         foreach($years as $y) {
             $id = $y['id'];
             $year = $y['year'];
+            $months = $y['mMonthsWorked'];
             $hours = $y['hoursWorked'];
             $days = $y['daysWorked'];
             $earnings = $y['earnings'];
             $sundays = $y['sundaysWorked'];
             // Allocate a new year instance
-            array_push($this->mYears, new Year($id, $year, $hours, $days, $earnings, $sundays));
+            array_push($this->mYears, new Year($id, $year, $month, $hours, $days, $earnings, $sundays));
         }
     }
 
