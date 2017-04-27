@@ -11,8 +11,6 @@ namespace Work\Page;
 
 use \Carbon\Application\Application;
 use \Work\Page\AbstractAuthorizedPage;
-use \Work\Month\Month;
-use \Work\User\User;
 use \Work\UI\ViewHeader;
 use \Work\UI\ViewFooter;
 use \PDO;
