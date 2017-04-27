@@ -24,7 +24,7 @@ class PageYearClose extends AbstractAuthorizedPage {
 
     private $mHeader;
     private $mFooter;
-    
+
     private $mDbHandle;
 
     private $mAlreadyBooked = false;
