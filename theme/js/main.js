@@ -50,7 +50,7 @@ function closeConfirmationBox() {
     var text = "Are you sure you want to book and close this month?\nThere is no going back!"; // default text
 
     // Work out if the button is for month or year
-    if(buttonText.toLowerCase().indexOf('month') > -1) {
+    if(buttonText.toLowerCase().indexOf('month') > -1 || buttonText.toLowerCase().indexOf('maand') > -1) {
         option = "month";
     }else{
         option = "year";
