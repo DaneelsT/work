@@ -2,7 +2,7 @@
     <?php if($this->yearNotFound()) { ?>
     <div class="panel panelSeperatorBottom">
         <div class="panelContent">
-            <h2><?php echo translate("The year you wanted to view is not booked"); ?>!</h2>
+            <h2 style="color:#C51010"><?php echo translate("The year you wanted to view is not booked"); ?>!</h2>
 
             <p>
                 <?php echo translatevar("The year you are trying to view the details of (%s) was not yet booked by you.", $this->getYear()); ?>.
