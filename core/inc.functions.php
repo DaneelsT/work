@@ -193,6 +193,7 @@ function registerPages($router) {
     $router->registerPage(\Work\Page\PageUserVerify::PATH, "\Work\Page\PageUserVerify");
     $router->registerPage(\Work\Page\PageYearClose::PATH, "Work\Page\PageYearClose");
     $router->registerPage(\Work\Page\PageYear::PATH, "Work\Page\PageYear");
+    $router->registerPage(\Work\Page\PageYearDetails::PATH, "Work\Page\PageYearDetails");
 	// Register admin pages
 	$router->registerPage(\Work\Page\PageAdmin::PATH, "\Work\Page\PageAdmin");
 	$router->registerPage(\Work\Page\PageAdminUsers::PATH, "\Work\Page\PageAdminUsers");
