@@ -83,7 +83,7 @@ class PageDashboard extends AbstractAuthorizedPage {
         }
 
         $sql = "INSERT INTO
-                    shifts_data (date, startTime, endTime, isSunday, userid)
+                    shifts (date, startTime, endTime, isSunday, userid)
                     VALUES (:date, :startTime, :endTime, :isSunday, :userid)";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':date', $date);
