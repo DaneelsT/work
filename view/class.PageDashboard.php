@@ -82,14 +82,15 @@ class PageDashboard extends AbstractAuthorizedPage {
             $isSunday = false;
         }
 
-        $sql = "INSERT INTO shifts (date, startTime, endTime, isSunday, userid)
-                VALUES (:date, :startTime, :endTime, :isSunday, :userid)";
+        $sql = "INSERT INTO
+                    shifts (date, startTime, endTime, isSunday, userid)
+                    VALUES (:date, :startTime, :endTime, :isSunday, :userid)";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':date', $date);
         $statement->bindParam(':startTime', $startTime);
         $statement->bindParam(':endTime', $endTime);
         $statement->bindParam(':isSunday', $isSunday);
-		$statement->bindParam(':userid', $user->getId());
+        $statement->bindParam(':userid', $user->getId());
         $statement->execute();
     }
 
@@ -98,7 +99,7 @@ class PageDashboard extends AbstractAuthorizedPage {
     	$app = Application::getInstance();
 		$user = $app->getUser();
 
-        $sql = "SELECT id, date, startTime, endTime, isSunday
+        $sql = "SELECT *
                 FROM shifts
                 WHERE userid = :userid
                 ORDER BY date DESC";

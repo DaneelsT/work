@@ -1,7 +1,22 @@
 <main>
+    <?php if($this->yearNotFound()) { ?>
     <div class="panel panelSeperatorBottom">
         <div class="panelContent">
-            <h2><?php echo translate("Monthly Overview"); ?> <a href="<?php echo placeHttpRoot(); ?>year/close" id="closebutton" class="button right"><?php echo translate("Close Year"); ?></a></h2>
+            <h2><?php echo translate("The year you wanted to view is not booked"); ?>!</h2>
+
+            <p>
+                <?php echo translatevar("The year you are trying to view the details of (%s) was not yet booked by you.", $this->getYear()); ?>.
+            </p>
+            <p>
+                <a href="<?php echo placeHttpRoot(); ?>year" class="button spacingRight"><?php echo translate("Check Yearly Overview"); ?></a>
+                <a href="<?php echo placeHttpRoot(); ?>" class="button"><?php echo translate("Back to dashboard"); ?></a>
+            </p>
+        </div>
+    </div>
+    <?php }else { ?>
+    <div class="panel panelSeperatorBottom">
+        <div class="panelContent">
+            <h2><?php echo translate("Year Details"); ?> - <?php echo $this->getYear(); ?></h2>
             <table class="width50" style="font-size: 13px;">
                 <tr>
                     <th><?php echo translate("Month"); ?></th>
@@ -33,4 +48,5 @@
             </table>
         </div>
     </div>
+    <?php } ?>
 </main>

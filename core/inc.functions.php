@@ -152,6 +152,20 @@ function placeMenuItem($url, $str, $style = "", $class = "") {
 	echo '<li><a href=' . getHttpRoot() . $url . ' style=' . $style . ' class=' . $class . '>' . strtoupper($str) . '</a></li>';
 }
 
+function drawMenu() {
+    $app = Application::getInstance();
+
+    placeMenuItem("", "Dashboard");
+    placeMenuItem("month", translate("Monthly Overview"));
+    placeMenuItem("year", translate("Yearly Overview"));
+    placeMenuItem("profile", $app->getUser()->getFullName());
+
+    if($app->getUser()->isAdmin())
+        placeMenuItem("admin", translate("Admin"), "color:red");
+
+    placeMenuItem("logout", translate("Logout"), "color:red");
+}
+
 function validEmail( $email ) {
     return ( filter_var($email, FILTER_VALIDATE_EMAIL) );
 }
@@ -191,6 +205,9 @@ function registerPages($router) {
     $router->registerPage(\Work\Page\PageMonthClose::PATH, "\Work\Page\PageMonthClose");
 	$router->registerPage(\Work\Page\PageProfile::PATH, "\Work\Page\PageProfile");
     $router->registerPage(\Work\Page\PageUserVerify::PATH, "\Work\Page\PageUserVerify");
+    $router->registerPage(\Work\Page\PageYearClose::PATH, "Work\Page\PageYearClose");
+    $router->registerPage(\Work\Page\PageYear::PATH, "Work\Page\PageYear");
+    $router->registerPage(\Work\Page\PageYearDetails::PATH, "Work\Page\PageYearDetails");
 	// Register admin pages
 	$router->registerPage(\Work\Page\PageAdmin::PATH, "\Work\Page\PageAdmin");
 	$router->registerPage(\Work\Page\PageAdminUsers::PATH, "\Work\Page\PageAdminUsers");

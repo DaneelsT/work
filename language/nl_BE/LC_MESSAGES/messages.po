@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2016-12-20 03:44+0100\n"
-"PO-Revision-Date: 2016-12-20 04:34+0100\n"
+"POT-Creation-Date: 2017-04-28 00:37+0200\n"
+"PO-Revision-Date: 2017-04-28 00:39+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -17,29 +17,33 @@ msgstr ""
 "X-Poedit-SearchPath-0: theme\n"
 "X-Poedit-SearchPath-1: view\n"
 
-#: theme/inc.admin-invite.php:5
+#: theme/inc.admin-invite.php:5 theme/mobile/inc.admin-invite.php:5
 msgid "Invite sent"
 msgstr "Uitnodiging verstuurd"
 
-#: theme/inc.admin-invite.php:7
+#: theme/inc.admin-invite.php:7 theme/mobile/inc.admin-invite.php:8
 msgid "An invite has been sent to this user"
 msgstr "Een uitnodiging werd verstuurd naar deze gebruiker"
 
-#: theme/inc.admin-invite.php:13
+#: theme/inc.admin-invite.php:13 theme/mobile/inc.admin-invite.php:14
 msgid "Invalid email entered"
 msgstr "Ongeldig e-mail adres ingevuld"
 
-#: theme/inc.admin-invite.php:15
+#: theme/inc.admin-invite.php:15 theme/mobile/inc.admin-invite.php:17
 msgid "The email you have entered is not valid"
 msgstr "Het e-mail adres dat je hebt ingevuld is niet geldig"
 
-#: theme/inc.admin-invite.php:21
+#: theme/inc.admin-invite.php:21 theme/mobile/inc.admin-invite.php:23
 msgid "Invite a user"
 msgstr "Gebruiker uitnodigen"
 
 #: theme/inc.admin-invite.php:24 theme/inc.admin-users.php:14
 #: theme/inc.profile.php:67 theme/inc.profile.php:116 theme/inc.user-add.php:44
 #: theme/inc.user-edit.php:42 theme/inc.user-verify.php:67
+#: theme/mobile/inc.admin-invite.php:29 theme/mobile/inc.admin-users.php:13
+#: theme/mobile/inc.profile.php:59 theme/mobile/inc.profile.php:116
+#: theme/mobile/inc.user-add.php:58 theme/mobile/inc.user-edit.php:42
+#: theme/mobile/inc.user-verify.php:80
 msgid "E-mail"
 msgstr "E-mail"
 
@@ -47,123 +51,157 @@ msgstr "E-mail"
 #: theme/inc.admin-users.php:15 theme/inc.profile.php:55
 #: theme/inc.profile.php:106 theme/inc.user-add.php:34
 #: theme/inc.user-edit.php:32 theme/inc.user-verify.php:57
+#: theme/mobile/inc.admin-invite.php:34 theme/mobile/inc.admin-shifts.php:12
+#: theme/mobile/inc.admin-users.php:14 theme/mobile/inc.profile.php:101
+#: theme/mobile/inc.user-add.php:48 theme/mobile/inc.user-edit.php:32
+#: theme/mobile/inc.user-verify.php:65
 msgid "Name"
 msgstr "Naam"
 
-#: theme/inc.admin-invite.php:31
+#: theme/inc.admin-invite.php:31 theme/mobile/inc.admin-invite.php:38
 msgid "Send Invite"
 msgstr "Stuur uitnodiging"
 
 #: theme/inc.admin-shift.php:9 theme/inc.user-edit.php:7
+#: theme/mobile/inc.admin-shift.php:10 theme/mobile/inc.user-edit.php:7
 msgid "User not found"
 msgstr "Gebruiker niet gevonden"
 
-#: theme/inc.admin-shift.php:11
+#: theme/inc.admin-shift.php:11 theme/mobile/inc.admin-shift.php:13
 msgid "A user with that id could not be found"
 msgstr "Een gebruiker met dat id kon niet worden gevonden"
 
 #: theme/inc.admin-shift.php:12 theme/inc.admin-shift.php:24
+#: theme/mobile/inc.admin-shift.php:14 theme/mobile/inc.admin-shift.php:27
 msgid "Back to shifts page"
 msgstr "Terug naar shifts pagina"
 
-#: theme/inc.admin-shift.php:18
+#: theme/inc.admin-shift.php:18 theme/mobile/inc.admin-shift.php:20
 msgid "No shifts found"
 msgstr "Geen shifts gevonden"
 
-#: theme/inc.admin-shift.php:21
+#: theme/inc.admin-shift.php:21 theme/mobile/inc.admin-shift.php:24
 msgid ""
 "No shifts for this user were found in the database!<br />\n"
-"                    Verify that this user has worked a shift before or shifts aren't booked."
+"                    Verify that this user has worked a shift before or "
+"shifts aren't booked."
 msgstr ""
 "Er konden geen shifts voor deze gebruiker worden gevonden.\n"
-"Ga na of deze gebruiker een shift heeft toegevoegd en/of de maand niet geboekt is."
+"Ga na of deze gebruiker een shift heeft toegevoegd en/of de maand niet "
+"geboekt is."
 
 #: theme/inc.admin-shift.php:38 theme/inc.dashboard.php:12
+#: theme/mobile/inc.admin-shift.php:41 theme/mobile/inc.dashboard.php:14
 msgid "Current Earnings"
 msgstr "Momenteel Verdiend"
 
 #: theme/inc.admin-shift.php:40 theme/inc.admin-shift.php:41
 #: theme/inc.dashboard.php:14 theme/inc.dashboard.php:15
+#: theme/mobile/inc.admin-shift.php:45 theme/mobile/inc.admin-shift.php:46
+#: theme/mobile/inc.dashboard.php:18 theme/mobile/inc.dashboard.php:19
 msgid "Current earnings"
 msgstr "Momenteel verdiend"
 
 #: theme/inc.admin-shift.php:40 theme/inc.dashboard.php:14
-#: theme/inc.month-close.php:31
+#: theme/inc.month-close.php:31 theme/inc.year-close.php:32
+#: theme/mobile/inc.admin-shift.php:45 theme/mobile/inc.dashboard.php:18
+#: theme/mobile/inc.month-close.php:35 theme/mobile/inc.year-close.php:36
 msgid "without fees"
 msgstr "zonder vergoedingen"
 
 #: theme/inc.admin-shift.php:41 theme/inc.dashboard.php:15
-#: theme/inc.month-close.php:32
+#: theme/inc.month-close.php:32 theme/inc.year-close.php:33
+#: theme/mobile/inc.admin-shift.php:46 theme/mobile/inc.dashboard.php:19
+#: theme/mobile/inc.month-close.php:36 theme/mobile/inc.year-close.php:37
 msgid "with fees"
 msgstr "met vergoedingen"
 
 #: theme/inc.admin-shift.php:42 theme/inc.dashboard.php:16
+#: theme/mobile/inc.admin-shift.php:47 theme/mobile/inc.dashboard.php:20
 msgid "Current month"
 msgstr "Huidige maand"
 
 #: theme/inc.admin-shift.php:44 theme/inc.dashboard.php:18
+#: theme/mobile/inc.admin-shift.php:49 theme/mobile/inc.dashboard.php:22
 msgid "Earnings per hour"
 msgstr "Uurloon"
 
 #: theme/inc.admin-shift.php:45 theme/inc.dashboard.php:19
+#: theme/mobile/inc.admin-shift.php:50 theme/mobile/inc.dashboard.php:23
 msgid "Sunday fee"
 msgstr "Zondag vergoeding"
 
 #: theme/inc.admin-shift.php:46 theme/inc.dashboard.php:20
-#: theme/inc.month-close.php:34
+#: theme/inc.month-close.php:34 theme/inc.year-close.php:36
+#: theme/mobile/inc.admin-shift.php:51 theme/mobile/inc.dashboard.php:24
+#: theme/mobile/inc.month-close.php:38 theme/mobile/inc.year-close.php:40
 msgid "Hours worked"
 msgstr "Gewerkte uren"
 
-#: theme/inc.admin-shift.php:52
+#: theme/inc.admin-shift.php:52 theme/mobile/inc.admin-shift.php:57
 msgid "View shifts from"
 msgstr "Bekijk shifts van"
 
 #: theme/inc.admin-shift.php:56 theme/inc.dashboard.php:30
 #: theme/inc.dashboard.php:54 theme/inc.shift-edit.php:12
+#: theme/mobile/inc.admin-shift.php:64 theme/mobile/inc.dashboard.php:39
+#: theme/mobile/inc.dashboard.php:72 theme/mobile/inc.shift-edit.php:15
 msgid "Date"
 msgstr "Datum"
 
 #: theme/inc.admin-shift.php:57 theme/inc.dashboard.php:34
 #: theme/inc.dashboard.php:55 theme/inc.shift-edit.php:16
+#: theme/mobile/inc.admin-shift.php:65 theme/mobile/inc.dashboard.php:44
+#: theme/mobile/inc.dashboard.php:73 theme/mobile/inc.shift-edit.php:20
 msgid "Start Time"
 msgstr "Start Tijd"
 
 #: theme/inc.admin-shift.php:58 theme/inc.dashboard.php:38
 #: theme/inc.dashboard.php:56 theme/inc.shift-edit.php:20
+#: theme/mobile/inc.admin-shift.php:66 theme/mobile/inc.dashboard.php:49
+#: theme/mobile/inc.dashboard.php:74 theme/mobile/inc.shift-edit.php:25
 msgid "End Time"
 msgstr "Eind Tijd"
 
 #: theme/inc.admin-shift.php:59 theme/inc.dashboard.php:57
+#: theme/mobile/inc.admin-shift.php:67 theme/mobile/inc.dashboard.php:75
 msgid "Total Hours"
 msgstr "Totaal uren"
 
 #: theme/inc.admin-shift.php:61 theme/inc.admin-shifts.php:16
 #: theme/inc.admin-users.php:18 theme/inc.dashboard.php:59
+#: theme/mobile/inc.admin-shift.php:69 theme/mobile/inc.admin-shifts.php:14
+#: theme/mobile/inc.admin-users.php:17 theme/mobile/inc.dashboard.php:77
 msgid "Actions"
 msgstr "Acties"
 
 #: theme/inc.admin-shift.php:85 theme/inc.dashboard.php:84
+#: theme/mobile/inc.admin-shift.php:95 theme/mobile/inc.dashboard.php:104
 msgid "SUNDAY"
 msgstr "ZONDAG"
 
 #: theme/inc.admin-shift.php:87 theme/inc.dashboard.php:86
+#: theme/mobile/inc.admin-shift.php:97 theme/mobile/inc.dashboard.php:106
 msgid "HOLIDAY"
 msgstr "FEESTDAG"
 
 #: theme/inc.admin-shift.php:94 theme/inc.dashboard.php:93
+#: theme/mobile/inc.admin-shift.php:104 theme/mobile/inc.dashboard.php:113
 msgid "Remove"
 msgstr "Verwijder"
 
 #: theme/inc.admin-shift.php:95 theme/inc.admin-users.php:29
 #: theme/inc.dashboard.php:94 theme/inc.user-edit.php:28
+#: theme/mobile/inc.admin-shift.php:105 theme/mobile/inc.admin-users.php:32
+#: theme/mobile/inc.dashboard.php:114 theme/mobile/inc.user-edit.php:28
 msgid "Edit"
 msgstr "Aanpassen"
 
-#: theme/inc.admin-shifts.php:4
+#: theme/inc.admin-shifts.php:4 theme/mobile/inc.admin-shifts.php:5
 msgid "View shifts from a user"
 msgstr "Bekijk shifts van een gebruiker"
 
-#: theme/inc.admin-shifts.php:6
+#: theme/inc.admin-shifts.php:6 theme/mobile/inc.admin-shifts.php:8
 msgid "Select a user to view shifts from"
 msgstr "Selecteer een gebruiker om shifts van te bekijken"
 
@@ -171,46 +209,53 @@ msgstr "Selecteer een gebruiker om shifts van te bekijken"
 #: theme/inc.admin-users.php:17 theme/inc.profile.php:59
 #: theme/inc.profile.php:108 theme/inc.user-add.php:36
 #: theme/inc.user-edit.php:34 theme/inc.user-verify.php:59
+#: theme/mobile/inc.admin-shifts.php:13 theme/mobile/inc.admin-users.php:15
+#: theme/mobile/inc.admin-users.php:16 theme/mobile/inc.profile.php:106
+#: theme/mobile/inc.user-add.php:53 theme/mobile/inc.user-edit.php:34
+#: theme/mobile/inc.user-verify.php:70
 msgid "Surname"
 msgstr "Achternaam"
 
-#: theme/inc.admin-shifts.php:23
+#: theme/inc.admin-shifts.php:23 theme/mobile/inc.admin-shifts.php:25
 msgid "View Shifts"
 msgstr "Bekijk Shifts"
 
-#: theme/inc.admin-users.php:4
+#: theme/inc.admin-users.php:4 theme/mobile/inc.admin-users.php:5
 msgid "Users Overview"
 msgstr "Gebruikers Overzicht"
 
-#: theme/inc.admin-users.php:4
+#: theme/inc.admin-users.php:4 theme/mobile/inc.admin-users.php:38
 msgid "Add a user"
 msgstr "Voeg gebruiker toe"
 
 #: theme/inc.admin-users.php:13 theme/inc.profile.php:63
 #: theme/inc.profile.php:112 theme/inc.user-add.php:40
 #: theme/inc.user-edit.php:38 theme/inc.user-verify.php:63
+#: theme/mobile/inc.admin-users.php:12 theme/mobile/inc.profile.php:57
+#: theme/mobile/inc.profile.php:111 theme/mobile/inc.user-add.php:43
+#: theme/mobile/inc.user-edit.php:38 theme/mobile/inc.user-verify.php:75
 msgid "Username"
 msgstr ""
 "Gebruikers\n"
 "naam"
 
-#: theme/inc.admin.php:4
+#: theme/inc.admin.php:4 theme/mobile/inc.admin.php:5
 msgid "Administrator Panel"
 msgstr "Beheerders Paneel"
 
-#: theme/inc.admin.php:6
+#: theme/inc.admin.php:6 theme/mobile/inc.admin.php:8
 msgid "User Overview"
 msgstr "Gebruiker Overzicht"
 
-#: theme/inc.admin.php:7
+#: theme/inc.admin.php:7 theme/mobile/inc.admin.php:9
 msgid "View Shifts From User"
 msgstr "Bekijk Shifts Van Gebruiker"
 
-#: theme/inc.admin.php:8
+#: theme/inc.admin.php:8 theme/mobile/inc.admin.php:10
 msgid "Invite A User"
 msgstr "Nodig Gebruiker Uit"
 
-#: theme/inc.dashboard.php:26
+#: theme/inc.dashboard.php:26 theme/mobile/inc.dashboard.php:34
 msgid "Add a new shift"
 msgstr "Nieuwe shift toevoegen"
 
@@ -219,18 +264,19 @@ msgid "Is holiday"
 msgstr "Is feestdag"
 
 #: theme/inc.dashboard.php:43 theme/inc.shift-edit.php:32
+#: theme/mobile/inc.dashboard.php:54 theme/mobile/inc.shift-edit.php:30
 msgid "This is a holiday"
 msgstr "Dit is een feestdag"
 
-#: theme/inc.dashboard.php:45
+#: theme/inc.dashboard.php:45 theme/mobile/inc.dashboard.php:56
 msgid "Add Shift"
 msgstr "Shift Toevoegen"
 
-#: theme/inc.dashboard.php:51
+#: theme/inc.dashboard.php:51 theme/mobile/inc.dashboard.php:65
 msgid "Current Shifts"
 msgstr "Gewerkte Shifts"
 
-#: theme/inc.dashboard.php:51
+#: theme/inc.dashboard.php:51 theme/mobile/inc.dashboard.php:123
 msgid "Close Month"
 msgstr "Sluit Maand"
 
@@ -238,191 +284,256 @@ msgstr "Sluit Maand"
 msgid "monthly overview"
 msgstr "maandelijks overzicht"
 
-#: theme/inc.header.php:26
+#: theme/inc.header.php:23
+msgid "yearly overview"
+msgstr "Jaarlijks overzicht"
+
+#: theme/inc.header.php:27
 msgid "admin"
 msgstr "beheer"
 
-#: theme/inc.header.php:28
+#: theme/inc.header.php:29
 msgid "logout"
 msgstr "uitloggen"
 
-#: theme/inc.month-close.php:14
+#: theme/inc.month-close.php:14 theme/mobile/inc.month-close.php:15
 msgid "This month has been booked already"
 msgstr "Deze maand is al geboekt"
 
-#: theme/inc.month-close.php:15
+#: theme/inc.month-close.php:15 theme/mobile/inc.month-close.php:18
 #, php-format
 msgid "The current month (%s) has been booked and closed already"
 msgstr "De huidige maand (%s) is al geboekt en afgesloten"
 
-#: theme/inc.month-close.php:17
+#: theme/inc.month-close.php:17 theme/mobile/inc.month-close.php:20
 msgid "Check Monthly Overview"
 msgstr "Bekijk Maandelijks Overzicht"
 
 #: theme/inc.month-close.php:18 theme/inc.month-close.php:39
+#: theme/inc.year-close.php:19 theme/inc.year-close.php:41
+#: theme/mobile/inc.month-close.php:21 theme/mobile/inc.month-close.php:42
+#: theme/mobile/inc.year-close.php:22 theme/mobile/inc.year-close.php:44
 msgid "Back to dashboard"
 msgstr "Terug naar dashboard"
 
-#: theme/inc.month-close.php:25
+#: theme/inc.month-close.php:25 theme/mobile/inc.month-close.php:28
 msgid "Month closed and booked"
 msgstr "Maand gesloten en geboekt"
 
-#: theme/inc.month-close.php:27
+#: theme/inc.month-close.php:27 theme/mobile/inc.month-close.php:31
 #, php-format
 msgid "The month %s has been successfully closed and booked"
 msgstr "De maand %s is successvol gesloten en geboekt"
 
-#: theme/inc.month-close.php:29
+#: theme/inc.month-close.php:29 theme/mobile/inc.month-close.php:33
 msgid "Details of this month"
 msgstr "Details van deze maand"
 
 #: theme/inc.month-close.php:31 theme/inc.month-close.php:32
 #: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
+#: theme/inc.year-close.php:32 theme/inc.year-close.php:33
+#: theme/inc.year-overview.php:11 theme/inc.year-overview.php:12
+#: theme/mobile/inc.month-close.php:35 theme/mobile/inc.month-close.php:36
+#: theme/mobile/inc.month-overview.php:15
+#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-close.php:36
+#: theme/mobile/inc.year-close.php:37 theme/mobile/inc.year-overview.php:15
+#: theme/mobile/inc.year-overview.php:16
 msgid "Earnings"
 msgstr "Verdiensten"
 
-#: theme/inc.month-close.php:33
+#: theme/inc.month-close.php:33 theme/inc.year-close.php:34
+#: theme/mobile/inc.month-close.php:37 theme/mobile/inc.year-close.php:38
 msgid "Sundays worked"
 msgstr "Gewerkte zondagen"
 
-#: theme/inc.month-close.php:35
+#: theme/inc.month-close.php:35 theme/inc.year-close.php:37
+#: theme/mobile/inc.month-close.php:39 theme/mobile/inc.year-close.php:41
 msgid "Days worked"
 msgstr "Gewerkte dagen"
 
-#: theme/inc.month-overview.php:4 view/class.PageMonth.php:23
+#: theme/inc.month-overview.php:4 theme/mobile/inc.header.php:34
+#: theme/mobile/inc.month-overview.php:6
 msgid "Monthly Overview"
 msgstr "Maandelijks Overzicht"
 
-#: theme/inc.month-overview.php:7
+#: theme/inc.month-overview.php:4
+msgid "Close Year"
+msgstr "Sluit Jaar"
+
+#: theme/inc.month-overview.php:7 theme/mobile/inc.month-overview.php:12
 msgid "Month"
 msgstr "Maand"
 
-#: theme/inc.month-overview.php:8
+#: theme/inc.month-overview.php:8 theme/inc.year-overview.php:9
+#: theme/mobile/inc.month-overview.php:13 theme/mobile/inc.year-overview.php:13
 msgid "Hours Worked"
 msgstr "Gewerkte uren"
 
-#: theme/inc.month-overview.php:9
+#: theme/inc.month-overview.php:9 theme/inc.year-overview.php:10
+#: theme/mobile/inc.month-overview.php:14 theme/mobile/inc.year-overview.php:14
 msgid "Days Worked"
 msgstr "Gewerkte dagen"
 
-#: theme/inc.month-overview.php:10
+#: theme/inc.month-overview.php:10 theme/inc.year-overview.php:11
+#: theme/mobile/inc.month-overview.php:15 theme/mobile/inc.year-overview.php:15
 msgid "without"
 msgstr "zonder"
 
 #: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
+#: theme/inc.year-overview.php:11 theme/inc.year-overview.php:12
+#: theme/mobile/inc.month-overview.php:15
+#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-overview.php:15
+#: theme/mobile/inc.year-overview.php:16
 msgid "fees"
 msgstr "vergoedingen"
 
-#: theme/inc.month-overview.php:11
+#: theme/inc.month-overview.php:11 theme/inc.year-overview.php:12
+#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-overview.php:16
 msgid "with"
 msgstr "met"
 
-#: theme/inc.month-overview.php:12
+#: theme/inc.month-overview.php:12 theme/inc.year-overview.php:13
+#: theme/mobile/inc.month-overview.php:17 theme/mobile/inc.year-overview.php:17
 msgid "Sundays Worked"
 msgstr "Gewerkte zondagen"
 
-#: theme/inc.page-not-found.php:4
+#: theme/inc.page-not-found.php:4 theme/mobile/inc.page-not-found.php:5
 msgid "Page not found"
 msgstr "Pagina niet gevonden"
 
-#: theme/inc.page-not-found.php:6
+#: theme/inc.page-not-found.php:6 theme/mobile/inc.page-not-found.php:9
 msgid "The page you are looking for could not be found"
 msgstr "De pagina waar je naar op zoek bent kom niet worden gevonden"
 
-#: theme/inc.profile.php:9
+#: theme/inc.profile.php:9 theme/mobile/inc.profile.php:10
 msgid "Account updated"
 msgstr "Account aaangepast"
 
-#: theme/inc.profile.php:12
+#: theme/inc.profile.php:12 theme/mobile/inc.profile.php:13
 msgid "Your account has been updated successfully"
 msgstr "Je account is succesvol aangepast"
 
-#: theme/inc.profile.php:16
+#: theme/inc.profile.php:16 theme/mobile/inc.profile.php:15
 msgid "Go to dashboard"
 msgstr "Naar dashboard"
 
 #: theme/inc.profile.php:23 theme/inc.user-verify.php:35
+#: theme/mobile/inc.profile.php:21 theme/mobile/inc.user-verify.php:39
 msgid "Invalid Input"
 msgstr "Ongeldige Invoer"
 
 #: theme/inc.profile.php:26 theme/inc.user-verify.php:38
+#: theme/mobile/inc.profile.php:25 theme/mobile/inc.user-verify.php:43
 msgid "Some fields were left empty or were not filled in correctly"
 msgstr "Sommige velden zijn leeggelaten of incorrect ingevuld"
 
 #: theme/inc.profile.php:29 theme/inc.user-verify.php:41
+#: theme/mobile/inc.profile.php:28 theme/mobile/inc.user-verify.php:46
 msgid "Go back and try again"
 msgstr "Ga terug en probeer opnieuw"
 
 #: theme/inc.profile.php:71 theme/inc.profile.php:120 theme/inc.user-add.php:48
-#: theme/inc.user-verify.php:71
+#: theme/inc.user-verify.php:71 theme/mobile/inc.profile.php:62
+#: theme/mobile/inc.profile.php:121 theme/mobile/inc.user-add.php:63
+#: theme/mobile/inc.user-verify.php:85
 msgid "Gender"
 msgstr "Geslacht"
 
-#: theme/inc.profile.php:75 theme/inc.profile.php:126
-#: theme/inc.user-edit.php:52 theme/inc.user-verify.php:78
+#: theme/inc.profile.php:75 theme/inc.profile.php:132
+#: theme/inc.user-edit.php:52 theme/inc.user-verify.php:84
+#: theme/mobile/inc.profile.php:67 theme/mobile/inc.profile.php:129
+#: theme/mobile/inc.user-edit.php:52 theme/mobile/inc.user-verify.php:93
 msgid "Hourly Pay"
 msgstr "Uurloon"
 
-#: theme/inc.profile.php:79 theme/inc.profile.php:128
-#: theme/inc.user-edit.php:54 theme/inc.user-verify.php:80
+#: theme/inc.profile.php:79 theme/inc.profile.php:134
+#: theme/inc.user-edit.php:54 theme/inc.user-verify.php:86
+#: theme/mobile/inc.profile.php:69 theme/mobile/inc.profile.php:134
+#: theme/mobile/inc.user-edit.php:54 theme/mobile/inc.user-verify.php:98
 msgid "Sunday Fee"
 msgstr "Zondag vergoeding"
 
-#: theme/inc.profile.php:83 theme/inc.profile.php:133
-#: theme/inc.user-edit.php:59 theme/inc.user-verify.php:86
+#: theme/inc.profile.php:83 theme/inc.profile.php:139
+#: theme/inc.user-edit.php:59 theme/inc.user-verify.php:92
+#: theme/mobile/inc.profile.php:74 theme/mobile/inc.user-edit.php:59
 msgid "Language"
 msgstr "Taal"
 
-#: theme/inc.profile.php:95
+#: theme/inc.profile.php:95 theme/mobile/inc.profile.php:84
 msgid "ADMINISTRATOR"
 msgstr "BEHEERDER"
 
-#: theme/inc.profile.php:102
+#: theme/inc.profile.php:102 theme/mobile/inc.profile.php:94
 msgid "Edit my profile"
 msgstr "Mijn profiel aanpassen"
 
 #: theme/inc.profile.php:104 theme/inc.user-edit.php:30
+#: theme/mobile/inc.profile.php:98 theme/mobile/inc.user-edit.php:30
 msgid "General Settings"
 msgstr "Algemene Instellingen"
 
-#: theme/inc.profile.php:124 theme/inc.user-edit.php:50
-#: theme/inc.user-verify.php:76
+#: theme/inc.profile.php:123 theme/inc.user-add.php:49
+#: theme/inc.user-verify.php:74 theme/mobile/inc.profile.php:122
+#: theme/mobile/inc.user-add.php:64 theme/mobile/inc.user-verify.php:86
+msgid "Male"
+msgstr "Man"
+
+#: theme/inc.profile.php:127 theme/inc.user-add.php:50
+#: theme/inc.user-verify.php:78 theme/mobile/inc.profile.php:123
+#: theme/mobile/inc.user-add.php:65 theme/mobile/inc.user-verify.php:87
+msgid "Female"
+msgstr "Vrouw"
+
+#: theme/inc.profile.php:130 theme/inc.user-edit.php:50
+#: theme/inc.user-verify.php:82 theme/mobile/inc.profile.php:126
+#: theme/mobile/inc.user-edit.php:50 theme/mobile/inc.user-verify.php:90
 msgid "Payment Settings"
 msgstr "Loon en vergoeding"
 
-#: theme/inc.profile.php:131 theme/inc.user-edit.php:57
-#: theme/inc.user-verify.php:84
+#: theme/inc.profile.php:137 theme/inc.user-edit.php:57
+#: theme/inc.user-verify.php:90 theme/mobile/inc.profile.php:138
+#: theme/mobile/inc.user-edit.php:57 theme/mobile/inc.user-verify.php:102
 msgid "Language Settings"
 msgstr "Taal Instellingen"
 
-#: theme/inc.profile.php:139 theme/inc.user-edit.php:65
+#: theme/inc.profile.php:145 theme/inc.user-edit.php:65
+#: theme/mobile/inc.profile.php:147 theme/mobile/inc.user-edit.php:65
 msgid "Password Settings"
 msgstr "Wachtwoord Instellen"
 
-#: theme/inc.profile.php:141 theme/inc.user-add.php:55
-#: theme/inc.user-edit.php:67 theme/inc.user-verify.php:95
+#: theme/inc.profile.php:147 theme/inc.user-add.php:55
+#: theme/inc.user-edit.php:67 theme/inc.user-verify.php:101
+#: theme/mobile/inc.profile.php:150 theme/mobile/inc.user-add.php:71
+#: theme/mobile/inc.user-edit.php:67 theme/mobile/inc.user-verify.php:114
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: theme/inc.profile.php:142 theme/inc.user-edit.php:68
+#: theme/inc.profile.php:148 theme/inc.user-edit.php:68
+#: theme/mobile/inc.profile.php:151 theme/mobile/inc.user-edit.php:68
+#: theme/mobile/inc.user-verify.php:115
 msgid "Enter new password"
 msgstr "Nieuw wachtwoord"
 
-#: theme/inc.profile.php:145 theme/inc.user-add.php:59
-#: theme/inc.user-edit.php:71 theme/inc.user-verify.php:99
+#: theme/inc.profile.php:151 theme/inc.user-add.php:59
+#: theme/inc.user-edit.php:71 theme/inc.user-verify.php:105
+#: theme/mobile/inc.profile.php:155 theme/mobile/inc.user-add.php:76
+#: theme/mobile/inc.user-edit.php:71 theme/mobile/inc.user-verify.php:119
 msgid "Password (repeat)"
 msgstr "Wachtwoord (herhalen)"
 
-#: theme/inc.profile.php:146 theme/inc.user-edit.php:72
+#: theme/inc.profile.php:152 theme/inc.user-edit.php:72
+#: theme/mobile/inc.profile.php:156 theme/mobile/inc.user-edit.php:72
+#: theme/mobile/inc.user-verify.php:120
 msgid "Repeat new password"
 msgstr "Herhaal nieuw wachtwoord"
 
-#: theme/inc.profile.php:148 theme/inc.shift-edit.php:34
-#: theme/inc.user-edit.php:74
+#: theme/inc.profile.php:154 theme/inc.shift-edit.php:34
+#: theme/inc.user-edit.php:74 theme/mobile/inc.profile.php:159
+#: theme/mobile/inc.shift-edit.php:33 theme/mobile/inc.user-edit.php:74
 msgid "Save Changes"
 msgstr "Aanpassen"
 
-#: theme/inc.shift-edit.php:9
+#: theme/inc.shift-edit.php:9 theme/mobile/inc.shift-edit.php:10
 msgid "Edit shift from"
 msgstr "Aanpassen shift van"
 
@@ -430,162 +541,204 @@ msgstr "Aanpassen shift van"
 msgid "Is Holiday"
 msgstr "Is Feestdag"
 
-#: theme/inc.user-add.php:5
+#: theme/inc.user-add.php:5 theme/mobile/inc.user-add.php:6
 msgid "User added"
 msgstr "Gebruiker toegevoegd"
 
-#: theme/inc.user-add.php:7
+#: theme/inc.user-add.php:7 theme/mobile/inc.user-add.php:9
 msgid "User successfully added to the Work Webinterface"
 msgstr "Gebruiker is succesvol toegevoegd"
 
-#: theme/inc.user-add.php:8
+#: theme/inc.user-add.php:8 theme/mobile/inc.user-add.php:10
 msgid "Return to user overview"
 msgstr "Terug naar gebruiker overzicht"
 
-#: theme/inc.user-add.php:14
+#: theme/inc.user-add.php:14 theme/mobile/inc.user-add.php:16
 msgid "Invalid input"
 msgstr "Ongeldige invoer"
 
-#: theme/inc.user-add.php:15
-msgid "Some fields were not filled in (correctly). Fill in all fields correctly and try again"
-msgstr "Sommige velden zijn niet (correct) ingevuld. Voer alle velden (correct) in en probeer opnieuw"
+#: theme/inc.user-add.php:15 theme/mobile/inc.user-add.php:19
+msgid ""
+"Some fields were not filled in (correctly). Fill in all fields correctly and "
+"try again"
+msgstr ""
+"Sommige velden zijn niet (correct) ingevuld. Voer alle velden (correct) in "
+"en probeer opnieuw"
 
 #: theme/inc.user-add.php:21 theme/inc.user-verify.php:18
+#: theme/mobile/inc.user-add.php:25 theme/mobile/inc.user-verify.php:20
 msgid "User already exists"
 msgstr "Gebruiker bestaat al"
 
-#: theme/inc.user-add.php:22
+#: theme/inc.user-add.php:22 theme/mobile/inc.user-add.php:28
 msgid "A user with this username and/or email already exists"
 msgstr "Een gebruiker met opgegeven gebruikersnaam/e-mail bestaat al"
 
-#: theme/inc.user-add.php:28
+#: theme/inc.user-add.php:28 theme/mobile/inc.user-add.php:34
 msgid "Add a new user"
 msgstr "Voeg nieuwe gebruiker toe"
 
 #: theme/inc.user-add.php:29 theme/inc.user-verify.php:52
+#: theme/mobile/inc.user-add.php:37 theme/mobile/inc.user-verify.php:59
 msgid "Basic information"
 msgstr "Algemene Informatie"
 
-#: theme/inc.user-add.php:49 theme/inc.user-verify.php:72
-msgid "Male"
-msgstr "Man"
-
-#: theme/inc.user-add.php:50 theme/inc.user-verify.php:73
-msgid "Female"
-msgstr "Vrouw"
-
-#: theme/inc.user-add.php:53 theme/inc.user-verify.php:93
+#: theme/inc.user-add.php:53 theme/inc.user-verify.php:99
+#: theme/mobile/inc.user-add.php:68 theme/mobile/inc.user-verify.php:111
 msgid "User password"
 msgstr "Wachtwoord"
 
-#: theme/inc.user-add.php:56 theme/inc.user-verify.php:96
+#: theme/inc.user-add.php:56 theme/inc.user-verify.php:102
+#: theme/mobile/inc.user-add.php:72
 msgid "Enter a password"
 msgstr "Wachtwoord"
 
-#: theme/inc.user-add.php:60 theme/inc.user-verify.php:100
+#: theme/inc.user-add.php:60 theme/inc.user-verify.php:106
+#: theme/mobile/inc.user-add.php:77
 msgid "Repeat password"
 msgstr "Herhaal Wachtwoord"
 
-#: theme/inc.user-add.php:63
+#: theme/inc.user-add.php:63 theme/mobile/inc.user-add.php:80
 msgid "Add User"
 msgstr "Toevoegen"
 
-#: theme/inc.user-edit.php:9
+#: theme/inc.user-edit.php:9 theme/mobile/inc.user-edit.php:9
 msgid "A user with that ID could not be found"
 msgstr "Een gebruiker met dat id kon niet worden gevonden"
 
 #: theme/inc.user-edit.php:10 theme/inc.user-edit.php:19
+#: theme/mobile/inc.user-edit.php:10 theme/mobile/inc.user-edit.php:19
 msgid "Back to users overview"
 msgstr "Terug naar gebruikers overzicht"
 
-#: theme/inc.user-edit.php:16
+#: theme/inc.user-edit.php:16 theme/mobile/inc.user-edit.php:16
 msgid "User successfully updated"
 msgstr "Gebruiker succesvol aangepast"
 
-#: theme/inc.user-edit.php:18
+#: theme/inc.user-edit.php:18 theme/mobile/inc.user-edit.php:18
 msgid "This user's profile has been successfully updated"
 msgstr "Deze gebruiker zijn/haar profiel is succesvol aangepast"
 
-#: theme/inc.user-verify.php:10
+#: theme/inc.user-verify.php:10 theme/mobile/inc.user-verify.php:11
 msgid "Invalid token"
 msgstr "Ongeldige token"
 
-#: theme/inc.user-verify.php:12
+#: theme/inc.user-verify.php:12 theme/mobile/inc.user-verify.php:14
 #, php-format
 msgid "The token you have supplied (%s) does not appear to be valid"
 msgstr "De token die je hebt ingevoerd (%s) lijkt niet geldig te zijn"
 
-#: theme/inc.user-verify.php:20
+#: theme/inc.user-verify.php:20 theme/mobile/inc.user-verify.php:23
 msgid "A user with the supplied username or email already exists in the system"
 msgstr "Een gebruiker met opgegeven gebruikersnaam/e-mail bestaat al"
 
-#: theme/inc.user-verify.php:26
+#: theme/inc.user-verify.php:26 theme/mobile/inc.user-verify.php:29
 msgid "Account created"
 msgstr "Account aangemaakt"
 
-#: theme/inc.user-verify.php:28
+#: theme/inc.user-verify.php:28 theme/mobile/inc.user-verify.php:32
 msgid "Your account has been created successfully"
 msgstr "Je account is succesvol aangemaakt"
 
-#: theme/inc.user-verify.php:29
+#: theme/inc.user-verify.php:29 theme/mobile/inc.user-verify.php:33
 msgid "Proceed to the login page"
 msgstr "Doorgaan naar login pagina"
 
-#: theme/inc.user-verify.php:47
-msgid "Your password will be encrypted upon registration. Nobody will be able to view or decrypt your password"
-msgstr "Je wachtwoord wordt versleuteld na je registratie. Anderen zullen dit dus niet kunnen bekijken of ontcijferen"
+#: theme/inc.user-verify.php:47 theme/mobile/inc.user-verify.php:52
+msgid ""
+"Your password will be encrypted upon registration. Nobody will be able to "
+"view or decrypt your password"
+msgstr ""
+"Je wachtwoord wordt versleuteld na je registratie. Anderen zullen dit dus "
+"niet kunnen bekijken of ontcijferen"
 
-#: theme/inc.user-verify.php:51
+#: theme/inc.user-verify.php:51 theme/mobile/inc.user-verify.php:56
 msgid "Finish your registration"
 msgstr "Voltooi je registratie"
 
-#: theme/inc.user-verify.php:103
+#: theme/inc.user-verify.php:109 theme/mobile/inc.user-verify.php:123
 msgid "Register"
 msgstr "Registreer"
 
-#: view/class.PageDashboard.php:23
-msgid "Dashboard"
-msgstr "Dashboard"
+#: theme/inc.year-close.php:15 theme/mobile/inc.year-close.php:16
+msgid "This year has been booked already"
+msgstr "Dit jaar is al geboekt"
 
-#: view/class.PageLogin.php:23
-msgid "Log in"
-msgstr "Log in"
+#: theme/inc.year-close.php:16 theme/mobile/inc.year-close.php:19
+#, php-format
+msgid "The current year (%s) has been booked and closed already"
+msgstr "Het huidig jaar (%s) is al geboekt en afgesloten"
 
-#: view/class.PageMonthClose.php:24
-msgid "Close and book current month"
-msgstr "Huidige maand boeken en sluiten"
+#: theme/inc.year-close.php:18 theme/mobile/inc.year-close.php:21
+msgid "Check Yearly Overview"
+msgstr "Bekijk Jaarlijks Overzicht"
 
-#: view/class.PageProfile.php:24
-msgid "My Profile"
-msgstr "Mijn Profiel"
+#: theme/inc.year-close.php:26 theme/mobile/inc.year-close.php:29
+msgid "Year closed and booked"
+msgstr "Jaar gesloten en geboekt"
 
-#: view/class.PageShiftRemove.php:23
-msgid "Remove this shift"
-msgstr "Verwijder deze shift"
+#: theme/inc.year-close.php:28 theme/mobile/inc.year-close.php:32
+#, php-format
+msgid "The year %s has been successfully closed and booked"
+msgstr "Het jaar %s is succesvol gesloten en geboekt"
 
-#: view/class.PageUserEdit.php:44
-msgid "Specified user not found"
-msgstr "Gevraagde gebruiker niet gevonden"
+#: theme/inc.year-close.php:30 theme/mobile/inc.year-close.php:34
+msgid "Details of this year"
+msgstr "Details van dit jaar"
 
-#: view/class.PageUserEdit.php:46
-msgid "Edit this user"
-msgstr "Gebruiker aanpassen"
+#: theme/inc.year-close.php:35 theme/mobile/inc.year-close.php:39
+msgid "Months worked"
+msgstr "Maanden gewerkt"
 
-#: view/class.PageUserVerify.php:22
-msgid "Verify Account"
-msgstr "Account verifiëren"
+#: theme/inc.year-overview.php:4 theme/mobile/inc.year-overview.php:6
+msgid "Yearly Overview"
+msgstr "Jaarlijks Overzicht"
 
-#: view/class.PageShiftEdit.php:36
-msgid "Specified shift not found"
-msgstr "Gevraagde shift niet gevonden"
+#: theme/inc.year-overview.php:7 theme/mobile/inc.year-overview.php:12
+msgid "Year"
+msgstr "Jaar"
 
-#: view/class.PageshiftEdit.php:38
-msgid "Edit this shift"
-msgstr "Shift aanpassen"
+#: theme/inc.year-overview.php:8
+msgid "Months Worked"
+msgstr "Maanden Gewerkt"
 
-#: view/class.PageAdmin.php:23
+#: theme/mobile/inc.header.php:38
 msgid "Admin"
 msgstr "Beheer"
+
+#: theme/mobile/inc.header.php:40
+msgid "Logout"
+msgstr "Uitloggen"
+
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
+
+#~ msgid "Log in"
+#~ msgstr "Log in"
+
+#~ msgid "Close and book current month"
+#~ msgstr "Huidige maand boeken en sluiten"
+
+#~ msgid "My Profile"
+#~ msgstr "Mijn Profiel"
+
+#~ msgid "Remove this shift"
+#~ msgstr "Verwijder deze shift"
+
+#~ msgid "Specified user not found"
+#~ msgstr "Gevraagde gebruiker niet gevonden"
+
+#~ msgid "Edit this user"
+#~ msgstr "Gebruiker aanpassen"
+
+#~ msgid "Verify Account"
+#~ msgstr "Account verifiëren"
+
+#~ msgid "Specified shift not found"
+#~ msgstr "Gevraagde shift niet gevonden"
+
+#~ msgid "Edit this shift"
+#~ msgstr "Shift aanpassen"
 
 #~ msgid "Username or e-mail"
 #~ msgstr "Gebruikersnaam of e-mail"
@@ -596,8 +749,12 @@ msgstr "Beheer"
 #~ msgid "Change Language"
 #~ msgstr "Wijzig Taal"
 
-#~ msgid "Some fields were left empty or were not filled in correctly. Go back and try again"
-#~ msgstr "Sommige velden zijn leeggelaten of niet correct ingevuld. Ga terug en prober opnieuw"
+#~ msgid ""
+#~ "Some fields were left empty or were not filled in correctly. Go back and "
+#~ "try again"
+#~ msgstr ""
+#~ "Sommige velden zijn leeggelaten of niet correct ingevuld. Ga terug en "
+#~ "prober opnieuw"
 
 #~ msgid "excluded"
 #~ msgstr "niet inbegrepen"

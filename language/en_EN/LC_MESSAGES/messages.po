@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2016-12-20 03:44+0100\n"
-"PO-Revision-Date: 2016-12-20 04:35+0100\n"
+"POT-Creation-Date: 2017-04-28 00:39+0200\n"
+"PO-Revision-Date: 2017-04-28 00:40+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -17,29 +17,33 @@ msgstr ""
 "X-Poedit-SearchPath-0: theme\n"
 "X-Poedit-SearchPath-1: view\n"
 
-#: theme/inc.admin-invite.php:5
+#: theme/inc.admin-invite.php:5 theme/mobile/inc.admin-invite.php:5
 msgid "Invite sent"
 msgstr "Invite sent"
 
-#: theme/inc.admin-invite.php:7
+#: theme/inc.admin-invite.php:7 theme/mobile/inc.admin-invite.php:8
 msgid "An invite has been sent to this user"
 msgstr "An invite has been sent to this user"
 
-#: theme/inc.admin-invite.php:13
+#: theme/inc.admin-invite.php:13 theme/mobile/inc.admin-invite.php:14
 msgid "Invalid email entered"
 msgstr "Invalid email entered"
 
-#: theme/inc.admin-invite.php:15
+#: theme/inc.admin-invite.php:15 theme/mobile/inc.admin-invite.php:17
 msgid "The email you have entered is not valid"
 msgstr "The email you have entered is not valid"
 
-#: theme/inc.admin-invite.php:21
+#: theme/inc.admin-invite.php:21 theme/mobile/inc.admin-invite.php:23
 msgid "Invite a user"
 msgstr "Invite a user"
 
 #: theme/inc.admin-invite.php:24 theme/inc.admin-users.php:14
 #: theme/inc.profile.php:67 theme/inc.profile.php:116 theme/inc.user-add.php:44
 #: theme/inc.user-edit.php:42 theme/inc.user-verify.php:67
+#: theme/mobile/inc.admin-invite.php:29 theme/mobile/inc.admin-users.php:13
+#: theme/mobile/inc.profile.php:59 theme/mobile/inc.profile.php:116
+#: theme/mobile/inc.user-add.php:58 theme/mobile/inc.user-edit.php:42
+#: theme/mobile/inc.user-verify.php:80
 msgid "E-mail"
 msgstr "E-mail"
 
@@ -47,123 +51,156 @@ msgstr "E-mail"
 #: theme/inc.admin-users.php:15 theme/inc.profile.php:55
 #: theme/inc.profile.php:106 theme/inc.user-add.php:34
 #: theme/inc.user-edit.php:32 theme/inc.user-verify.php:57
+#: theme/mobile/inc.admin-invite.php:34 theme/mobile/inc.admin-shifts.php:12
+#: theme/mobile/inc.admin-users.php:14 theme/mobile/inc.profile.php:101
+#: theme/mobile/inc.user-add.php:48 theme/mobile/inc.user-edit.php:32
+#: theme/mobile/inc.user-verify.php:65
 msgid "Name"
 msgstr "Name"
 
-#: theme/inc.admin-invite.php:31
+#: theme/inc.admin-invite.php:31 theme/mobile/inc.admin-invite.php:38
 msgid "Send Invite"
 msgstr "Send Invite"
 
 #: theme/inc.admin-shift.php:9 theme/inc.user-edit.php:7
+#: theme/mobile/inc.admin-shift.php:10 theme/mobile/inc.user-edit.php:7
 msgid "User not found"
 msgstr "User not found"
 
-#: theme/inc.admin-shift.php:11
+#: theme/inc.admin-shift.php:11 theme/mobile/inc.admin-shift.php:13
 msgid "A user with that id could not be found"
 msgstr "A user with that id could not be found"
 
 #: theme/inc.admin-shift.php:12 theme/inc.admin-shift.php:24
+#: theme/mobile/inc.admin-shift.php:14 theme/mobile/inc.admin-shift.php:27
 msgid "Back to shifts page"
 msgstr "Back to shifts page"
 
-#: theme/inc.admin-shift.php:18
+#: theme/inc.admin-shift.php:18 theme/mobile/inc.admin-shift.php:20
 msgid "No shifts found"
 msgstr "No shifts found"
 
-#: theme/inc.admin-shift.php:21
+#: theme/inc.admin-shift.php:21 theme/mobile/inc.admin-shift.php:24
 msgid ""
 "No shifts for this user were found in the database!<br />\n"
-"                    Verify that this user has worked a shift before or shifts aren't booked."
+"                    Verify that this user has worked a shift before or "
+"shifts aren't booked."
 msgstr ""
 "No shifts for this user were found in the database!\n"
 "Verify that this user has worked a shift before or shifts aren't booked."
 
 #: theme/inc.admin-shift.php:38 theme/inc.dashboard.php:12
+#: theme/mobile/inc.admin-shift.php:41 theme/mobile/inc.dashboard.php:14
 msgid "Current Earnings"
 msgstr "Current Earnings"
 
 #: theme/inc.admin-shift.php:40 theme/inc.admin-shift.php:41
 #: theme/inc.dashboard.php:14 theme/inc.dashboard.php:15
+#: theme/mobile/inc.admin-shift.php:45 theme/mobile/inc.admin-shift.php:46
+#: theme/mobile/inc.dashboard.php:18 theme/mobile/inc.dashboard.php:19
 msgid "Current earnings"
 msgstr "Current earnings"
 
 #: theme/inc.admin-shift.php:40 theme/inc.dashboard.php:14
-#: theme/inc.month-close.php:31
+#: theme/inc.month-close.php:31 theme/inc.year-close.php:32
+#: theme/mobile/inc.admin-shift.php:45 theme/mobile/inc.dashboard.php:18
+#: theme/mobile/inc.month-close.php:35 theme/mobile/inc.year-close.php:36
 msgid "without fees"
 msgstr "without fees"
 
 #: theme/inc.admin-shift.php:41 theme/inc.dashboard.php:15
-#: theme/inc.month-close.php:32
+#: theme/inc.month-close.php:32 theme/inc.year-close.php:33
+#: theme/mobile/inc.admin-shift.php:46 theme/mobile/inc.dashboard.php:19
+#: theme/mobile/inc.month-close.php:36 theme/mobile/inc.year-close.php:37
 msgid "with fees"
 msgstr "with fees"
 
 #: theme/inc.admin-shift.php:42 theme/inc.dashboard.php:16
+#: theme/mobile/inc.admin-shift.php:47 theme/mobile/inc.dashboard.php:20
 msgid "Current month"
 msgstr "Current month"
 
 #: theme/inc.admin-shift.php:44 theme/inc.dashboard.php:18
+#: theme/mobile/inc.admin-shift.php:49 theme/mobile/inc.dashboard.php:22
 msgid "Earnings per hour"
 msgstr "Earnings per hour"
 
 #: theme/inc.admin-shift.php:45 theme/inc.dashboard.php:19
+#: theme/mobile/inc.admin-shift.php:50 theme/mobile/inc.dashboard.php:23
 msgid "Sunday fee"
 msgstr "Sunday fee"
 
 #: theme/inc.admin-shift.php:46 theme/inc.dashboard.php:20
-#: theme/inc.month-close.php:34
+#: theme/inc.month-close.php:34 theme/inc.year-close.php:36
+#: theme/mobile/inc.admin-shift.php:51 theme/mobile/inc.dashboard.php:24
+#: theme/mobile/inc.month-close.php:38 theme/mobile/inc.year-close.php:40
 msgid "Hours worked"
 msgstr "Hours worked"
 
-#: theme/inc.admin-shift.php:52
+#: theme/inc.admin-shift.php:52 theme/mobile/inc.admin-shift.php:57
 msgid "View shifts from"
 msgstr "View shifts from"
 
 #: theme/inc.admin-shift.php:56 theme/inc.dashboard.php:30
 #: theme/inc.dashboard.php:54 theme/inc.shift-edit.php:12
+#: theme/mobile/inc.admin-shift.php:64 theme/mobile/inc.dashboard.php:39
+#: theme/mobile/inc.dashboard.php:72 theme/mobile/inc.shift-edit.php:15
 msgid "Date"
 msgstr "Date"
 
 #: theme/inc.admin-shift.php:57 theme/inc.dashboard.php:34
 #: theme/inc.dashboard.php:55 theme/inc.shift-edit.php:16
+#: theme/mobile/inc.admin-shift.php:65 theme/mobile/inc.dashboard.php:44
+#: theme/mobile/inc.dashboard.php:73 theme/mobile/inc.shift-edit.php:20
 msgid "Start Time"
 msgstr "Start Time"
 
 #: theme/inc.admin-shift.php:58 theme/inc.dashboard.php:38
 #: theme/inc.dashboard.php:56 theme/inc.shift-edit.php:20
+#: theme/mobile/inc.admin-shift.php:66 theme/mobile/inc.dashboard.php:49
+#: theme/mobile/inc.dashboard.php:74 theme/mobile/inc.shift-edit.php:25
 msgid "End Time"
 msgstr "End Time"
 
 #: theme/inc.admin-shift.php:59 theme/inc.dashboard.php:57
+#: theme/mobile/inc.admin-shift.php:67 theme/mobile/inc.dashboard.php:75
 msgid "Total Hours"
 msgstr "Total Hours"
 
 #: theme/inc.admin-shift.php:61 theme/inc.admin-shifts.php:16
 #: theme/inc.admin-users.php:18 theme/inc.dashboard.php:59
+#: theme/mobile/inc.admin-shift.php:69 theme/mobile/inc.admin-shifts.php:14
+#: theme/mobile/inc.admin-users.php:17 theme/mobile/inc.dashboard.php:77
 msgid "Actions"
 msgstr "Actions"
 
 #: theme/inc.admin-shift.php:85 theme/inc.dashboard.php:84
+#: theme/mobile/inc.admin-shift.php:95 theme/mobile/inc.dashboard.php:104
 msgid "SUNDAY"
 msgstr "SUNDAY"
 
 #: theme/inc.admin-shift.php:87 theme/inc.dashboard.php:86
+#: theme/mobile/inc.admin-shift.php:97 theme/mobile/inc.dashboard.php:106
 msgid "HOLIDAY"
 msgstr "HOLIDAY"
 
 #: theme/inc.admin-shift.php:94 theme/inc.dashboard.php:93
+#: theme/mobile/inc.admin-shift.php:104 theme/mobile/inc.dashboard.php:113
 msgid "Remove"
 msgstr "Remove"
 
 #: theme/inc.admin-shift.php:95 theme/inc.admin-users.php:29
 #: theme/inc.dashboard.php:94 theme/inc.user-edit.php:28
+#: theme/mobile/inc.admin-shift.php:105 theme/mobile/inc.admin-users.php:32
+#: theme/mobile/inc.dashboard.php:114 theme/mobile/inc.user-edit.php:28
 msgid "Edit"
 msgstr "Edit"
 
-#: theme/inc.admin-shifts.php:4
+#: theme/inc.admin-shifts.php:4 theme/mobile/inc.admin-shifts.php:5
 msgid "View shifts from a user"
 msgstr "View shifts from a user"
 
-#: theme/inc.admin-shifts.php:6
+#: theme/inc.admin-shifts.php:6 theme/mobile/inc.admin-shifts.php:8
 msgid "Select a user to view shifts from"
 msgstr "Select a user to view shifts from"
 
@@ -171,44 +208,51 @@ msgstr "Select a user to view shifts from"
 #: theme/inc.admin-users.php:17 theme/inc.profile.php:59
 #: theme/inc.profile.php:108 theme/inc.user-add.php:36
 #: theme/inc.user-edit.php:34 theme/inc.user-verify.php:59
+#: theme/mobile/inc.admin-shifts.php:13 theme/mobile/inc.admin-users.php:15
+#: theme/mobile/inc.admin-users.php:16 theme/mobile/inc.profile.php:106
+#: theme/mobile/inc.user-add.php:53 theme/mobile/inc.user-edit.php:34
+#: theme/mobile/inc.user-verify.php:70
 msgid "Surname"
 msgstr "Surname"
 
-#: theme/inc.admin-shifts.php:23
+#: theme/inc.admin-shifts.php:23 theme/mobile/inc.admin-shifts.php:25
 msgid "View Shifts"
 msgstr "View Shifts"
 
-#: theme/inc.admin-users.php:4
+#: theme/inc.admin-users.php:4 theme/mobile/inc.admin-users.php:5
 msgid "Users Overview"
 msgstr "Users Overview"
 
-#: theme/inc.admin-users.php:4
+#: theme/inc.admin-users.php:4 theme/mobile/inc.admin-users.php:38
 msgid "Add a user"
 msgstr "Add a user"
 
 #: theme/inc.admin-users.php:13 theme/inc.profile.php:63
 #: theme/inc.profile.php:112 theme/inc.user-add.php:40
 #: theme/inc.user-edit.php:38 theme/inc.user-verify.php:63
+#: theme/mobile/inc.admin-users.php:12 theme/mobile/inc.profile.php:57
+#: theme/mobile/inc.profile.php:111 theme/mobile/inc.user-add.php:43
+#: theme/mobile/inc.user-edit.php:38 theme/mobile/inc.user-verify.php:75
 msgid "Username"
 msgstr "Username"
 
-#: theme/inc.admin.php:4
+#: theme/inc.admin.php:4 theme/mobile/inc.admin.php:5
 msgid "Administrator Panel"
 msgstr "Administrator Panel"
 
-#: theme/inc.admin.php:6
+#: theme/inc.admin.php:6 theme/mobile/inc.admin.php:8
 msgid "User Overview"
 msgstr "User Overview"
 
-#: theme/inc.admin.php:7
+#: theme/inc.admin.php:7 theme/mobile/inc.admin.php:9
 msgid "View Shifts From User"
 msgstr "View Shifts From User"
 
-#: theme/inc.admin.php:8
+#: theme/inc.admin.php:8 theme/mobile/inc.admin.php:10
 msgid "Invite A User"
 msgstr "Invite A User"
 
-#: theme/inc.dashboard.php:26
+#: theme/inc.dashboard.php:26 theme/mobile/inc.dashboard.php:34
 msgid "Add a new shift"
 msgstr "Add a new shift"
 
@@ -217,18 +261,19 @@ msgid "Is holiday"
 msgstr "Is holiday"
 
 #: theme/inc.dashboard.php:43 theme/inc.shift-edit.php:32
+#: theme/mobile/inc.dashboard.php:54 theme/mobile/inc.shift-edit.php:30
 msgid "This is a holiday"
 msgstr "This is a holiday"
 
-#: theme/inc.dashboard.php:45
+#: theme/inc.dashboard.php:45 theme/mobile/inc.dashboard.php:56
 msgid "Add Shift"
 msgstr "Add Shift"
 
-#: theme/inc.dashboard.php:51
+#: theme/inc.dashboard.php:51 theme/mobile/inc.dashboard.php:65
 msgid "Current Shifts"
 msgstr "Current Shifts"
 
-#: theme/inc.dashboard.php:51
+#: theme/inc.dashboard.php:51 theme/mobile/inc.dashboard.php:123
 msgid "Close Month"
 msgstr "Close Month"
 
@@ -236,191 +281,256 @@ msgstr "Close Month"
 msgid "monthly overview"
 msgstr "monthly overview"
 
-#: theme/inc.header.php:26
+#: theme/inc.header.php:23
+msgid "yearly overview"
+msgstr "yearly overview"
+
+#: theme/inc.header.php:27
 msgid "admin"
 msgstr "admin"
 
-#: theme/inc.header.php:28
+#: theme/inc.header.php:29
 msgid "logout"
 msgstr "logout"
 
-#: theme/inc.month-close.php:14
+#: theme/inc.month-close.php:14 theme/mobile/inc.month-close.php:15
 msgid "This month has been booked already"
 msgstr "This month has been booked already"
 
-#: theme/inc.month-close.php:15
+#: theme/inc.month-close.php:15 theme/mobile/inc.month-close.php:18
 #, php-format
 msgid "The current month (%s) has been booked and closed already"
 msgstr "The current month (%s) has been booked and closed already"
 
-#: theme/inc.month-close.php:17
+#: theme/inc.month-close.php:17 theme/mobile/inc.month-close.php:20
 msgid "Check Monthly Overview"
 msgstr "Check Monthly Overview"
 
 #: theme/inc.month-close.php:18 theme/inc.month-close.php:39
+#: theme/inc.year-close.php:19 theme/inc.year-close.php:41
+#: theme/mobile/inc.month-close.php:21 theme/mobile/inc.month-close.php:42
+#: theme/mobile/inc.year-close.php:22 theme/mobile/inc.year-close.php:44
 msgid "Back to dashboard"
 msgstr "Back to dashboard"
 
-#: theme/inc.month-close.php:25
+#: theme/inc.month-close.php:25 theme/mobile/inc.month-close.php:28
 msgid "Month closed and booked"
 msgstr "Month closed and booked"
 
-#: theme/inc.month-close.php:27
+#: theme/inc.month-close.php:27 theme/mobile/inc.month-close.php:31
 #, php-format
 msgid "The month %s has been successfully closed and booked"
 msgstr "The month %s has been successfully closed and booked"
 
-#: theme/inc.month-close.php:29
+#: theme/inc.month-close.php:29 theme/mobile/inc.month-close.php:33
 msgid "Details of this month"
 msgstr "Details of this month"
 
 #: theme/inc.month-close.php:31 theme/inc.month-close.php:32
 #: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
+#: theme/inc.year-close.php:32 theme/inc.year-close.php:33
+#: theme/inc.year-overview.php:11 theme/inc.year-overview.php:12
+#: theme/mobile/inc.month-close.php:35 theme/mobile/inc.month-close.php:36
+#: theme/mobile/inc.month-overview.php:15
+#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-close.php:36
+#: theme/mobile/inc.year-close.php:37 theme/mobile/inc.year-overview.php:15
+#: theme/mobile/inc.year-overview.php:16
 msgid "Earnings"
 msgstr "Earnings"
 
-#: theme/inc.month-close.php:33
+#: theme/inc.month-close.php:33 theme/inc.year-close.php:34
+#: theme/mobile/inc.month-close.php:37 theme/mobile/inc.year-close.php:38
 msgid "Sundays worked"
 msgstr "Sundays worked"
 
-#: theme/inc.month-close.php:35
+#: theme/inc.month-close.php:35 theme/inc.year-close.php:37
+#: theme/mobile/inc.month-close.php:39 theme/mobile/inc.year-close.php:41
 msgid "Days worked"
 msgstr "Days worked"
 
-#: theme/inc.month-overview.php:4 view/class.PageMonth.php:23
+#: theme/inc.month-overview.php:4 theme/mobile/inc.header.php:34
+#: theme/mobile/inc.month-overview.php:6
 msgid "Monthly Overview"
 msgstr "Monthly Overview"
 
-#: theme/inc.month-overview.php:7
+#: theme/inc.month-overview.php:4
+msgid "Close Year"
+msgstr "Close Year"
+
+#: theme/inc.month-overview.php:7 theme/mobile/inc.month-overview.php:12
 msgid "Month"
 msgstr "Month"
 
-#: theme/inc.month-overview.php:8
+#: theme/inc.month-overview.php:8 theme/inc.year-overview.php:9
+#: theme/mobile/inc.month-overview.php:13 theme/mobile/inc.year-overview.php:13
 msgid "Hours Worked"
 msgstr "Hours Worked"
 
-#: theme/inc.month-overview.php:9
+#: theme/inc.month-overview.php:9 theme/inc.year-overview.php:10
+#: theme/mobile/inc.month-overview.php:14 theme/mobile/inc.year-overview.php:14
 msgid "Days Worked"
 msgstr "Days Worked"
 
-#: theme/inc.month-overview.php:10
+#: theme/inc.month-overview.php:10 theme/inc.year-overview.php:11
+#: theme/mobile/inc.month-overview.php:15 theme/mobile/inc.year-overview.php:15
 msgid "without"
 msgstr "without"
 
 #: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
+#: theme/inc.year-overview.php:11 theme/inc.year-overview.php:12
+#: theme/mobile/inc.month-overview.php:15
+#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-overview.php:15
+#: theme/mobile/inc.year-overview.php:16
 msgid "fees"
 msgstr "fees"
 
-#: theme/inc.month-overview.php:11
+#: theme/inc.month-overview.php:11 theme/inc.year-overview.php:12
+#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-overview.php:16
 msgid "with"
 msgstr "with"
 
-#: theme/inc.month-overview.php:12
+#: theme/inc.month-overview.php:12 theme/inc.year-overview.php:13
+#: theme/mobile/inc.month-overview.php:17 theme/mobile/inc.year-overview.php:17
 msgid "Sundays Worked"
 msgstr "Sundays Worked"
 
-#: theme/inc.page-not-found.php:4
+#: theme/inc.page-not-found.php:4 theme/mobile/inc.page-not-found.php:5
 msgid "Page not found"
 msgstr "Page not found"
 
-#: theme/inc.page-not-found.php:6
+#: theme/inc.page-not-found.php:6 theme/mobile/inc.page-not-found.php:9
 msgid "The page you are looking for could not be found"
 msgstr "The page you are looking for could not be found"
 
-#: theme/inc.profile.php:9
+#: theme/inc.profile.php:9 theme/mobile/inc.profile.php:10
 msgid "Account updated"
 msgstr "Account updated"
 
-#: theme/inc.profile.php:12
+#: theme/inc.profile.php:12 theme/mobile/inc.profile.php:13
 msgid "Your account has been updated successfully"
 msgstr "Account updated"
 
-#: theme/inc.profile.php:16
+#: theme/inc.profile.php:16 theme/mobile/inc.profile.php:15
 msgid "Go to dashboard"
 msgstr "Go to dashboard"
 
 #: theme/inc.profile.php:23 theme/inc.user-verify.php:35
+#: theme/mobile/inc.profile.php:21 theme/mobile/inc.user-verify.php:39
 msgid "Invalid Input"
 msgstr "Invalid Input"
 
 #: theme/inc.profile.php:26 theme/inc.user-verify.php:38
+#: theme/mobile/inc.profile.php:25 theme/mobile/inc.user-verify.php:43
 msgid "Some fields were left empty or were not filled in correctly"
 msgstr "Some fields were left empty or were not filled in correctly"
 
 #: theme/inc.profile.php:29 theme/inc.user-verify.php:41
+#: theme/mobile/inc.profile.php:28 theme/mobile/inc.user-verify.php:46
 msgid "Go back and try again"
 msgstr "Go back and try again"
 
 #: theme/inc.profile.php:71 theme/inc.profile.php:120 theme/inc.user-add.php:48
-#: theme/inc.user-verify.php:71
+#: theme/inc.user-verify.php:71 theme/mobile/inc.profile.php:62
+#: theme/mobile/inc.profile.php:121 theme/mobile/inc.user-add.php:63
+#: theme/mobile/inc.user-verify.php:85
 msgid "Gender"
 msgstr "Gender"
 
-#: theme/inc.profile.php:75 theme/inc.profile.php:126
-#: theme/inc.user-edit.php:52 theme/inc.user-verify.php:78
+#: theme/inc.profile.php:75 theme/inc.profile.php:132
+#: theme/inc.user-edit.php:52 theme/inc.user-verify.php:84
+#: theme/mobile/inc.profile.php:67 theme/mobile/inc.profile.php:129
+#: theme/mobile/inc.user-edit.php:52 theme/mobile/inc.user-verify.php:93
 msgid "Hourly Pay"
 msgstr "Hourly Pay"
 
-#: theme/inc.profile.php:79 theme/inc.profile.php:128
-#: theme/inc.user-edit.php:54 theme/inc.user-verify.php:80
+#: theme/inc.profile.php:79 theme/inc.profile.php:134
+#: theme/inc.user-edit.php:54 theme/inc.user-verify.php:86
+#: theme/mobile/inc.profile.php:69 theme/mobile/inc.profile.php:134
+#: theme/mobile/inc.user-edit.php:54 theme/mobile/inc.user-verify.php:98
 msgid "Sunday Fee"
 msgstr "Sunday Fee"
 
-#: theme/inc.profile.php:83 theme/inc.profile.php:133
-#: theme/inc.user-edit.php:59 theme/inc.user-verify.php:86
+#: theme/inc.profile.php:83 theme/inc.profile.php:139
+#: theme/inc.user-edit.php:59 theme/inc.user-verify.php:92
+#: theme/mobile/inc.profile.php:74 theme/mobile/inc.user-edit.php:59
 msgid "Language"
 msgstr "Language"
 
-#: theme/inc.profile.php:95
+#: theme/inc.profile.php:95 theme/mobile/inc.profile.php:84
 msgid "ADMINISTRATOR"
 msgstr "ADMINISTRATOR"
 
-#: theme/inc.profile.php:102
+#: theme/inc.profile.php:102 theme/mobile/inc.profile.php:94
 msgid "Edit my profile"
 msgstr "Edit my profile"
 
 #: theme/inc.profile.php:104 theme/inc.user-edit.php:30
+#: theme/mobile/inc.profile.php:98 theme/mobile/inc.user-edit.php:30
 msgid "General Settings"
 msgstr "General Settings"
 
-#: theme/inc.profile.php:124 theme/inc.user-edit.php:50
-#: theme/inc.user-verify.php:76
+#: theme/inc.profile.php:123 theme/inc.user-add.php:49
+#: theme/inc.user-verify.php:74 theme/mobile/inc.profile.php:122
+#: theme/mobile/inc.user-add.php:64 theme/mobile/inc.user-verify.php:86
+msgid "Male"
+msgstr "Male"
+
+#: theme/inc.profile.php:127 theme/inc.user-add.php:50
+#: theme/inc.user-verify.php:78 theme/mobile/inc.profile.php:123
+#: theme/mobile/inc.user-add.php:65 theme/mobile/inc.user-verify.php:87
+msgid "Female"
+msgstr "Female"
+
+#: theme/inc.profile.php:130 theme/inc.user-edit.php:50
+#: theme/inc.user-verify.php:82 theme/mobile/inc.profile.php:126
+#: theme/mobile/inc.user-edit.php:50 theme/mobile/inc.user-verify.php:90
 msgid "Payment Settings"
 msgstr "Payment Settings"
 
-#: theme/inc.profile.php:131 theme/inc.user-edit.php:57
-#: theme/inc.user-verify.php:84
+#: theme/inc.profile.php:137 theme/inc.user-edit.php:57
+#: theme/inc.user-verify.php:90 theme/mobile/inc.profile.php:138
+#: theme/mobile/inc.user-edit.php:57 theme/mobile/inc.user-verify.php:102
 msgid "Language Settings"
 msgstr "Language Settings"
 
-#: theme/inc.profile.php:139 theme/inc.user-edit.php:65
+#: theme/inc.profile.php:145 theme/inc.user-edit.php:65
+#: theme/mobile/inc.profile.php:147 theme/mobile/inc.user-edit.php:65
 msgid "Password Settings"
 msgstr "Password Settings"
 
-#: theme/inc.profile.php:141 theme/inc.user-add.php:55
-#: theme/inc.user-edit.php:67 theme/inc.user-verify.php:95
+#: theme/inc.profile.php:147 theme/inc.user-add.php:55
+#: theme/inc.user-edit.php:67 theme/inc.user-verify.php:101
+#: theme/mobile/inc.profile.php:150 theme/mobile/inc.user-add.php:71
+#: theme/mobile/inc.user-edit.php:67 theme/mobile/inc.user-verify.php:114
 msgid "Password"
 msgstr "Password"
 
-#: theme/inc.profile.php:142 theme/inc.user-edit.php:68
+#: theme/inc.profile.php:148 theme/inc.user-edit.php:68
+#: theme/mobile/inc.profile.php:151 theme/mobile/inc.user-edit.php:68
+#: theme/mobile/inc.user-verify.php:115
 msgid "Enter new password"
 msgstr "Enter new password"
 
-#: theme/inc.profile.php:145 theme/inc.user-add.php:59
-#: theme/inc.user-edit.php:71 theme/inc.user-verify.php:99
+#: theme/inc.profile.php:151 theme/inc.user-add.php:59
+#: theme/inc.user-edit.php:71 theme/inc.user-verify.php:105
+#: theme/mobile/inc.profile.php:155 theme/mobile/inc.user-add.php:76
+#: theme/mobile/inc.user-edit.php:71 theme/mobile/inc.user-verify.php:119
 msgid "Password (repeat)"
 msgstr "Password (repeat)"
 
-#: theme/inc.profile.php:146 theme/inc.user-edit.php:72
+#: theme/inc.profile.php:152 theme/inc.user-edit.php:72
+#: theme/mobile/inc.profile.php:156 theme/mobile/inc.user-edit.php:72
+#: theme/mobile/inc.user-verify.php:120
 msgid "Repeat new password"
 msgstr "Repeat new password"
 
-#: theme/inc.profile.php:148 theme/inc.shift-edit.php:34
-#: theme/inc.user-edit.php:74
+#: theme/inc.profile.php:154 theme/inc.shift-edit.php:34
+#: theme/inc.user-edit.php:74 theme/mobile/inc.profile.php:159
+#: theme/mobile/inc.shift-edit.php:33 theme/mobile/inc.user-edit.php:74
 msgid "Save Changes"
 msgstr "Save Changes"
 
-#: theme/inc.shift-edit.php:9
+#: theme/inc.shift-edit.php:9 theme/mobile/inc.shift-edit.php:10
 msgid "Edit shift from"
 msgstr "Edit shift from"
 
@@ -428,162 +538,206 @@ msgstr "Edit shift from"
 msgid "Is Holiday"
 msgstr "Is Holiday"
 
-#: theme/inc.user-add.php:5
+#: theme/inc.user-add.php:5 theme/mobile/inc.user-add.php:6
 msgid "User added"
 msgstr "User added"
 
-#: theme/inc.user-add.php:7
+#: theme/inc.user-add.php:7 theme/mobile/inc.user-add.php:9
 msgid "User successfully added to the Work Webinterface"
 msgstr "User successfully added to the Work Webinterface"
 
-#: theme/inc.user-add.php:8
+#: theme/inc.user-add.php:8 theme/mobile/inc.user-add.php:10
 msgid "Return to user overview"
 msgstr "Return to user overview"
 
-#: theme/inc.user-add.php:14
+#: theme/inc.user-add.php:14 theme/mobile/inc.user-add.php:16
 msgid "Invalid input"
 msgstr "Invalid input"
 
-#: theme/inc.user-add.php:15
-msgid "Some fields were not filled in (correctly). Fill in all fields correctly and try again"
-msgstr "Some fields were not filled in (correctly). Fill in all fields correctly and try again"
+#: theme/inc.user-add.php:15 theme/mobile/inc.user-add.php:19
+msgid ""
+"Some fields were not filled in (correctly). Fill in all fields correctly and "
+"try again"
+msgstr ""
+"Some fields were not filled in (correctly). Fill in all fields correctly and "
+"try again"
 
 #: theme/inc.user-add.php:21 theme/inc.user-verify.php:18
+#: theme/mobile/inc.user-add.php:25 theme/mobile/inc.user-verify.php:20
 msgid "User already exists"
 msgstr "User already exists"
 
-#: theme/inc.user-add.php:22
+#: theme/inc.user-add.php:22 theme/mobile/inc.user-add.php:28
 msgid "A user with this username and/or email already exists"
 msgstr "A user with this username and/or email already exists"
 
-#: theme/inc.user-add.php:28
+#: theme/inc.user-add.php:28 theme/mobile/inc.user-add.php:34
 msgid "Add a new user"
 msgstr "Add a new user"
 
 #: theme/inc.user-add.php:29 theme/inc.user-verify.php:52
+#: theme/mobile/inc.user-add.php:37 theme/mobile/inc.user-verify.php:59
 msgid "Basic information"
 msgstr "Basic information"
 
-#: theme/inc.user-add.php:49 theme/inc.user-verify.php:72
-msgid "Male"
-msgstr "Male"
-
-#: theme/inc.user-add.php:50 theme/inc.user-verify.php:73
-msgid "Female"
-msgstr "Female"
-
-#: theme/inc.user-add.php:53 theme/inc.user-verify.php:93
+#: theme/inc.user-add.php:53 theme/inc.user-verify.php:99
+#: theme/mobile/inc.user-add.php:68 theme/mobile/inc.user-verify.php:111
 msgid "User password"
 msgstr "User password"
 
-#: theme/inc.user-add.php:56 theme/inc.user-verify.php:96
+#: theme/inc.user-add.php:56 theme/inc.user-verify.php:102
+#: theme/mobile/inc.user-add.php:72
 msgid "Enter a password"
 msgstr "Enter a password"
 
-#: theme/inc.user-add.php:60 theme/inc.user-verify.php:100
+#: theme/inc.user-add.php:60 theme/inc.user-verify.php:106
+#: theme/mobile/inc.user-add.php:77
 msgid "Repeat password"
 msgstr "Repeat password"
 
-#: theme/inc.user-add.php:63
+#: theme/inc.user-add.php:63 theme/mobile/inc.user-add.php:80
 msgid "Add User"
 msgstr "Add User"
 
-#: theme/inc.user-edit.php:9
+#: theme/inc.user-edit.php:9 theme/mobile/inc.user-edit.php:9
 msgid "A user with that ID could not be found"
 msgstr "A user with that ID could not be found"
 
 #: theme/inc.user-edit.php:10 theme/inc.user-edit.php:19
+#: theme/mobile/inc.user-edit.php:10 theme/mobile/inc.user-edit.php:19
 msgid "Back to users overview"
 msgstr "Back to users overview"
 
-#: theme/inc.user-edit.php:16
+#: theme/inc.user-edit.php:16 theme/mobile/inc.user-edit.php:16
 msgid "User successfully updated"
 msgstr "User successfully updated"
 
-#: theme/inc.user-edit.php:18
+#: theme/inc.user-edit.php:18 theme/mobile/inc.user-edit.php:18
 msgid "This user's profile has been successfully updated"
 msgstr "This user's profile has been successfully updated"
 
-#: theme/inc.user-verify.php:10
+#: theme/inc.user-verify.php:10 theme/mobile/inc.user-verify.php:11
 msgid "Invalid token"
 msgstr "Invalid token"
 
-#: theme/inc.user-verify.php:12
+#: theme/inc.user-verify.php:12 theme/mobile/inc.user-verify.php:14
 #, php-format
 msgid "The token you have supplied (%s) does not appear to be valid"
 msgstr "The token you have supplied (%s) does not appear to be valid"
 
-#: theme/inc.user-verify.php:20
+#: theme/inc.user-verify.php:20 theme/mobile/inc.user-verify.php:23
 msgid "A user with the supplied username or email already exists in the system"
-msgstr "A user with the supplied username or email already exists in the system"
+msgstr ""
+"A user with the supplied username or email already exists in the system"
 
-#: theme/inc.user-verify.php:26
+#: theme/inc.user-verify.php:26 theme/mobile/inc.user-verify.php:29
 msgid "Account created"
-msgstr "A user with the supplied username or email already exists in the system"
+msgstr ""
+"A user with the supplied username or email already exists in the system"
 
-#: theme/inc.user-verify.php:28
+#: theme/inc.user-verify.php:28 theme/mobile/inc.user-verify.php:32
 msgid "Your account has been created successfully"
 msgstr "Your account has been created successfully"
 
-#: theme/inc.user-verify.php:29
+#: theme/inc.user-verify.php:29 theme/mobile/inc.user-verify.php:33
 msgid "Proceed to the login page"
 msgstr "Proceed to the login page"
 
-#: theme/inc.user-verify.php:47
-msgid "Your password will be encrypted upon registration. Nobody will be able to view or decrypt your password"
-msgstr "Your password will be encrypted upon registration. Nobody will be able to view or decrypt your password"
+#: theme/inc.user-verify.php:47 theme/mobile/inc.user-verify.php:52
+msgid ""
+"Your password will be encrypted upon registration. Nobody will be able to "
+"view or decrypt your password"
+msgstr ""
+"Your password will be encrypted upon registration. Nobody will be able to "
+"view or decrypt your password"
 
-#: theme/inc.user-verify.php:51
+#: theme/inc.user-verify.php:51 theme/mobile/inc.user-verify.php:56
 msgid "Finish your registration"
 msgstr "Finish your registration"
 
-#: theme/inc.user-verify.php:103
+#: theme/inc.user-verify.php:109 theme/mobile/inc.user-verify.php:123
 msgid "Register"
 msgstr "Register"
 
-#: view/class.PageDashboard.php:23
-msgid "Dashboard"
-msgstr "Dashboard"
+#: theme/inc.year-close.php:15 theme/mobile/inc.year-close.php:16
+msgid "This year has been booked already"
+msgstr "This year has been booked already"
 
-#: view/class.PageLogin.php:23
-msgid "Log in"
-msgstr "Log in"
+#: theme/inc.year-close.php:16 theme/mobile/inc.year-close.php:19
+#, php-format
+msgid "The current year (%s) has been booked and closed already"
+msgstr "The current year (%s) has been booked and closed already"
 
-#: view/class.PageMonthClose.php:24
-msgid "Close and book current month"
-msgstr "Close and book current month"
+#: theme/inc.year-close.php:18 theme/mobile/inc.year-close.php:21
+msgid "Check Yearly Overview"
+msgstr "Check Yearly Overview"
 
-#: view/class.PageProfile.php:24
-msgid "My Profile"
-msgstr "My Profile"
+#: theme/inc.year-close.php:26 theme/mobile/inc.year-close.php:29
+msgid "Year closed and booked"
+msgstr "Year closed and booked"
 
-#: view/class.PageShiftRemove.php:23
-msgid "Remove this shift"
-msgstr "Remove this shift"
+#: theme/inc.year-close.php:28 theme/mobile/inc.year-close.php:32
+#, php-format
+msgid "The year %s has been successfully closed and booked"
+msgstr "The year %s has been successfully closed and booked"
 
-#: view/class.PageUserEdit.php:44
-msgid "Specified user not found"
-msgstr "Specified user not found"
+#: theme/inc.year-close.php:30 theme/mobile/inc.year-close.php:34
+msgid "Details of this year"
+msgstr "Details of this year"
 
-#: view/class.PageUserEdit.php:46
-msgid "Edit this user"
-msgstr "Edit this user"
+#: theme/inc.year-close.php:35 theme/mobile/inc.year-close.php:39
+msgid "Months worked"
+msgstr "Months worked"
 
-#: view/class.PageUserVerify.php:22
-msgid "Verify Account"
-msgstr "Verify Account"
+#: theme/inc.year-overview.php:4 theme/mobile/inc.year-overview.php:6
+msgid "Yearly Overview"
+msgstr "Yearly Overview"
 
-#: view/class.PageShiftEdit.php:36
-msgid "Specified shift not found"
-msgstr "Specified shift not found"
+#: theme/inc.year-overview.php:7 theme/mobile/inc.year-overview.php:12
+msgid "Year"
+msgstr "Year"
 
-#: view/class.PageshiftEdit.php:38
-msgid "Edit this shift"
-msgstr "Edit this shift"
+#: theme/inc.year-overview.php:8
+msgid "Months Worked"
+msgstr "Months Worked"
 
-#: view/class.PageAdmin.php:23
+#: theme/mobile/inc.header.php:38
 msgid "Admin"
 msgstr "Admin"
+
+#: theme/mobile/inc.header.php:40
+msgid "Logout"
+msgstr "Logout"
+
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
+
+#~ msgid "Log in"
+#~ msgstr "Log in"
+
+#~ msgid "Close and book current month"
+#~ msgstr "Close and book current month"
+
+#~ msgid "My Profile"
+#~ msgstr "My Profile"
+
+#~ msgid "Remove this shift"
+#~ msgstr "Remove this shift"
+
+#~ msgid "Specified user not found"
+#~ msgstr "Specified user not found"
+
+#~ msgid "Edit this user"
+#~ msgstr "Edit this user"
+
+#~ msgid "Verify Account"
+#~ msgstr "Verify Account"
+
+#~ msgid "Specified shift not found"
+#~ msgstr "Specified shift not found"
+
+#~ msgid "Edit this shift"
+#~ msgstr "Edit this shift"
 
 #~ msgid "Username or e-mail"
 #~ msgstr "Username or e-mail"
@@ -594,8 +748,12 @@ msgstr "Admin"
 #~ msgid "Change Language"
 #~ msgstr "Change Language"
 
-#~ msgid "Some fields were left empty or were not filled in correctly. Go back and try again"
-#~ msgstr "Some fields were left empty or were not filled in correctly. Go back and try again"
+#~ msgid ""
+#~ "Some fields were left empty or were not filled in correctly. Go back and "
+#~ "try again"
+#~ msgstr ""
+#~ "Some fields were left empty or were not filled in correctly. Go back and "
+#~ "try again"
 
 #~ msgid "excluded"
 #~ msgstr "excluded"

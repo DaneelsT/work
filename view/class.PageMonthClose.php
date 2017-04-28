@@ -116,6 +116,7 @@ class PageMonthClose extends AbstractAuthorizedPage {
     private function checkMonth() {
     	$app = Application::getInstance();
 		$user = $app->getUser();
+
         $sql = "SELECT month
                 FROM months
                 WHERE month = :month AND userid = :userid";
@@ -139,18 +140,27 @@ class PageMonthClose extends AbstractAuthorizedPage {
 		$user = $app->getUser();
 
         $currentMonth = date("n");
-        $sql = "INSERT INTO months (month, hoursWorked, daysWorked, earnings, sundaysWorked, userid)
-                VALUES(:month, :hoursworked, :daysworked, :earnings, :sundaysworked, :userid)";
-        $statement = $this->mDbHandle->prepare($sql);
-        $statement->bindParam(':month', $currentMonth);
-        $statement->bindParam(':hoursworked', round($this->mTotalHours, 1));
-		$statement->bindParam(':daysworked', $this->mDaysWorked);
-        $statement->bindParam(':earnings', $this->mTotalPay);
-        $statement->bindParam(':sundaysworked', $this->mSunday);
-		$statement->bindParam(':userid', $user->getId());
-        $statement->execute();
 
-        $this->closeMonth();
+        $sql = "INSERT INTO months (month, year, userid)
+                VALUES (:month, :year, :userid)";
+        $stmt1 = $this->mDbHandle->prepare($sql);
+        $stmt1->bindParam(':month', $currentMonth);
+        $stmt1->bindParam(':year', date('Y'));
+        $stmt1->bindParam(':userid', $user->getId());
+        $stmt1->execute();
+        $id = $this->mDbHandle->lastInsertId();
+
+        $sql2 = "INSERT INTO months_data (month_id, hoursWorked, daysWorked, sundaysWorked, earnings)
+                VALUES(:month_id, :hoursworked, :daysworked, :sundaysworked, :earnings)";
+        $stmt2 = $this->mDbHandle->prepare($sql2);
+        $stmt2->bindParam(':month_id', $id);
+        $stmt2->bindParam(':hoursworked', round($this->mTotalHours, 1));
+		$stmt2->bindParam(':daysworked', $this->mDaysWorked);
+        $stmt2->bindParam(':earnings', $this->mTotalPay);
+        $stmt2->bindParam(':sundaysworked', $this->mSunday);
+        $stmt2->execute();
+
+        // $this->closeMonth();
     }
 
     // Close the current month by emptying the shifts table
