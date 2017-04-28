@@ -62,14 +62,14 @@ function closeConfirmationBox() {
             if(buttonText.toLowerCase() == "close month") {
                 text = "Are you sure you want to book and close this month?\nThere is no going back!";
             }else if(buttonText.toLowerCase() == "sluit maand") {
-                text = "Ben je zeker dat je deze maand wilt boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
+                text = "Ben je zeker dat je deze maand wil boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
             }
             break;
         case "year":
             if(buttonText.toLowerCase() == "close year") {
                 text = "Are you sure you want to book and close this year?\nThere is no going back!";
             }else if(buttonText.toLowerCase() == "sluit jaar") {
-                text = "Ben je zeker dat je dit jaar wilt boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
+                text = "Ben je zeker dat je dit jaar wil boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
             }
             break;
     }
