@@ -112,10 +112,10 @@ class PageYearClose extends AbstractAuthorizedPage {
         $id = $this->mDbHandle->lastInsertId();
 
         $sql2 = "INSERT INTO years_data (year_id, monthsWorked, hoursWorked, daysWorked, sundaysWorked, earnings)
-                VALUES (:year, :monthsWorked, :hoursWorked, :daysWorked, :sundaysWorked, :earnings)";
+                VALUES (:year_id, :monthsWorked, :hoursWorked, :daysWorked, :sundaysWorked, :earnings)";
         $stmt2 = $this->mDbHandle->prepare($sql2);
         $stmt2->bindParam(':year_id', $id);
-        $stmt2->bindParam('monthsWorked', $this->mMonthsWorked);
+        $stmt2->bindParam(':monthsWorked', $this->mMonthsWorked);
         $stmt2->bindParam(':hoursWorked', $this->mHoursWorked);
         $stmt2->bindParam(':daysWorked', $this->mDaysWorked);
         $stmt2->bindParam(':sundaysWorked', $this->mSundaysWorked);
