@@ -2,6 +2,13 @@
 
 System written in PHP [(Using Carbon Framework)](https://github.com/JoeriHermans/Carbon "Carbon Framework") to submit and check workshifts, track current monthly earnings, ...
 
+## Version 4.0
+
+###### Advanved year overview
+In this version the database scheme has been updated, designed to respect the normalisation process more than the previous scheme used. When a month gets booked the current year will be saved into the database.
+This makes it possible that, when the user books the year, these months stay accessable through their 'month' row, which can be then used to draw a detailed view of all worked months during that particular year.
+
+
 ## Version 3.0
 
 ###### Multilanguage support using GetText and basic API implementation
