@@ -52,7 +52,7 @@ class PageYearDetails extends AbstractAuthorizedPage {
                 FROM months
                 WHERE userid = :userid AND year = :year";
         $statement = $this->mDbHandle->prepare($sql);
-        $statement->bindParam(':userid', $user->getId();
+        $statement->bindParam(':userid', $user->getId());
         $statement->bindParam(':year', $id);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
