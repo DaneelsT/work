@@ -28,7 +28,7 @@
                     $html .= '<td>&euro; ' . round($year->getEarnings(), 2) . '</td>';
                     $html .= '<td>&euro; ' . round($year->getEarningsWithFee(), 2) . '</td>';
                     $html .= '<td>'. $year->getSundays() . ' (&euro; ' . round($year->getSundayFee() * $year->getSundays(), 2) . ')</td>';
-                    $html .= '<a class="button right buttonSpacingRight" href="' . getHttpRoot() . 'year/details/' . $shift->getYear() .'">' . translate("Detailed View") . '</a>';
+                    $html .= '<td><a class="button right buttonSpacingRight" href="' . getHttpRoot() . 'year/details/' . $year->getYear() .'">' . translate("Detailed View") . '</a></td>';
                     $html .= '</tr>';
                 }
                 // Print all generated HTML
