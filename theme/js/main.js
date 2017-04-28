@@ -17,12 +17,15 @@ function createMasks() {
  *  Append the minutes (:00) to the start and end time automatically when only the hours are entered.
  *  @param The time to append the minutes to (start|end)
  */
-function appendMinutes(time) {
-    var time = $("#" + time + "Time");
-    if(time.val().length == 2) {
-        time.val(time.val() + ":00");
-    }
-}
+ function appendMinutes(time) {
+     var time = $("#" + time + "Time");
+
+     if(time.val().length == 2) {
+         time.val(time.val() + ":00");
+     }else if(time.val().length == 1) {
+         time.val("0" + time.val() + ":00");
+     }
+ }
 
 /**
  *  Check the entered time in the start and end time fields and make sure the entered value is valid.
@@ -96,6 +99,6 @@ $(document).ready(function() {
     });
 
     // Called when the book month button has been clicked.
-    closeMonthConfirmation();
+    closeConfirmationBox();
 
 });
