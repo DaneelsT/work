@@ -18,7 +18,7 @@ use \PDO;
 
 class PageYear extends AbstractAuthorizedPage {
 
-    const PATH = "/year";
+    const PATH = "/year+$";
     private $mTitle = "Yearly Overview";
 
     private $mHeader;
