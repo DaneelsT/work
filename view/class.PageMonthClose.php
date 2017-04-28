@@ -150,7 +150,7 @@ class PageMonthClose extends AbstractAuthorizedPage {
         $id = $this->mDbHandle->lastInsertId();
 
         $sql2 = "INSERT INTO months_data (month_id, hoursWorked, daysWorked, sundaysWorked, earnings)
-                VALUES(:month_id, :hoursworked, :daysworked, :earnings, :sundaysworked)";
+                VALUES(:month_id, :hoursworked, :daysworked, :sundaysworked, :earnings)";
         $stmt2 = $this->mDbHandle->prepare($sql2);
         $stmt2->bindParam(':month_id', $id);
         $stmt2->bindParam(':hoursworked', round($this->mTotalHours, 1));
