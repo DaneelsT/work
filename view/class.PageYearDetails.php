@@ -19,7 +19,7 @@ use \PDO;
 class PageYearDetails extends AbstractAuthorizedPage {
 
     const PATH = "/year/details/[0-9]+$";
-    private $mTitle = "Test";
+    private $mTitle = "Year Details";
 
     private $mHeader;
     private $mFooter;
@@ -40,10 +40,6 @@ class PageYearDetails extends AbstractAuthorizedPage {
         $app = Application::getInstance();
         $app->connectToDatabase();
         $this->mDbHandle = $app->getDatabaseConnection();
-    }
-
-    private function addScripts() {
-        $this->mFooter->addScript("jquery.min.js");
     }
 
     private function fetchMonths() {
@@ -86,7 +82,6 @@ class PageYearDetails extends AbstractAuthorizedPage {
         $this->setTitle($this->mTitle);
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
-        $this->addScripts();
 
         $this->mYear = Application::getInstance()->getRouter()->getSegment(2);
         $this->fetchMonths();
