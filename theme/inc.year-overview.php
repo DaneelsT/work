@@ -11,6 +11,7 @@
                     <th style="text-align:center"><?php echo translate("Earnings") . "<br />(<font color='#BC1717'>" . translate("without") . "</font> " . translate("fees"); ?>)</th>
                     <th style="text-align:center"><?php echo translate("Earnings") . "<br />(<font color='#28AF28'>" . translate("with") . "</font> " . translate("fees"); ?>)</th>
                     <th><?php echo translate("Sundays Worked"); ?></th>
+                    <th style="text-align:center"><?php echo translate("Details"); ?></th>
                 </tr>
                 <?php
                 // Fetch the years
@@ -27,6 +28,7 @@
                     $html .= '<td>&euro; ' . round($year->getEarnings(), 2) . '</td>';
                     $html .= '<td>&euro; ' . round($year->getEarningsWithFee(), 2) . '</td>';
                     $html .= '<td>'. $year->getSundays() . ' (&euro; ' . round($year->getSundayFee() * $year->getSundays(), 2) . ')</td>';
+                    $html .= '<a class="button right buttonSpacingRight" href="' . getHttpRoot() . 'year/details/' . $shift->getYear() .'">' . translate("Detailed View") . '</a>';
                     $html .= '</tr>';
                 }
                 // Print all generated HTML
