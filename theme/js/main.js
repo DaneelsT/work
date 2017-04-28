@@ -50,18 +50,18 @@ function closeConfirmationBox() {
     var text = "Are you sure you want to book and close this month?\nThere is no going back!"; // default text
 
     // Work out if the button is for month or year
-    if(buttonText.indexOf("month") >= 0) {
-        option = "year";
-    }else{
+    if(buttonText.toLowerCase().indexOf('month') > -1) {
         option = "month";
+    }else{
+        option = "year";
     }
 
     // Switch between month and year text
     switch(option) {
         case "month":
-            if(button.text().toLowerCase() == "close month") {
+            if(buttonText.toLowerCase() == "close month") {
                 text = "Are you sure you want to book and close this month?\nThere is no going back!";
-            }else if(button.text().toLowerCase() == "sluit maand") {
+            }else if(buttonText.toLowerCase() == "sluit maand") {
                 text = "Ben je zeker dat je deze maand wilt boeken en afsluiten?\nDit kan niet ongedaan worden gemaakt!";
             }
             break;
