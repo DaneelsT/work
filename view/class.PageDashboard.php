@@ -86,11 +86,13 @@ class PageDashboard extends AbstractAuthorizedPage {
         $stmt1 = $this->mDbHandle->prepare($sql);
         $stmt1->bindParam(':userid', $user->getId());
         $stmt1->execute();
+        $lastId = $this->mDbHandle->lastInsertId();
 
         $sql2 = "INSERT INTO
-                    shifts_data (date, startTime, endTime, isSunday, userid)
-                    VALUES (:date, :startTime, :endTime, :isSunday)";
+                    shifts_data (id, date, startTime, endTime, isSunday, userid)
+                    VALUES (:id, :date, :startTime, :endTime, :isSunday)";
         $stmt2 = $this->mDbHandle->prepare($sql2);
+        $stmt2->bindParam(':id', $lastId);
         $stmt2->bindParam(':date', $date);
         $stmt2->bindParam(':startTime', $startTime);
         $stmt2->bindParam(':endTime', $endTime);
