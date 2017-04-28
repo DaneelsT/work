@@ -2,14 +2,14 @@ CREATE TABLE IF NOT EXISTS `api_keys` (
   `id` int(11) NOT NULL,
   `apikey` varchar(50) NOT NULL,
   `userid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `months` (
   `id` int(11) NOT NULL,
   `month` int(2) NOT NULL,
   `year` int(4) NOT NULL,
   `userid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `months_data` (
   `id` int(11) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `months_data` (
   `daysWorked` int(11) NOT NULL,
   `sundaysWorked` int(11) NOT NULL,
   `earnings` decimal(10,2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `shifts` (
   `id` int(11) NOT NULL,
@@ -27,13 +27,13 @@ CREATE TABLE IF NOT EXISTS `shifts` (
   `endTime` int(10) NOT NULL,
   `isSunday` tinyint(4) NOT NULL,
   `userid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `tokens` (
   `id` int(11) NOT NULL,
   `token` varchar(255) NOT NULL,
   `email` varchar(60) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `disabled` int(11) NOT NULL DEFAULT '0',
   `last_ip` varchar(45) NOT NULL,
   `admin` int(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `users_language` (
   `userid` int(11) NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `years` (
   `id` int(11) NOT NULL,
   `year` int(4) NOT NULL,
   `userid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `years_data` (
   `id` int(11) NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `years_data` (
   `daysWorked` int(11) NOT NULL,
   `sundaysWorked` int(11) NOT NULL,
   `earnings` decimal(10,2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 ALTER TABLE `api_keys`
