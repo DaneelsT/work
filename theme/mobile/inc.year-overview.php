@@ -33,7 +33,7 @@
                             $html .= '<td>&euro; ' . round($years->getEarnings(), 2) . '</td>';
                             $html .= '<td>&euro; ' . round($years->getEarningsWithFee(), 2) . '</td>';
                             $html .= '<td>'. $years->getSundays() . ' (&euro; ' . round($years->getSundayFee() * $years->getSundays(), 2) . ')</td>';
-                            $html .= '<td><a class="button right buttonSpacingRight" href="' . getHttpRoot() . 'year/details/' . $year->getYear() .'">' . translate("Detailed View") . '</a></td>';
+                            $html .= '<td><a class="button" href="' . getHttpRoot() . 'year/details/' . $year->getYear() .'">' . translate("Detailed View") . '</a></td>';
                             $html .= '</tr>';
                         }
                         // Print all generated HTML
