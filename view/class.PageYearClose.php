@@ -56,9 +56,9 @@ class PageYearClose extends AbstractAuthorizedPage {
                     SUM(months_data.earnings) AS earnings,
                     SUM(months_data.sundaysWorked) AS sundaysworked
                 FROM
-					months,
-					months_data
-                WHERE months.userid = :userid";
+                    months_data
+                	INNER JOIN months ON months_data.month_id = months.id
+                WHERE userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':userid', $user->getId());
         $statement->execute();
