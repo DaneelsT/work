@@ -68,13 +68,13 @@ class PageYearDetails extends AbstractAuthorizedPage {
             $this->mYearNotFound = true;
             return;
         }else{
-            foreach($months as $month) {
-                $id = $month['id'];
-                $month = $month['month'];
-                $hoursWorked = $month['hoursWorked'];
-                $daysWorked = $month['daysWorked'];
-                $sundaysWorked = $month['sundaysWorked'];
-                $earnings = $month['earnings'];
+            foreach($months as $m) {
+                $id = $m['id'];
+                $month = $m['month'];
+                $hoursWorked = $m['hoursWorked'];
+                $daysWorked = $m['daysWorked'];
+                $sundaysWorked = $m['sundaysWorked'];
+                $earnings = $m['earnings'];
                 // Allocate a new month instance
                 array_push($this->mMonths, new Month($id, $month, $hoursWorked, $daysWorked, $earnings, $sundaysWorked));
             }
