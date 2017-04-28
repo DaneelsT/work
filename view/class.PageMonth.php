@@ -40,6 +40,7 @@ class PageMonth extends AbstractAuthorizedPage {
     }
 
     private function addScripts() {
+        $this->mFooter->addScript("jquery.min.js");
         $this->mFooter->addScript("main.js");
     }
 
