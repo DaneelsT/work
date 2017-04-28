@@ -57,10 +57,11 @@ class PageMonth extends AbstractAuthorizedPage {
                     months_data
                     INNER JOIN months ON months_data.month_id = months.id
                 WHERE
-                    userid = :userid
+                    userid = :userid AND year = :year
                 ORDER BY month DESC";
         $statement = $this->mDbHandle->prepare($sql);
 		$statement->bindParam(':userid', $user->getId());
+        $statement->bindParam(':year', date('Y'));
         $statement->execute();
         $months = $statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($months as $month) {
