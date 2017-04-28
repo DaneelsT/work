@@ -27,12 +27,12 @@
                         // Iterate through all years and display them
                         foreach($years as $year) {
                             $html .= '<tr>';
-                            $html .= '<td>' . $years->getMonth() . '</td>';
-                            $html .= '<td>' . $years->getHoursWorked() . '</td>';
-            				$html .= '<td>' . $years->getDaysWorked() . '</td>';
-                            $html .= '<td>&euro; ' . round($years->getEarnings(), 2) . '</td>';
-                            $html .= '<td>&euro; ' . round($years->getEarningsWithFee(), 2) . '</td>';
-                            $html .= '<td>'. $years->getSundays() . ' (&euro; ' . round($years->getSundayFee() * $years->getSundays(), 2) . ')</td>';
+                            $html .= '<td>' . $year->getMonth() . '</td>';
+                            $html .= '<td>' . $year->getHoursWorked() . '</td>';
+            				$html .= '<td>' . $year->getDaysWorked() . '</td>';
+                            $html .= '<td>&euro; ' . round($year->getEarnings(), 2) . '</td>';
+                            $html .= '<td>&euro; ' . round($year->getEarningsWithFee(), 2) . '</td>';
+                            $html .= '<td>'. $year->getSundays() . ' (&euro; ' . round($year->getSundayFee() * $year->getSundays(), 2) . ')</td>';
                             $html .= '<td><a class="btn btn-primary" href="' . getHttpRoot() . 'year/details/' . $year->getYear() .'">' . translate("Detailed View") . '</a></td>';
                             $html .= '</tr>';
                         }
