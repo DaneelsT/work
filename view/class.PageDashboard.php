@@ -82,22 +82,16 @@ class PageDashboard extends AbstractAuthorizedPage {
             $isSunday = false;
         }
 
-        $sql = "INSERT INTO shifts (userid) VALUES (:userid)";
-        $stmt1 = $this->mDbHandle->prepare($sql);
-        $stmt1->bindParam(':userid', $user->getId());
-        $stmt1->execute();
-        $lastId = $this->mDbHandle->lastInsertId();
-
-        $sql2 = "INSERT INTO
-                    shifts_data (id, date, startTime, endTime, isSunday, userid)
-                    VALUES (:id, :date, :startTime, :endTime, :isSunday)";
-        $stmt2 = $this->mDbHandle->prepare($sql2);
-        $stmt2->bindParam(':id', $lastId);
-        $stmt2->bindParam(':date', $date);
-        $stmt2->bindParam(':startTime', $startTime);
-        $stmt2->bindParam(':endTime', $endTime);
-        $stmt2->bindParam(':isSunday', $isSunday);
-        $stmt2->execute();
+        $sql = "INSERT INTO
+                    shifts_data (date, startTime, endTime, isSunday, userid)
+                    VALUES (:date, :startTime, :endTime, :isSunday, :userid)";
+        $statement = $this->mDbHandle->prepare($sql);
+        $statement->bindParam(':date', $date);
+        $statement->bindParam(':startTime', $startTime);
+        $statement->bindParam(':endTime', $endTime);
+        $statement->bindParam(':isSunday', $isSunday);
+        $statement->bindParam(':userid', $user->getId());
+        $statement->execute();
     }
 
     // Fetch all the current worked shifts from the database, ordered DESC by date
@@ -105,16 +99,10 @@ class PageDashboard extends AbstractAuthorizedPage {
     	$app = Application::getInstance();
 		$user = $app->getUser();
 
-        $sql = "SELECT
-                    shifts_data.*
-                FROM
-                    shifts,
-                    shifts_data
-                WHERE
-                	shifts.shift_id = shifts_data.id
-                AND
-                	shifts.userid = :userid
-                ORDER BY shifts_data.date DESC";
+        $sql = "SELECT *
+                FROM shifts
+                WHERE userid = :userid
+                ORDER BY date DESC";
         $statement = $this->mDbHandle->prepare($sql);
 		$statement->bindParam(':userid', $user->getId());
         $statement->execute();
