@@ -152,6 +152,20 @@ function placeMenuItem($url, $str, $style = "", $class = "") {
 	echo '<li><a href=' . getHttpRoot() . $url . ' style=' . $style . ' class=' . $class . '>' . strtoupper($str) . '</a></li>';
 }
 
+function drawMenu() {
+    $app = Application::getInstance();
+
+    placeMenuItem("", "Dashboard");
+    placeMenuItem("month", translate("Monthly Overview"));
+    placeMenuItem("year", translate("Yearly Overview"));
+    placeMenuItem("profile", $app->getUser()->getFullName());
+
+    if($app->getUser()->isAdmin())
+        placeMenuItem("admin", translate("Admin"), "color:red");
+
+    placeMenuItem("logout", translate("Logout"), "color:red");
+}
+
 function validEmail( $email ) {
     return ( filter_var($email, FILTER_VALIDATE_EMAIL) );
 }

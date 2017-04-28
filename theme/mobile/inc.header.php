@@ -26,19 +26,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                  <?php
-                  use \Carbon\Application\Application;
-                  $app = Application::getInstance();
-
-                  placeMenuItem("", "Dashboard");
-                  placeMenuItem("month", translate("Monthly Overview"));
-                  placeMenuItem("profile", $app->getUser()->getFullName());
-
-                  if($app->getUser()->isAdmin())
-                  placeMenuItem("admin", translate("Admin"), "color:red");
-
-                  placeMenuItem("logout", translate("Logout"), "color:red");
-                  ?>
+                  <?php drawMenu(); ?>
               </ul>
             </div>
           </div>
