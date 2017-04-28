@@ -96,6 +96,10 @@ class PageYearDetails extends AbstractAuthorizedPage {
         return $this->mYearNotFound;
     }
 
+    public function getYear() {
+        return $this->mYear;
+    }
+
     public function getMonths() {
         return $this->mMonths;
     }
