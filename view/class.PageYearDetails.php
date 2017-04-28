@@ -102,7 +102,7 @@ class PageYearDetails extends AbstractAuthorizedPage {
 
     public function draw() {
         $this->mHeader->draw();
-        include getTheme("inc.dashboard.php");
+        include getTheme("inc.year-details.php");
         $this->mFooter->draw();
     }
 
