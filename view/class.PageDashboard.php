@@ -105,12 +105,16 @@ class PageDashboard extends AbstractAuthorizedPage {
     	$app = Application::getInstance();
 		$user = $app->getUser();
 
-        $sql = "SELECT shifts_data.*
+        $sql = "SELECT
+                    shifts_data.*
                 FROM
                     shifts,
                     shifts_data
-                WHERE shifts.userid = :userid
-                ORDER BY date DESC";
+                WHERE
+                	shifts.shift_id = shifts_data.id
+                AND
+                	shifts.userid = :userid
+                ORDER BY shifts_data.date DESC";
         $statement = $this->mDbHandle->prepare($sql);
 		$statement->bindParam(':userid', $user->getId());
         $statement->execute();
