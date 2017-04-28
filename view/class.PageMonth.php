@@ -43,9 +43,14 @@ class PageMonth extends AbstractAuthorizedPage {
     private function fetchMonths() {
     	$app = Application::getInstance();
 		$user = $app->getUser();
-        $sql = "SELECT *
-                FROM months
-                WHERE userid = :userid
+
+        $sql = "SELECT
+                    months_data.*,
+                    months.month AS month
+                FROM
+                    months,
+                    months_data
+                WHERE months.userid = :userid
                 ORDER BY month DESC";
         $statement = $this->mDbHandle->prepare($sql);
 		$statement->bindParam(':userid', $user->getId());
@@ -53,11 +58,11 @@ class PageMonth extends AbstractAuthorizedPage {
         $months = $statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($months as $month) {
             $monthId = $month['id'];
-            $monthMonth = $month['month']; // that variable naming tho.
+            $monthMonth = $month['month'];
             $monthHours = $month['hoursWorked'];
 			$daysWorked = $month['daysWorked'];
-            $monthEarnings = $month['earnings'];
             $monthSundays = $month['sundaysWorked'];
+            $monthEarnings = $month['earnings'];
             // Allocate a new month instance
             array_push($this->mMonths, new Month($monthId, $monthMonth, $monthHours, $daysWorked, $monthEarnings, $monthSundays));
         }
