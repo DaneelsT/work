@@ -141,10 +141,11 @@ class PageMonthClose extends AbstractAuthorizedPage {
 
         $currentMonth = date("n");
 
-        $sql = "INSERT INTO months (month, userid)
-                VALUES (:month, :userid)";
+        $sql = "INSERT INTO months (month, year, userid)
+                VALUES (:month, :year, :userid)";
         $stmt1 = $this->mDbHandle->prepare($sql);
         $stmt1->bindParam(':month', $currentMonth);
+        $stmt1->bindParam(':year', date('Y'));
         $stmt1->bindParam(':userid', $user->getId());
         $stmt1->execute();
         $id = $this->mDbHandle->lastInsertId();
