@@ -44,8 +44,12 @@ class PageYear extends AbstractAuthorizedPage {
         $app = Application::getInstance();
         $user = $app->getUser();
 
-        $sql = "SELECT *
-                FROM years
+        $sql = "SELECT
+                    years.year,
+                    years_data.*
+                FROM
+                    years_data
+                    INNER JOIN years ON years.id = years_data.year_id
                 WHERE userid = :userid
                 ORDER BY year DESC";
         $statement = $this->mDbHandle->prepare($sql);
