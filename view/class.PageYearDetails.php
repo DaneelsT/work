@@ -18,18 +18,18 @@ use \PDO;
 
 class PageYearDetails extends AbstractAuthorizedPage {
 
-    const PATH = "/years/details/[0-9]+$";
-    private $mTitle = "Year Details";
+    const PATH = "/test/details/[0-9]+$";
+    private $mTitle = "Test";
 
     private $mHeader;
     private $mFooter;
 
     private $mDbHandle;
 
-    private $mNonExistent = false;
-    private $mYear;
-
+    private $mYear = null;
     private $mMonths = array();
+
+    private $mYearNotFound = false;
 
     private function initializeViewElements() {
         $this->mHeader = new ViewHeader($this->mTitle);
@@ -42,33 +42,13 @@ class PageYearDetails extends AbstractAuthorizedPage {
         $this->mDbHandle = $app->getDatabaseConnection();
     }
 
-    // Make sure the requested year is actually booked by this user
-    private function checkYear() {
-        $app = Application::getInstance();
-        $id = (int) $app->getRouter()->getSegment(2);
-        $user = $app->getUser();
-
-        $sql = "SELECT months.year
-                FROM months
-                WHERE userid = :userid AND year = :year";
-        $statement = $this->mDbHandle->prepare($sql);
-        $statement->bindParam(':userid', $user->getId());
-        $statement->bindParam(':year', $id);
-        $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-        $count = count($result);
-        if($count == 0) {
-            $this->mNonExistent = true;
-            return;
-        }else{
-            $this->fetchAllMonths();
-        }
+    private function addScripts() {
+        $this->mFooter->addScript("jquery.min.js");
     }
 
-    // Fetch all the months worked in the requested year
-    private function fetchAllMonths() {
+    private function fetchMonths() {
         $app = Application::getInstance();
-        $id = (int) $app->getRouter()->getSegment(2);
+        $id = $app->getRouter()->getSegment(2);
         $user = $app->getUser();
 
         $sql = "SELECT
@@ -80,41 +60,44 @@ class PageYearDetails extends AbstractAuthorizedPage {
             WHERE userid = :userid
             AND year = :year";
         $statement = $this->mDbHandle->prepare($sql);
-        $statement->bindParam(':userid', $user->getId());
+        $statement->bindParam(':userid', $user->getId();
         $statement->bindParam(':year', $id);
         $statement->execute();
         $months = $statement->fetchAll(PDO::FETCH_ASSOC);
-        foreach($months as $month) {
-            $monthId = $month['id'];
-            $monthMonth = $month['month'];
-            $monthHours = $month['hoursWorked'];
-			$daysWorked = $month['daysWorked'];
-            $monthSundays = $month['sundaysWorked'];
-            $monthEarnings = $month['earnings'];
-            // Allocate a new month instance
-            array_push($this->mMonths, new Month($monthId, $monthMonth, $monthHours, $daysWorked, $monthEarnings, $monthSundays));
+        if(count($months) == 0) {
+            $this->mYearNotFound = true;
+            return;
+        }else{
+            foreach($months as $month) {
+                $id = $month['id'];
+                $month = $month['month'];
+                $hoursWorked = $month['hoursWorked'];
+                $daysWorked = $month['daysWorked'];
+                $sundaysWorked = $month['sundaysWorked'];
+                $earnings = $month['earnings'];
+                // Allocate a new month instance
+                array_push($this->mMonths, new Month($id, $month, $hoursWorked, $daysWorked, $earnings, $sundaysWorked));
+            }
         }
     }
 
     public function __construct() {
-    	parent::__construct(parent::DEFAULT_LOGIN_DIR);
+        parent::__construct(parent::DEFAULT_LOGIN_DIR);
         $this->setTitle($this->mTitle);
         $this->initializeViewElements();
         $this->initializeDatabaseConnection();
+        $this->addScripts();
 
-        $this->checkYear();
+        $this->mYear = Application::getInstance()->getRouter()->getSegment(2);
+        $this->fetchMonths();
+    }
+
+    public function yearNotFound() {
+        return $this->mYearNotFound;
     }
 
     public function getMonths() {
         return $this->mMonths;
-    }
-
-    public function getYear() {
-        return (int) Application::getInstance()->getRouter()->getSegment(2);
-    }
-
-    public function yearNotFound() {
-        return ($this->mNonExistent);
     }
 
     public function draw() {
