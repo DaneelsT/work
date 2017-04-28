@@ -46,11 +46,13 @@ class PageMonth extends AbstractAuthorizedPage {
 
         $sql = "SELECT
                     months_data.*,
-                    months.month AS month
+                    months.month,
+                    months.userid
                 FROM
-                    months,
                     months_data
-                WHERE months.userid = :userid
+                    INNER JOIN months ON months_data.month_id = months.id
+                WHERE
+                    userid = :userid
                 ORDER BY month DESC";
         $statement = $this->mDbHandle->prepare($sql);
 		$statement->bindParam(':userid', $user->getId());

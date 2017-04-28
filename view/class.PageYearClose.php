@@ -50,13 +50,15 @@ class PageYearClose extends AbstractAuthorizedPage {
         $user = $app->getUser();
 
         $sql = "SELECT
-                    COUNT(months.month) AS totalmonths,
-                    SUM(months.hoursWorked) AS hoursworked,
-                    SUM(months.daysWorked) AS daysworked,
-                    SUM(months.earnings) AS earnings,
-                    SUM(months.sundaysWorked) AS sundaysworked
-                FROM months
-                WHERE userid = :userid";
+                    COUNT(months_data.id) AS totalmonths,
+                    SUM(months_data.hoursWorked) AS hoursworked,
+                    SUM(months_data.daysWorked) AS daysworked,
+                    SUM(months_data.earnings) AS earnings,
+                    SUM(months_data.sundaysWorked) AS sundaysworked
+                FROM
+					months,
+					months_data
+                WHERE months.userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':userid', $user->getId());
         $statement->execute();
@@ -77,9 +79,15 @@ class PageYearClose extends AbstractAuthorizedPage {
         $app = Application::getInstance();
         $user = $app->getUser();
 
-        $sql = "SELECT year FROM years WHERE year = :year";
+        $sql = "SELECT year
+                FROM years
+                WHERE
+                    year = :year
+                AND
+                    userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':year', date('Y'));
+        $statement->bindParam(':userid', $user->getId());
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         $count = count($result);
@@ -96,20 +104,25 @@ class PageYearClose extends AbstractAuthorizedPage {
         $app = Application::getInstance();
         $user = $app->getUser();
 
-        $sql = "INSERT INTO
-                years(year, monthsWorked, hoursWorked, daysWorked, earnings, sundaysWorked, userid)
-                VALUES(:year, :monthsWorked, :hoursWorked, :daysWorked, :earnings, :sundaysWorked, :userid)";
-        $statement = $this->mDbHandle->prepare($sql);
-        $statement->bindParam(':year', date('Y'));
-        $statement->bindParam('monthsWorked', $this->mMonthsWorked);
-        $statement->bindParam(':hoursWorked', $this->mHoursWorked);
-        $statement->bindParam(':daysWorked', $this->mDaysWorked);
-        $statement->bindParam(':earnings', $this->mEarnings);
-        $statement->bindParam(':sundaysWorked', $this->mSundaysWorked);
-        $statement->bindParam(':userid', $user->getId());
-        $statement->execute();
+        $sql = "INSERT INTO years (year, userid) VALUES (:year, :userid)";
+        $stmt1 = $this->mDbHandle->prepare($sql);
+        $stmt1->bindParam(':year', date('Y'));
+        $stmt1->bindParam(':userid', $user->getId());
+        $stmt1->execute();
+        $id = $this->mDbHandle->lastInsertId();
 
-        $this->closeYear();
+        $sql = "INSERT INTO years_data (year_id, monthsWorked, hoursWorked, daysWorked, sundaysWorked, earnings)
+                VALUES (:year, :monthsWorked, :hoursWorked, :daysWorked, :sundaysWorked, :earnings)";
+        $stmt2 = $this->mDbHandle->prepare($sql2);
+        $stmt2->bindParam(':year_id', $id);
+        $stmt2->bindParam('monthsWorked', $this->mMonthsWorked);
+        $stmt2->bindParam(':hoursWorked', $this->mHoursWorked);
+        $stmt2->bindParam(':daysWorked', $this->mDaysWorked);
+        $stmt2->bindParam(':sundaysWorked', $this->mSundaysWorked);
+        $stmt2->bindParam(':earnings', $this->mEarnings);
+        $stmt2->execute();
+
+        // $this->closeYear();
     }
 
     // Close the current year by emptying the months table
@@ -120,7 +133,7 @@ class PageYearClose extends AbstractAuthorizedPage {
     	$sql = "DELETE FROM months WHERE userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
 		$statement->bindParam(':userid', $user->getId());
-        // $statement->execute();
+        $statement->execute();
     }
 
     public function __construct() {
