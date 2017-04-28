@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2017-04-28 00:39+0200\n"
-"PO-Revision-Date: 2017-04-28 00:40+0200\n"
+"POT-Creation-Date: 2017-04-28 05:55+0200\n"
+"PO-Revision-Date: 2017-04-28 05:55+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -277,22 +277,6 @@ msgstr "Current Shifts"
 msgid "Close Month"
 msgstr "Close Month"
 
-#: theme/inc.header.php:22
-msgid "monthly overview"
-msgstr "monthly overview"
-
-#: theme/inc.header.php:23
-msgid "yearly overview"
-msgstr "yearly overview"
-
-#: theme/inc.header.php:27
-msgid "admin"
-msgstr "admin"
-
-#: theme/inc.header.php:29
-msgid "logout"
-msgstr "logout"
-
 #: theme/inc.month-close.php:14 theme/mobile/inc.month-close.php:15
 msgid "This month has been booked already"
 msgstr "This month has been booked already"
@@ -307,9 +291,11 @@ msgid "Check Monthly Overview"
 msgstr "Check Monthly Overview"
 
 #: theme/inc.month-close.php:18 theme/inc.month-close.php:39
-#: theme/inc.year-close.php:19 theme/inc.year-close.php:41
+#: theme/inc.page-not-found.php:9 theme/inc.year-close.php:19
+#: theme/inc.year-close.php:41 theme/inc.year-details.php:12
 #: theme/mobile/inc.month-close.php:21 theme/mobile/inc.month-close.php:42
 #: theme/mobile/inc.year-close.php:22 theme/mobile/inc.year-close.php:44
+#: theme/mobile/inc.year-details.php:12
 msgid "Back to dashboard"
 msgstr "Back to dashboard"
 
@@ -329,11 +315,13 @@ msgstr "Details of this month"
 #: theme/inc.month-close.php:31 theme/inc.month-close.php:32
 #: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
 #: theme/inc.year-close.php:32 theme/inc.year-close.php:33
+#: theme/inc.year-details.php:25 theme/inc.year-details.php:26
 #: theme/inc.year-overview.php:11 theme/inc.year-overview.php:12
 #: theme/mobile/inc.month-close.php:35 theme/mobile/inc.month-close.php:36
 #: theme/mobile/inc.month-overview.php:15
 #: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-close.php:36
-#: theme/mobile/inc.year-close.php:37 theme/mobile/inc.year-overview.php:15
+#: theme/mobile/inc.year-close.php:37 theme/mobile/inc.year-details.php:29
+#: theme/mobile/inc.year-details.php:30 theme/mobile/inc.year-overview.php:15
 #: theme/mobile/inc.year-overview.php:16
 msgid "Earnings"
 msgstr "Earnings"
@@ -348,8 +336,7 @@ msgstr "Sundays worked"
 msgid "Days worked"
 msgstr "Days worked"
 
-#: theme/inc.month-overview.php:4 theme/mobile/inc.header.php:34
-#: theme/mobile/inc.month-overview.php:6
+#: theme/inc.month-overview.php:4 theme/mobile/inc.month-overview.php:6
 msgid "Monthly Overview"
 msgstr "Monthly Overview"
 
@@ -357,40 +344,48 @@ msgstr "Monthly Overview"
 msgid "Close Year"
 msgstr "Close Year"
 
-#: theme/inc.month-overview.php:7 theme/mobile/inc.month-overview.php:12
+#: theme/inc.month-overview.php:7 theme/inc.year-details.php:22
+#: theme/mobile/inc.month-overview.php:12 theme/mobile/inc.year-details.php:26
 msgid "Month"
 msgstr "Month"
 
-#: theme/inc.month-overview.php:8 theme/inc.year-overview.php:9
-#: theme/mobile/inc.month-overview.php:13 theme/mobile/inc.year-overview.php:13
+#: theme/inc.month-overview.php:8 theme/inc.year-details.php:23
+#: theme/inc.year-overview.php:9 theme/mobile/inc.month-overview.php:13
+#: theme/mobile/inc.year-details.php:27 theme/mobile/inc.year-overview.php:13
 msgid "Hours Worked"
 msgstr "Hours Worked"
 
-#: theme/inc.month-overview.php:9 theme/inc.year-overview.php:10
-#: theme/mobile/inc.month-overview.php:14 theme/mobile/inc.year-overview.php:14
+#: theme/inc.month-overview.php:9 theme/inc.year-details.php:24
+#: theme/inc.year-overview.php:10 theme/mobile/inc.month-overview.php:14
+#: theme/mobile/inc.year-details.php:28 theme/mobile/inc.year-overview.php:14
 msgid "Days Worked"
 msgstr "Days Worked"
 
-#: theme/inc.month-overview.php:10 theme/inc.year-overview.php:11
-#: theme/mobile/inc.month-overview.php:15 theme/mobile/inc.year-overview.php:15
+#: theme/inc.month-overview.php:10 theme/inc.year-details.php:25
+#: theme/inc.year-overview.php:11 theme/mobile/inc.month-overview.php:15
+#: theme/mobile/inc.year-details.php:29 theme/mobile/inc.year-overview.php:15
 msgid "without"
 msgstr "without"
 
 #: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
+#: theme/inc.year-details.php:25 theme/inc.year-details.php:26
 #: theme/inc.year-overview.php:11 theme/inc.year-overview.php:12
 #: theme/mobile/inc.month-overview.php:15
-#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-overview.php:15
+#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-details.php:29
+#: theme/mobile/inc.year-details.php:30 theme/mobile/inc.year-overview.php:15
 #: theme/mobile/inc.year-overview.php:16
 msgid "fees"
 msgstr "fees"
 
-#: theme/inc.month-overview.php:11 theme/inc.year-overview.php:12
-#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-overview.php:16
+#: theme/inc.month-overview.php:11 theme/inc.year-details.php:26
+#: theme/inc.year-overview.php:12 theme/mobile/inc.month-overview.php:16
+#: theme/mobile/inc.year-details.php:30 theme/mobile/inc.year-overview.php:16
 msgid "with"
 msgstr "with"
 
-#: theme/inc.month-overview.php:12 theme/inc.year-overview.php:13
-#: theme/mobile/inc.month-overview.php:17 theme/mobile/inc.year-overview.php:17
+#: theme/inc.month-overview.php:12 theme/inc.year-details.php:27
+#: theme/inc.year-overview.php:13 theme/mobile/inc.month-overview.php:17
+#: theme/mobile/inc.year-details.php:31 theme/mobile/inc.year-overview.php:17
 msgid "Sundays Worked"
 msgstr "Sundays Worked"
 
@@ -668,7 +663,8 @@ msgstr "This year has been booked already"
 msgid "The current year (%s) has been booked and closed already"
 msgstr "The current year (%s) has been booked and closed already"
 
-#: theme/inc.year-close.php:18 theme/mobile/inc.year-close.php:21
+#: theme/inc.year-close.php:18 theme/inc.year-details.php:11
+#: theme/mobile/inc.year-close.php:21 theme/mobile/inc.year-details.php:11
 msgid "Check Yearly Overview"
 msgstr "Check Yearly Overview"
 
@@ -689,6 +685,23 @@ msgstr "Details of this year"
 msgid "Months worked"
 msgstr "Months worked"
 
+#: theme/inc.year-details.php:5 theme/mobile/inc.year-details.php:6
+msgid "The year you wanted to view is not booked"
+msgstr "The year you wanted to view is not booked"
+
+#: theme/inc.year-details.php:8 theme/mobile/inc.year-details.php:9
+#, php-format
+msgid ""
+"The year you are trying to view the details of (%s) was not yet booked by "
+"you."
+msgstr ""
+"The year you are trying to view the details of (%s) was not yet booked by "
+"you."
+
+#: theme/inc.year-details.php:19 theme/mobile/inc.year-details.php:20
+msgid "Year Details"
+msgstr "Year Details"
+
 #: theme/inc.year-overview.php:4 theme/mobile/inc.year-overview.php:6
 msgid "Yearly Overview"
 msgstr "Yearly Overview"
@@ -701,13 +714,31 @@ msgstr "Year"
 msgid "Months Worked"
 msgstr "Months Worked"
 
-#: theme/mobile/inc.header.php:38
-msgid "Admin"
-msgstr "Admin"
+#: theme/inc.year-overview.php:14 theme/mobile/inc.year-overview.php:18
+msgid "Details"
+msgstr "Details"
 
-#: theme/mobile/inc.header.php:40
-msgid "Logout"
-msgstr "Logout"
+#: theme/inc.year-overview.php:31 theme/mobile/inc.year-overview.php:36
+msgid "Detailed View"
+msgstr "Detailed View"
+
+#~ msgid "monthly overview"
+#~ msgstr "monthly overview"
+
+#~ msgid "yearly overview"
+#~ msgstr "yearly overview"
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "logout"
+#~ msgstr "logout"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid "Logout"
+#~ msgstr "Logout"
 
 #~ msgid "Dashboard"
 #~ msgstr "Dashboard"

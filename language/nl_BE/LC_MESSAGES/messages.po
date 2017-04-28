@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2017-04-28 00:37+0200\n"
-"PO-Revision-Date: 2017-04-28 00:39+0200\n"
+"POT-Creation-Date: 2017-04-28 05:56+0200\n"
+"PO-Revision-Date: 2017-04-28 05:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_BE\n"
@@ -280,22 +280,6 @@ msgstr "Gewerkte Shifts"
 msgid "Close Month"
 msgstr "Sluit Maand"
 
-#: theme/inc.header.php:22
-msgid "monthly overview"
-msgstr "maandelijks overzicht"
-
-#: theme/inc.header.php:23
-msgid "yearly overview"
-msgstr "Jaarlijks overzicht"
-
-#: theme/inc.header.php:27
-msgid "admin"
-msgstr "beheer"
-
-#: theme/inc.header.php:29
-msgid "logout"
-msgstr "uitloggen"
-
 #: theme/inc.month-close.php:14 theme/mobile/inc.month-close.php:15
 msgid "This month has been booked already"
 msgstr "Deze maand is al geboekt"
@@ -310,9 +294,11 @@ msgid "Check Monthly Overview"
 msgstr "Bekijk Maandelijks Overzicht"
 
 #: theme/inc.month-close.php:18 theme/inc.month-close.php:39
-#: theme/inc.year-close.php:19 theme/inc.year-close.php:41
+#: theme/inc.page-not-found.php:9 theme/inc.year-close.php:19
+#: theme/inc.year-close.php:41 theme/inc.year-details.php:12
 #: theme/mobile/inc.month-close.php:21 theme/mobile/inc.month-close.php:42
 #: theme/mobile/inc.year-close.php:22 theme/mobile/inc.year-close.php:44
+#: theme/mobile/inc.year-details.php:12
 msgid "Back to dashboard"
 msgstr "Terug naar dashboard"
 
@@ -332,11 +318,13 @@ msgstr "Details van deze maand"
 #: theme/inc.month-close.php:31 theme/inc.month-close.php:32
 #: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
 #: theme/inc.year-close.php:32 theme/inc.year-close.php:33
+#: theme/inc.year-details.php:25 theme/inc.year-details.php:26
 #: theme/inc.year-overview.php:11 theme/inc.year-overview.php:12
 #: theme/mobile/inc.month-close.php:35 theme/mobile/inc.month-close.php:36
 #: theme/mobile/inc.month-overview.php:15
 #: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-close.php:36
-#: theme/mobile/inc.year-close.php:37 theme/mobile/inc.year-overview.php:15
+#: theme/mobile/inc.year-close.php:37 theme/mobile/inc.year-details.php:29
+#: theme/mobile/inc.year-details.php:30 theme/mobile/inc.year-overview.php:15
 #: theme/mobile/inc.year-overview.php:16
 msgid "Earnings"
 msgstr "Verdiensten"
@@ -351,8 +339,7 @@ msgstr "Gewerkte zondagen"
 msgid "Days worked"
 msgstr "Gewerkte dagen"
 
-#: theme/inc.month-overview.php:4 theme/mobile/inc.header.php:34
-#: theme/mobile/inc.month-overview.php:6
+#: theme/inc.month-overview.php:4 theme/mobile/inc.month-overview.php:6
 msgid "Monthly Overview"
 msgstr "Maandelijks Overzicht"
 
@@ -360,40 +347,48 @@ msgstr "Maandelijks Overzicht"
 msgid "Close Year"
 msgstr "Sluit Jaar"
 
-#: theme/inc.month-overview.php:7 theme/mobile/inc.month-overview.php:12
+#: theme/inc.month-overview.php:7 theme/inc.year-details.php:22
+#: theme/mobile/inc.month-overview.php:12 theme/mobile/inc.year-details.php:26
 msgid "Month"
 msgstr "Maand"
 
-#: theme/inc.month-overview.php:8 theme/inc.year-overview.php:9
-#: theme/mobile/inc.month-overview.php:13 theme/mobile/inc.year-overview.php:13
+#: theme/inc.month-overview.php:8 theme/inc.year-details.php:23
+#: theme/inc.year-overview.php:9 theme/mobile/inc.month-overview.php:13
+#: theme/mobile/inc.year-details.php:27 theme/mobile/inc.year-overview.php:13
 msgid "Hours Worked"
 msgstr "Gewerkte uren"
 
-#: theme/inc.month-overview.php:9 theme/inc.year-overview.php:10
-#: theme/mobile/inc.month-overview.php:14 theme/mobile/inc.year-overview.php:14
+#: theme/inc.month-overview.php:9 theme/inc.year-details.php:24
+#: theme/inc.year-overview.php:10 theme/mobile/inc.month-overview.php:14
+#: theme/mobile/inc.year-details.php:28 theme/mobile/inc.year-overview.php:14
 msgid "Days Worked"
 msgstr "Gewerkte dagen"
 
-#: theme/inc.month-overview.php:10 theme/inc.year-overview.php:11
-#: theme/mobile/inc.month-overview.php:15 theme/mobile/inc.year-overview.php:15
+#: theme/inc.month-overview.php:10 theme/inc.year-details.php:25
+#: theme/inc.year-overview.php:11 theme/mobile/inc.month-overview.php:15
+#: theme/mobile/inc.year-details.php:29 theme/mobile/inc.year-overview.php:15
 msgid "without"
 msgstr "zonder"
 
 #: theme/inc.month-overview.php:10 theme/inc.month-overview.php:11
+#: theme/inc.year-details.php:25 theme/inc.year-details.php:26
 #: theme/inc.year-overview.php:11 theme/inc.year-overview.php:12
 #: theme/mobile/inc.month-overview.php:15
-#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-overview.php:15
+#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-details.php:29
+#: theme/mobile/inc.year-details.php:30 theme/mobile/inc.year-overview.php:15
 #: theme/mobile/inc.year-overview.php:16
 msgid "fees"
 msgstr "vergoedingen"
 
-#: theme/inc.month-overview.php:11 theme/inc.year-overview.php:12
-#: theme/mobile/inc.month-overview.php:16 theme/mobile/inc.year-overview.php:16
+#: theme/inc.month-overview.php:11 theme/inc.year-details.php:26
+#: theme/inc.year-overview.php:12 theme/mobile/inc.month-overview.php:16
+#: theme/mobile/inc.year-details.php:30 theme/mobile/inc.year-overview.php:16
 msgid "with"
 msgstr "met"
 
-#: theme/inc.month-overview.php:12 theme/inc.year-overview.php:13
-#: theme/mobile/inc.month-overview.php:17 theme/mobile/inc.year-overview.php:17
+#: theme/inc.month-overview.php:12 theme/inc.year-details.php:27
+#: theme/inc.year-overview.php:13 theme/mobile/inc.month-overview.php:17
+#: theme/mobile/inc.year-details.php:31 theme/mobile/inc.year-overview.php:17
 msgid "Sundays Worked"
 msgstr "Gewerkte zondagen"
 
@@ -669,7 +664,8 @@ msgstr "Dit jaar is al geboekt"
 msgid "The current year (%s) has been booked and closed already"
 msgstr "Het huidig jaar (%s) is al geboekt en afgesloten"
 
-#: theme/inc.year-close.php:18 theme/mobile/inc.year-close.php:21
+#: theme/inc.year-close.php:18 theme/inc.year-details.php:11
+#: theme/mobile/inc.year-close.php:21 theme/mobile/inc.year-details.php:11
 msgid "Check Yearly Overview"
 msgstr "Bekijk Jaarlijks Overzicht"
 
@@ -690,6 +686,23 @@ msgstr "Details van dit jaar"
 msgid "Months worked"
 msgstr "Maanden gewerkt"
 
+#: theme/inc.year-details.php:5 theme/mobile/inc.year-details.php:6
+msgid "The year you wanted to view is not booked"
+msgstr "Het jaar dat je wilt bekijken is niet geboekt"
+
+#: theme/inc.year-details.php:8 theme/mobile/inc.year-details.php:9
+#, php-format
+msgid ""
+"The year you are trying to view the details of (%s) was not yet booked by "
+"you."
+msgstr ""
+"Het jaar waarvan je een gedetailleerd overzicht van wil opvragen (%s) is nog "
+"niet door jou geboekt."
+
+#: theme/inc.year-details.php:19 theme/mobile/inc.year-details.php:20
+msgid "Year Details"
+msgstr "Jaar Details"
+
 #: theme/inc.year-overview.php:4 theme/mobile/inc.year-overview.php:6
 msgid "Yearly Overview"
 msgstr "Jaarlijks Overzicht"
@@ -702,13 +715,31 @@ msgstr "Jaar"
 msgid "Months Worked"
 msgstr "Maanden Gewerkt"
 
-#: theme/mobile/inc.header.php:38
-msgid "Admin"
-msgstr "Beheer"
+#: theme/inc.year-overview.php:14 theme/mobile/inc.year-overview.php:18
+msgid "Details"
+msgstr "Details"
 
-#: theme/mobile/inc.header.php:40
-msgid "Logout"
-msgstr "Uitloggen"
+#: theme/inc.year-overview.php:31 theme/mobile/inc.year-overview.php:36
+msgid "Detailed View"
+msgstr "Gedetailleerd Overzicht"
+
+#~ msgid "monthly overview"
+#~ msgstr "maandelijks overzicht"
+
+#~ msgid "yearly overview"
+#~ msgstr "Jaarlijks overzicht"
+
+#~ msgid "admin"
+#~ msgstr "beheer"
+
+#~ msgid "logout"
+#~ msgstr "uitloggen"
+
+#~ msgid "Admin"
+#~ msgstr "Beheer"
+
+#~ msgid "Logout"
+#~ msgstr "Uitloggen"
 
 #~ msgid "Dashboard"
 #~ msgstr "Dashboard"
