@@ -27,7 +27,7 @@
                         // Iterate through all years and display them
                         foreach($years as $year) {
                             $html .= '<tr>';
-                            $html .= '<td>' . $year->getMonth() . '</td>';
+                            $html .= '<td>' . $year->getYear() . '</td>';
                             $html .= '<td>' . $year->getHoursWorked() . '</td>';
             				$html .= '<td>' . $year->getDaysWorked() . '</td>';
                             $html .= '<td>&euro; ' . round($year->getEarnings(), 2) . '</td>';
