@@ -121,19 +121,6 @@ class PageYearClose extends AbstractAuthorizedPage {
         $stmt2->bindParam(':sundaysWorked', $this->mSundaysWorked);
         $stmt2->bindParam(':earnings', $this->mEarnings);
         $stmt2->execute();
-
-        // $this->closeYear();
-    }
-
-    // Close the current year by emptying the months table
-    private function closeYear() {
-    	$app = Application::getInstance();
-		$user = $app->getUser();
-
-    	$sql = "DELETE FROM months WHERE userid = :userid";
-        $statement = $this->mDbHandle->prepare($sql);
-		$statement->bindParam(':userid', $user->getId());
-        $statement->execute();
     }
 
     public function __construct() {
