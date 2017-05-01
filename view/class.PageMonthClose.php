@@ -160,7 +160,7 @@ class PageMonthClose extends AbstractAuthorizedPage {
         $stmt2->bindParam(':sundaysworked', $this->mSunday);
         $stmt2->execute();
 
-        // $this->closeMonth();
+        $this->closeMonth();
     }
 
     // Close the current month by emptying the shifts table
