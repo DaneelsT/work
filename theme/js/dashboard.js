@@ -65,11 +65,11 @@ function addShift(id, date, startTime, endTime, isSunday) {
                 "<td>" + date + "</td>" +
                 "<td>" + formatDate(startTime) + "</td>" +
                 "<td>" + formatDate(endTime) + "</td>" +
-                "<td>" + hoursWorked + "</td>" +
+                "<td>" + hoursWorked + "</td>"
                 if(isSunday) {
-                    "<td style='color:#28AF28'>" + checkSunday(date) + "</td>" +
+                    + "<td style='color:#28AF28'>" + checkSunday(date) + "</td>"
                 }
-                "<td>" +
+                + "<td>" +
                     "<a class='button right buttonRed' href='shift/remove/" + id + "'>Remove</a>" +
                     "<a class='button right buttonSpacingRight' href='shift/edit/" + id + "'>Edit</a></td>" +
                 "</td>" +
