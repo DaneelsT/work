@@ -30,20 +30,17 @@ $.ajax({
 
 // Append a new shift to the shifts table with the provided arguments
 function addShift(id, date, startTime, endTime, isSunday) {
-    // Make sure the DOM is ready before appending
-    $(document).ready(function() {
-        $("#shifts").append(
-                "<tr>" +
-                    "<td>" + date + "</td>" +
-                    "<td>" + startTime + "</td>" +
-                    "<td>" + endTime + "</td>" +
-                    "<td>" + isSunday + "</td>" +
-                    "<td>" + isSunday + "</td>" +
-                    "<td>" +
-                        "<a class='button right buttonRed' href='shift/remove/" + id + "'>Remove</a>" +
-                        "<a class='button right buttonSpacingRight' href='shift/edit/" + id + "'>Edit</a></td>" +
-                    "</td>" +
-                "</tr>"
-                );
-    });
+    $("#shifts").append(
+            "<tr>" +
+                "<td>" + date + "</td>" +
+                "<td>" + startTime + "</td>" +
+                "<td>" + endTime + "</td>" +
+                "<td>" + isSunday + "</td>" +
+                "<td>" + isSunday + "</td>" +
+                "<td>" +
+                    "<a class='button right buttonRed' href='shift/remove/" + id + "'>Remove</a>" +
+                    "<a class='button right buttonSpacingRight' href='shift/edit/" + id + "'>Edit</a></td>" +
+                "</td>" +
+            "</tr>"
+            );
 }
