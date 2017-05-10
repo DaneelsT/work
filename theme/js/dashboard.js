@@ -8,6 +8,14 @@
 var base = "api/";
 var key = "dev"; // api key
 
+function addShift(date, startTime, endTime, isSunday) {
+    // TODO: implement.
+
+    $("body")
+        .append(date)
+        .append(startTime);
+}
+
 $(document).ready(function() {
 
     // try and fetch shifts from user with id 1 when testButton has been clicked.
@@ -21,9 +29,9 @@ $(document).ready(function() {
             },
             success: function(data) {
                 for (var i = 0; i < data.length; i++) {
-                    var content = data[i];
+                    var result = data[i];
 
-                    console.log(content.date);
+                    addShift(result.date, result.startTime, result.endTime, result.isSunday);
                 }
             },
             error: function(error) {
