@@ -20,7 +20,11 @@ $(document).ready(function() {
                 "Authorization": key,
             },
             success: function(data) {
-                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    var content = data[i];
+
+                    console.log(content.date);
+                }
             },
             error: function(error) {
                 console.log("error: " + error);
