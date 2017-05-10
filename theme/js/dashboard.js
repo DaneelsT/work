@@ -28,21 +28,25 @@ $.ajax({
     }
 });
 
+// Format a date from unix timestamp to readable hh:mm format
+function formatDate(timestamp) {
+    var date = new Date(timestamp * 1000);
+    var hours = date.getHours();
+    var minutes = "0" + date.getMinutes();
+
+    return hours + ':' + minutes.substr(-2);
+}
+
 // Append a new shift to the shifts table with the provided arguments
 function addShift(id, date, startTime, endTime, isSunday) {
-
-    var startTime = new Date(startTime * 1000);
-    var endTime = new Date(endTime * 1000);
-    var formattedStartTime = endTime.getHours() + ":" + "0" + endTime.getMinutes().substr(-2);
-    var formattedEndTime = endTime.getHours() + ":" + "0" + endTime.getMinutes().substr(-2);
     var timeDifference = (startTime - endTime);
     var hoursWorked = timeDifference / 60 / 60;
 
     $("#shifts").append(
             "<tr>" +
                 "<td>" + date + "</td>" +
-                "<td>" + formattedStartTime + "</td>" +
-                "<td>" + formattedEndTime + "</td>" +
+                "<td>" + formatDate(startTime) + "</td>" +
+                "<td>" + formatDate(endTime) + "</td>" +
                 "<td>" + hoursWorked + "</td>" +
                 "<td>" + isSunday + "</td>" +
                 "<td>" +
