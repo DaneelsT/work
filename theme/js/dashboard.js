@@ -42,9 +42,9 @@ function checkSunday(date) {
     var dateArray = date.split("-");
     var newDate = new Date();
 
-    newDate.setFullYear(dateArr[0]);
-    newDate.setMonth(dateArr[1]);
-    newDate.setDate(dateArr[2]);
+    newDate.setFullYear(dateArray[0]);
+    newDate.setMonth(dateArray[1]);
+    newDate.setDate(dateArray[2]);
 
     if(newDate.getDay() == 0) {
         sundayStr = "SUNDAY";
@@ -66,7 +66,7 @@ function addShift(id, date, startTime, endTime, isSunday) {
                 "<td>" + formatDate(startTime) + "</td>" +
                 "<td>" + formatDate(endTime) + "</td>" +
                 "<td>" + hoursWorked + "</td>" +
-                "<td style='color:#28AF28'>" + isSunday ? checkSunday(date) : "" + "</td>" +
+                isSunday ? + "<td style='color:#28AF28'>" + checkSunday(date) + "</td>" + : "" +
                 "<td>" +
                     "<a class='button right buttonRed' href='shift/remove/" + id + "'>Remove</a>" +
                     "<a class='button right buttonSpacingRight' href='shift/edit/" + id + "'>Edit</a></td>" +
