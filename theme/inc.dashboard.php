@@ -62,8 +62,6 @@
 	            	<th></th>
 	            	<th><?php echo translate("Actions"); ?></th>
             	</tr>
-                <tbody>
-                </tbody>
             </table>
         </div>
     </div>
