@@ -13,7 +13,7 @@ $(document).ready(function() {
     // try and fetch shifts from user with id 1 when testButton has been clicked.
     $("#testButton").click(function() {
         $.ajax({
-            url: base + "api/shifts/1",
+            url: base + "shifts/1",
             type: "GET",
             dataType: "json",
             headers: {
