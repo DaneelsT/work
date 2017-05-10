@@ -37,6 +37,24 @@ function formatDate(timestamp) {
     return hours + ':' + minutes.substr(-2);
 }
 
+function checkSunday(date) {
+    var sundayStr = "";
+    var dateArray = date.split("-");
+    var newDate = new Date();
+
+    newDate.setFullYear(dateArr[0]);
+    newDate.setMonth(dateArr[1]);
+    newDate.setDate(dateArr[2]);
+
+    if(newDate.getDay() == 0) {
+        sundayStr = "SUNDAY";
+    }else{
+        sundayStr = "HOLIDAY";
+    }
+
+    return sundayStr;
+}
+
 // Append a new shift to the shifts table with the provided arguments
 function addShift(id, date, startTime, endTime, isSunday) {
     var timeDifference = (endTime - startTime);
@@ -48,7 +66,9 @@ function addShift(id, date, startTime, endTime, isSunday) {
                 "<td>" + formatDate(startTime) + "</td>" +
                 "<td>" + formatDate(endTime) + "</td>" +
                 "<td>" + hoursWorked + "</td>" +
-                "<td>" + isSunday + "</td>" +
+                if(isSunday) {
+                    "<td style='color:#28AF28'>" + checkSunday(date) + "</td>" +
+                }
                 "<td>" +
                     "<a class='button right buttonRed' href='shift/remove/" + id + "'>Remove</a>" +
                     "<a class='button right buttonSpacingRight' href='shift/edit/" + id + "'>Edit</a></td>" +
