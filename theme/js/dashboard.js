@@ -34,13 +34,13 @@ function getShifts(userid) {
 function addShift(date, startTime, endTime, isSunday) {
 
     console.log("addShift()");
-    
+
     var sundayStr = "";
     // idk if this will work lol
-    $("#shifts").append("<tr><td>" + date + "</td></tr>");
-    $("#shifts").append("<tr><td>" + startTime + "</td></tr>");
-    $("#shifts").append("<tr><td>" + endTime + "</td></tr>");
-    $("#shifts").append("<tr><td>" + isSunday + "</td></tr>");
+    $("#shifts").append("<tr><td>" + date + "</td>");
+    $("#shifts").append("<td>" + startTime + "</td>");
+    $("#shifts").append("<td>" + endTime + "</td>");
+    $("#shifts").append("<td>" + isSunday + "</td></tr>");
 }
 
 $(document).ready(function() {
