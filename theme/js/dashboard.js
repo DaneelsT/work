@@ -7,6 +7,7 @@
 
 var base = "api/";
 var key = "dev"; // api key
+var userid = 1; // id of user to retrieve shifts from
 
 // Get the shifts from the user with provided userid using an HTTP GET
 $.ajax({
