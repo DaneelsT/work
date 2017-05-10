@@ -20,8 +20,7 @@ $(document).ready(function() {
                 "Authorization": key,
             },
             success: function(data) {
-                console.log(data.date);
-                console.log(data.startTime);
+                console.log(data);
             },
             error: function(error) {
                 console.log("error: " + error);
