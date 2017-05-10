@@ -53,7 +53,7 @@
     <div class="panel panelSeparatorBottom" style="width:70%;float:right;">
         <div class="panelContent">
             <h2><?php echo translate("Current Shifts"); ?> - <?php echo $currentMonth; ?> <a href="<?php echo placeHttpRoot(); ?>month/close" id="closebutton" class="button right"><?php echo translate("Close Month"); ?></a></h2>
-            <table class="width50">
+            <table class="width50" id="shifts">
         		<tr>
 	            	<th><?php echo translate("Date"); ?></th>
 	            	<th><?php echo translate("Start Time"); ?></th>
