@@ -21,7 +21,7 @@ function getShifts(userid) {
             for (var i = 0; i < data.length; i++) {
                 var result = data[i];
 
-                addShift(result.date, result.startTime, result.endTime, result.isSunday);
+                addShift(result.id, result.date, result.startTime, result.endTime, result.isSunday);
             }
         },
         error: function(error) {
@@ -31,13 +31,16 @@ function getShifts(userid) {
 }
 
 // Append a new shift to the shifts table with the provided arguments
-function addShift(date, startTime, endTime, isSunday) {
+function addShift(id, date, startTime, endTime, isSunday) {
     $("#shifts").append(
             "<tr>" +
                 "<td>" + date + "</td>" +
                 "<td>" + startTime + "</td>" +
                 "<td>" + endTime + "</td>" +
                 "<td>" + isSunday + "</td>" +
+                "<td>" + isSunday + "</td>" +
+                "<td><a href='shift/remove/" + id + "'>Remove</a></td>" +
+                "<td><a href='shift/edit/" + id + "'>Edit</a></td>" +
                 "</tr>"
             );
 }
