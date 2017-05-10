@@ -49,9 +49,6 @@ function addShift(id, date, startTime, endTime, isSunday) {
 
 $(document).ready(function() {
 
-    // try and fetch shifts from user with id 1 when testButton has been clicked
-    $("#testButton").click(function() {
-        getShifts(1);
-    });
+    getShifts(1);
 
 });

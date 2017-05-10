@@ -62,46 +62,8 @@
 	            	<th></th>
 	            	<th><?php echo translate("Actions"); ?></th>
             	</tr>
-            	<?php
-            	// Fetch the shifts
-            	$shifts = $this->getShifts();
-				// Initialize the HTML string
-				$html = "";
-				// Iterate through all shifts and display them
-				foreach($shifts as $shift) {
-					$dateFormatted = date('d-m-Y', strtotime($shift->getDate()));
-					// wtf PHP, really.
-					$startTime = date('H:i', $shift->getStartTime() - (60*60));
-					$endTime = date('H:i', $shift->getEndTime() - (60*60));
-					$timeDifference = ($shift->getEndTime() - $shift->getStartTime());
-					$hoursWorked = (int)$timeDifference / 60 / 60;
-					$minutesWorked = (int)($timeDifference - ($hoursWorked * 60 * 60)) / 60;
-					$dayHours = ($hoursWorked + ($minutesWorked / 60));
-
-                	$html .= '<tr>';
-                    $html .= '<td>' . $dateFormatted . '</td>';
-                    $html .= '<td>' . $startTime . '</td>';
-                    $html .= '<td>' . $endTime . '</td>';
-                    $html .= '<td>' . round($dayHours, 1) . '</td>';
-					if($shift->isSunday()) {
-						if(dayIsSunday($shift->getDate())) {
-							$type = translate("SUNDAY");
-						}else{
-							$type = translate("HOLIDAY");
-						}
-                        $html .= '<td style="color:#28AF28">' . $type . ' (+ &euro; ' . $this->getSundayFee() .')</td>';
-					}else{
-                        $html .= '<td></td>';
-                    }
-                    $html .= '<td>';
-                    $html .= '<a class="button right buttonRed" href="' . getHttpRoot() . 'shift/remove/' . $shift->getId() .'/">' . translate("Remove") . '</a>';
-                    $html .= '<a class="button right buttonSpacingRight" href="' . getHttpRoot() . 'shift/edit/' . $shift->getId() .'/">' . translate("Edit") . '</a>';
-                    $html .= '</td>';
-                    $html .= '</tr>';
-				}
-				// Print all generated HTML
-				echo $html;
-				?>
+                <tbody>
+                </tbody>
             </table>
         </div>
     </div>
