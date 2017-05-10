@@ -30,12 +30,20 @@ $.ajax({
 
 // Append a new shift to the shifts table with the provided arguments
 function addShift(id, date, startTime, endTime, isSunday) {
+
+    var startTime = new Date(startTime * 1000);
+    var endTime = new Date(endTime * 1000);
+    var formattedStartTime = endTime.getHours() + ":" + "0" + endTime.getMinutes().substr(-2);
+    var formattedEndTime = endTime.getHours() + ":" + "0" + endTime.getMinutes().substr(-2);
+    var timeDifference = (startTime - endTime);
+    var hoursWorked = timeDifference / 60 / 60;
+
     $("#shifts").append(
             "<tr>" +
                 "<td>" + date + "</td>" +
-                "<td>" + startTime + "</td>" +
-                "<td>" + endTime + "</td>" +
-                "<td>" + isSunday + "</td>" +
+                "<td>" + formattedStartTime + "</td>" +
+                "<td>" + formattedEndTime + "</td>" +
+                "<td>" + hoursWorked + "</td>" +
                 "<td>" + isSunday + "</td>" +
                 "<td>" +
                     "<a class='button right buttonRed' href='shift/remove/" + id + "'>Remove</a>" +
