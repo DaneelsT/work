@@ -31,7 +31,7 @@ $.ajax({
 // Format a date from unix timestamp to readable hh:mm format
 function formatDate(timestamp) {
     var date = new Date(timestamp * 1000);
-    var hours = date.getHours();
+    var hours = date.getUTCHours();
     var minutes = "0" + date.getMinutes();
 
     return hours + ':' + minutes.substr(-2);
@@ -39,7 +39,7 @@ function formatDate(timestamp) {
 
 // Append a new shift to the shifts table with the provided arguments
 function addShift(id, date, startTime, endTime, isSunday) {
-    var timeDifference = (startTime - endTime);
+    var timeDifference = (endTime - startTime);
     var hoursWorked = timeDifference / 60 / 60;
 
     $("#shifts").append(
