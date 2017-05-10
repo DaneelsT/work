@@ -1,6 +1,10 @@
 <main>
     <div class="panel panelSeperatorBottom">
         <div class="panelContent">
+
+            <!-- testing -->
+            <button class="button" id="testButton">Get shifts</button>
+
         	<?php
             	$totalPay = round($this->getTotalPay(), 2);
                 $totalPayWithFees = round($this->getTotalPayWithFees(), 2);
