@@ -21,7 +21,7 @@ $.ajax({
         var buffer = "";
         for (var i = 0; i < data.length; i++) {
             var result = data[i];
-            buffer = addShift(result.id, result.date, result.startTime, result.endTime, result.isSunday);
+            buffer += addShift(result.id, result.date, result.startTime, result.endTime, result.isSunday);
         }
         $("#shifts").append(buffer);
     },
