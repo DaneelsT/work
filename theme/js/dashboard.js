@@ -18,10 +18,12 @@ $.ajax({
         "Authorization": key,
     },
     success: function(data) {
+        var buffer = "";
         for (var i = 0; i < data.length; i++) {
             var result = data[i];
-            addShift(result.id, result.date, result.startTime, result.endTime, result.isSunday);
+            buffer = addShift(result.id, result.date, result.startTime, result.endTime, result.isSunday);
         }
+        $("#shifts").append(buffer);
     },
     error: function(error) {
         console.log("error: " + error);
@@ -56,8 +58,7 @@ function addShift(id, date, startTime, endTime, isSunday) {
     var timeDifference = (endTime - startTime);
     var hoursWorked = timeDifference / 60 / 60;
 
-    $("#shifts").append(
-            "<tr>" +
+    return  "<tr>" +
                 "<td>" + date + "</td>" +
                 "<td>" + formatDate(startTime) + "</td>" +
                 "<td>" + formatDate(endTime) + "</td>" +
@@ -67,6 +68,5 @@ function addShift(id, date, startTime, endTime, isSunday) {
                     "<a class='button right buttonRed' href='shift/remove/" + id + "'>Remove</a>" +
                     "<a class='button right buttonSpacingRight' href='shift/edit/" + id + "'>Edit</a></td>" +
                 "</td>" +
-            "</tr>"
-            );
+            "</tr>";
 }
