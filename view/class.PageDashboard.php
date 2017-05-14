@@ -187,10 +187,6 @@ class PageDashboard extends AbstractAuthorizedPage {
         return $this->mTotalHours;
     }
 
-    public function getDayEarnings() {
-        return Application::getInstance()->getUser()->getHourlyPay() * $this->mTotalHours;
-    }
-
     public function getSundayFee() {
 		return Application::getInstance()->getUser()->getSundayFee();
     }
