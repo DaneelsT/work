@@ -73,6 +73,7 @@ $currentMonth = date("F");
                                 <th><?php echo translate("Start Time"); ?></th>
                                 <th><?php echo translate("End Time"); ?></th>
                                 <th><?php echo translate("Total Hours"); ?></th>
+                                <th><?php echo translate("Earned"); ?></th>
                                 <th></th>
                                 <th><?php echo translate("Actions"); ?></th>
                             </tr>
@@ -99,6 +100,7 @@ $currentMonth = date("F");
                                 $html .= '<td>' . $startTime . '</td>';
                                 $html .= '<td>' . $endTime . '</td>';
                                 $html .= '<td>' . round($dayHours, 1) . '</td>';
+                                $html .= '<td>' . round($shift->getDayEarnings(), 2) . '</td>';
                                 if($shift->isSunday()) {
                                     if(dayIsSunday($shift->getDate())) {
                                         $type = translate("SUNDAY");
