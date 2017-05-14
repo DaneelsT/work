@@ -80,7 +80,7 @@
                     $html .= '<td>' . $startTime . '</td>';
                     $html .= '<td>' . $endTime . '</td>';
                     $html .= '<td>' . round($dayHours, 1) . '</td>';
-                    $html .= '<td>' . round($shift->getDayEarnings(), 2) . '</td>';
+                    $html .= '<td>' . round($this->getDayEarnings(), 2) . '</td>';
 					if($shift->isSunday()) {
 						if(dayIsSunday($shift->getDate())) {
 							$type = translate("SUNDAY");
