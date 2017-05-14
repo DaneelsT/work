@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Work\n"
-"POT-Creation-Date: 2017-04-28 05:55+0200\n"
-"PO-Revision-Date: 2017-04-28 05:55+0200\n"
+"POT-Creation-Date: 2017-05-15 00:25+0200\n"
+"PO-Revision-Date: 2017-05-15 00:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -168,29 +168,29 @@ msgid "Total Hours"
 msgstr "Total Hours"
 
 #: theme/inc.admin-shift.php:61 theme/inc.admin-shifts.php:16
-#: theme/inc.admin-users.php:18 theme/inc.dashboard.php:59
+#: theme/inc.admin-users.php:18 theme/inc.dashboard.php:60
 #: theme/mobile/inc.admin-shift.php:69 theme/mobile/inc.admin-shifts.php:14
 #: theme/mobile/inc.admin-users.php:17 theme/mobile/inc.dashboard.php:77
 msgid "Actions"
 msgstr "Actions"
 
-#: theme/inc.admin-shift.php:85 theme/inc.dashboard.php:84
+#: theme/inc.admin-shift.php:85 theme/inc.dashboard.php:86
 #: theme/mobile/inc.admin-shift.php:95 theme/mobile/inc.dashboard.php:104
 msgid "SUNDAY"
 msgstr "SUNDAY"
 
-#: theme/inc.admin-shift.php:87 theme/inc.dashboard.php:86
+#: theme/inc.admin-shift.php:87 theme/inc.dashboard.php:88
 #: theme/mobile/inc.admin-shift.php:97 theme/mobile/inc.dashboard.php:106
 msgid "HOLIDAY"
 msgstr "HOLIDAY"
 
-#: theme/inc.admin-shift.php:94 theme/inc.dashboard.php:93
+#: theme/inc.admin-shift.php:94 theme/inc.dashboard.php:95
 #: theme/mobile/inc.admin-shift.php:104 theme/mobile/inc.dashboard.php:113
 msgid "Remove"
 msgstr "Remove"
 
 #: theme/inc.admin-shift.php:95 theme/inc.admin-users.php:29
-#: theme/inc.dashboard.php:94 theme/inc.user-edit.php:28
+#: theme/inc.dashboard.php:96 theme/inc.user-edit.php:28
 #: theme/mobile/inc.admin-shift.php:105 theme/mobile/inc.admin-users.php:32
 #: theme/mobile/inc.dashboard.php:114 theme/mobile/inc.user-edit.php:28
 msgid "Edit"
@@ -276,6 +276,10 @@ msgstr "Current Shifts"
 #: theme/inc.dashboard.php:51 theme/mobile/inc.dashboard.php:123
 msgid "Close Month"
 msgstr "Close Month"
+
+#: theme/inc.dashboard.php:58
+msgid "Earned"
+msgstr "Earned"
 
 #: theme/inc.month-close.php:14 theme/mobile/inc.month-close.php:15
 msgid "This month has been booked already"
