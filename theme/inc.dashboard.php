@@ -7,7 +7,7 @@
     			$payPerHour = $this->getPayPerHour();
     			$sundayFee = $this->getSundayFee();
     			$hoursWorked = round($this->getTotalHours(), 1);
-                $currentMonth = date("F");
+                $currentMonth = translateMonth();
 			?>
             <h2><?php echo translate("Current Earnings"); ?> - <?php echo $currentMonth; ?> (&euro; <?php echo $totalPayWithFees; ?>)</h2>
             <p style="font-size:15px;">

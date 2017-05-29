@@ -19,7 +19,7 @@
                 // Iterate through all months and display them
                 foreach($months as $month) {
                     $html .= '<tr>';
-                    $html .= '<td>' . getMonthName($month->getMonth()) . '</td>';
+                    $html .= '<td>' . translateMonth(getMonthNumber($month->getMonth())) . '</td>';
                     $html .= '<td>' . $month->getHoursWorked() . '</td>';
 					$html .= '<td>' . $month->getDaysWorked() . '</td>';
                     $html .= '<td>&euro; ' . round($month->getEarnings(), 2) . '</td>';
