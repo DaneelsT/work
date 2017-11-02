@@ -52,6 +52,8 @@ class PageDashboard extends AbstractAuthorizedPage {
         $this->mFooter->addScript("jquery.min.js");
         $this->mFooter->addScript("jquery.mask.min.js");
         $this->mFooter->addScript("main.js");
+
+        $this->mFooter->addScript("dashboard.js");
     }
 
     // Insert a new shift into the database

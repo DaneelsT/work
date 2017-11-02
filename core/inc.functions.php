@@ -96,6 +96,10 @@ function getMonthName($inp) {
     return date("F", strtotime(date("d-$inp-y")));
 }
 
+function getMonthNumber($int) {
+    return date("j", strtotime(date("d-$inp-y")));
+}
+
 function getLastDayInMonth($inp) {
     return date("t", strtotime(date("d-$inp-y")));
 }
@@ -103,6 +107,48 @@ function getLastDayInMonth($inp) {
 function dayIsSunday($inp) {
     if(date("w", strtotime($inp)) == 0) {
         return true;
+    }
+}
+
+function translateMonth($input = null) {
+    if($input) {
+        $count = $input;
+    }else{
+        $count = date("j");
+    }
+    $month = "";
+    switch ($count) {
+        case 1:
+            $month = "Januari";
+            break;
+        case 2:
+            $month = "Februari";
+            break;
+        case 3:
+            $month = "Maart";
+            break;
+        case 5:
+            $month = "Mei";
+            break;
+        case 6:
+            $month = "Juni";
+            break;
+        case 7:
+            $month = "Juli";
+            break;
+        case 8:
+            $month = "Augustus";
+            break;
+        case 9:
+            $month = "September";
+            break;
+        case 10:
+            $month = "Oktober";
+            break;
+        default:
+            $month = date("F");
+            break;
+
     }
 }
 
