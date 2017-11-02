@@ -117,12 +117,11 @@ class PageMonthClose extends AbstractAuthorizedPage {
     	$app = Application::getInstance();
 		$user = $app->getUser();
 
-        $sql = "SELECT month
-                FROM months
-                WHERE month = :month AND userid = :userid";
+        $sql = "SELECT month FROM months WHERE month = :month AND year = :year AND userid = :userid";
         $statement = $this->mDbHandle->prepare($sql);
         $statement->bindParam(':month', date('n'));
-		$statement->bindParam(':userid', $user->getId());
+        $statement->bindParam(":year", date('Y'));
+		    $statement->bindParam(':userid', $user->getId());
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         $count = count($result);
