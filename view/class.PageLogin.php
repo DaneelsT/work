@@ -5,7 +5,7 @@ namespace Work\Page;
 /**
  * A class which describes the properties and actions of a login page.
  *
- * @author  Joeri Hermans
+ * @author  Joeri Hermans, Gaetan Dumortier
  * @since   14 February 2016
  */
 
@@ -16,24 +16,20 @@ use \Work\UI\ViewHeaderNoMenu;
 use \Work\UI\ViewFooter;
 use \PDO;
 
-class PageLogin extends AbstractPage
-{
+class PageLogin extends AbstractPage {
 
     const PATH = "/login$";
     private $mTitle = "Log in";
 
-    /**
-     * Additional views that need to be rendered with the login page.
-     */
     private $mHeader;
     private $mFooter;
 
-	private $mDbHandle;
+    private $mDbHandle;
 
-	private $mUserId;
-	private $mUsername;
-	private $mHourlyPay;
-	private $mSundayFee;
+    private $mUserId;
+    private $mUsername;
+    private $mHourlyPay;
+    private $mSundayFee;
     private $mLanguage;
 
     private function initializeViewElements() {
@@ -42,24 +38,19 @@ class PageLogin extends AbstractPage
     }
 
     private function initializeDatabaseConnection() {
-    	$app = Application::getInstance();
-        $app->connectToDatabase();
-        $this->mDbHandle = $app->getDatabaseConnection();
+      $app = Application::getInstance();
+      $app->connectToDatabase();
+      $this->mDbHandle = $app->getDatabaseConnection();
     }
 
-    private function addScripts() {
-        $this->mFooter->addScript("jquery.min.js");
+    private function addStyleSheets() {
+      $this->mHeader->addStyleSheet("bootstrap.min.css");
+      $this->mHeader->addStyleSheet("login.css");
     }
 
-	private function addStyleSheets() {
-        $this->mHeader->addStyleSheet("bootstrap.min.css");
-		$this->mHeader->addStyleSheet("login.css");
-	}
-
-    private function setUsername()
-    {
-        if( isset( $_POST['username']) )
-            $this->mUsername = $_POST['username'];
+    private function setUsername() {
+      if( isset( $_POST['username']) )
+        $this->mUsername = $_POST['username'];
     }
 
 	private function userLogin() {
@@ -183,8 +174,7 @@ class PageLogin extends AbstractPage
 
         $this->setTitle($this->mTitle);
         $this->initializeViewElements();
-		$this->addStyleSheets();
-		$this->addScripts();
+        $this->addStyleSheets();
 
         $this->setUsername();
     }
